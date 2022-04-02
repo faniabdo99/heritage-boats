@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.promo-lower {
+    left: 0;
+    right: auto;
+}
+.promo-lower .video-block {
+    right: auto;
+    left: 0;
+}
+.promo-lower .socials-primary li:not(:last-of-type) {
+    margin-left: 23px;
+    margin-right:auto
+}
+.promo-lower .promo-contacts {
+        text-align: right;
+    padding-right: 30px;
+    padding-left: 0px;
+}
+.slick-dots li:not(:last-of-type) {
+        margin-left: 30px;
+        margin-right: 0px;
+}
+.promo-slider .align-container,.about-welcome,.main-gallery .heading ,.news--style-2 .heading,.news-item--aside:not(:last-of-type),.news-item--aside,.news-item--style-2 .description,footer.footer,.mobile-menu,.promo-primary .align-container,.description-item .primary-heading,.description-item,.testimonials.testimonials--primary .heading.primary-heading,.primary-heading .subtitle,.testimonials-primary-slider .slider-item,.contacts-page-form,.products--style-3 .heading , .logo-block{
+    text-align: right
+}
+.Clubs {
+    text-align: right;
+}
+.info-box__category {
+        right: 30px;
+    left: auto
+}
+.calendar-ara {
+        direction: ltr;
+    text-align: right;
+}
+.socials-primary li:not(:last-of-type) {
+    margin-left: 15px;
+     margin-right:auto
+}
+footer.footer .footer-logo a span {
+        line-height: 38px;
+}
+.info-box__title i {
+        transform: rotate(180deg);
+    transform-origin: center;
+}
+.main-menu > li.menu-item--has-child > a > span::before , .mobile-menu > li.menu-item--has-child > a > span::before{
+        transform: rotate(-45deg);
+        left: -15px;
+    right: auto;
+}
+.main-menu > li.menu-item--has-child > a > span::after ,.mobile-menu > li.menu-item--has-child > a > span::after {
+    transform: rotate(45deg);
+        left: -18px;
+        right: auto;
+    
+}
+.main-menu > li:not(:last-of-type) {
+        margin-left: auto;
+        margin-right: auto;
+}
+@media only screen and (min-width: 576px) {
+footer.footer .copyright  {
+    text-align: center;
+}
+    
+}
+@media only screen and (max-width: 576px) {
+    .promo-lower .video-block {
+        right: 0px;
+        left: auto
+    }
+    .comming-ara {
+        margin-top:100px
+    }
+}
+@media only screen and (min-width:768px) {
+    footer.footer .copyright {
+    text-align: right;
+}
+    
+}
+.promo-primary .title::before {
+        right: 0;
+    left: auto;
+}
+.promo-primary .title::after {
+        right: 70px;
+    left: auto;
+}
+.primary-heading {
+        margin-right: 0px;
+}
+.status-ara ,.Acknow-heading{
+    margin: 0 auto 60px auto;
+    text-align: center
+}
+.primary-heading .status-heading, .Acknow-heading .subtitle {
+    text-align: center !important
+}
+
+@media only screen and (min-width: 992px){
+.contacts-banner {
+    margin-left: 10px;
+    text-align: right;
+}
+}
+ul li::before{
+        left: auto;
+    right: 0px;
+}
+ul li {
+        padding-right: 40px;
+        text-align: right;
+}
+.socials-holder ul li {
+    padding-right: 0px
+}
+footer.footer .footer-menu li {
+        margin-top: 5px;
+}
+.menu-item ul li {
+        padding-right: 0px
+}
+@media only screen and (min-width: 1200px) {
+    
+.promo-primary {
+    padding-right: 53px;
+}
+    footer.footer .title {
+        text-align: right
+    }
+}
+ footer.footer .title {
+        text-align: center
+    }
+#home .contact--form.contacts-page-form {
+    color:#fff;
+    text-align: right
+}
+#home .contact--form.contacts-page-form .title-block{
+    text-align: right
+}
+#home .contacts-banner .title-block {
+    text-align: center
+}
+#home h1 {
+    font-size: 60px
+}
+#home h2 {
+    font-weight: 200
+}
+.footer-nav {
+    direction: ltr
+}
