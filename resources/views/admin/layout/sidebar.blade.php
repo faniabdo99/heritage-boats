@@ -7,7 +7,7 @@
                     <span class="nav-text">Dashboard</span>
                 </a>
             </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+            <li><a class="has-arrow ai-icon" href="javascript:;" aria-expanded="false">
                     <i class="fas fa-users"></i>
                     <span class="nav-text">Admins</span>
                 </a>
@@ -18,7 +18,7 @@
                     @endif
                 </ul>
             </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+            <li><a class="has-arrow ai-icon" href="javascript:;" aria-expanded="false">
                     <i class="flaticon-381-controls-3"></i>
                     <span class="nav-text">Management</span>
                 </a>
@@ -30,7 +30,7 @@
                     <li><a href="./form-element.html">Conversions Report</a></li>
                 </ul>
             </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+            <li><a class="has-arrow ai-icon" href="javascript:;" aria-expanded="false">
                     <i class="flaticon-381-internet"></i>
                     <span class="nav-text">Events</span>
                 </a>
@@ -39,7 +39,16 @@
                     <li><a href="./ui-alert.html">Add New</a></li>
                 </ul>
             </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+            <li><a class="has-arrow ai-icon" href="javascript:;" aria-expanded="false">
+                    <i class="flaticon-381-heart"></i>
+                    <span class="nav-text">Blog</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{route('admin.blogs.all')}}">List Articles</a></li>
+                    <li><a href="{{route('admin.blogs.getNew')}}">Add New</a></li>
+                </ul>
+            </li>
+            <li><a class="has-arrow ai-icon" href="javascript:;" aria-expanded="false">
                     <i class="flaticon-381-heart"></i>
                     <span class="nav-text">Clubs</span>
                 </a>
@@ -48,14 +57,14 @@
                     <li><a href="./uc-nestable.html">Add New</a></li>
                 </ul>
             </li>
-            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+            <li><a class="has-arrow ai-icon" href="javascript:;" aria-expanded="false">
                     <i class="flaticon-381-layer-1"></i>
                     <span class="nav-text">Pages</span>
                 </a>
                 <ul aria-expanded="false">
                     <li><a href="./page-register.html">Register</a></li>
                     <li><a href="./page-login.html">Login</a></li>
-                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
+                    <li><a class="has-arrow" href="javascript:;" aria-expanded="false">Error</a>
                         <ul aria-expanded="false">
                             <li><a href="./page-error-400.html">Error 400</a></li>
                             <li><a href="./page-error-403.html">Error 403</a></li>
@@ -67,7 +76,7 @@
                     <li><a href="./page-lock-screen.html">Lock Screen</a></li>
                 </ul>
             </li>
-            <li><a class="ai-icon" href="#">
+            <li><a class="ai-icon" href="{{route('home')}}">
                     <i class="fas fa-globe"></i>
                     <span class="nav-text">Back to Website</span>
                 </a>

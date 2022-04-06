@@ -11,6 +11,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\BlogController;
 
 Route::get('feed-db', [TestController::class, 'feedDb']); //To be ignored by Front end team
 Route::get('/', [HomeController::class , 'getHomepage'])->name('home'); // The homepage: resources/views/home.blade.php
@@ -44,5 +45,10 @@ Route::group(['prefix' => 'admin' , 'middleware' => 'admin'] , function(){
         Route::post('/new' , [UserController::class, 'postNew'])->middleware('super_admin')->name('admin.admins.postNew');
         Route::get('/edit/{id}' , [UserController::class, 'getEdit'])->middleware('super_admin')->name('admin.admins.getEdit');
         Route::post('/edit/{id}' , [UserController::class, 'postEdit'])->middleware('super_admin')->name('admin.admins.postEdit');
+    });
+    Route::prefix('blog')->group(function(){
+        Route::get('/' , [BlogController::class, 'getAdminAll'])->name('admin.blogs.all');
+        Route::get('/new' , [BlogController::class, 'getAdminNew'])->name('admin.blogs.getNew');
+        Route::post('/new' , [BlogController::class, 'postAdminNew'])->name('admin.blogs.postNew');
     });
 });

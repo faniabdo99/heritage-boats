@@ -6,4 +6,4 @@ mix.options({
   processCssUrls: false
 });
 mix.sass('resources/scss/admin/app.scss' , 'public/admin/css')
-    .browserSync('http://localhost/boat-clubs');
+    .browserSync('http://localhost/heritage-boats');
