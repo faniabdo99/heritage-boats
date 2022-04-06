@@ -63,7 +63,7 @@
                     <!-- contacts-banner end-->
 
                     <div class="col-md-6 col-xs-12">
-                        <div class="form-wrapper" style="background-image: url(img/world-map.png);">
+                        <div class="form-wrapper">
                             <!-- contact form start-->
                             <form action="{{route('contact.post')}}" method="post" class="form contact--form contacts-page-form" id="get-in-touch" autocomplete="off">
                                 @csrf
