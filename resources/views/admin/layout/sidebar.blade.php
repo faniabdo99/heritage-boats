@@ -23,7 +23,7 @@
                     <span class="nav-text">Management</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="./chart-flot.html">Contact Requests</a></li>
+                    <li><a href="{{route('admin.contact.all')}}">Contact Requests</a></li>
                     <li><a href="./chart-morris.html">Club Views</a></li>
                     <li><a href="./form-element.html">Overall Report</a></li>
                     <li><a href="./form-element.html">Traffic Report</a></li>

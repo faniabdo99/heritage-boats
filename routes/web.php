@@ -51,4 +51,5 @@ Route::group(['prefix' => 'admin' , 'middleware' => 'admin'] , function(){
         Route::get('/new' , [BlogController::class, 'getAdminNew'])->name('admin.blogs.getNew');
         Route::post('/new' , [BlogController::class, 'postAdminNew'])->name('admin.blogs.postNew');
     });
+    Route::get('contact-requests' , [ContactController::class , 'getAdminAll'])->name('admin.contact.all');
 });
