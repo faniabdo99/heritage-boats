@@ -1,9 +1,6 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 class AdminController extends Controller{
     /*
         Function: getHome();
@@ -11,7 +8,7 @@ class AdminController extends Controller{
         Usage(s): web.php
         Notes: Requires to pass the isAdmin middleware
     */
-    public function getHome(){
+    public function getHome(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application {
         return view('admin.index');
     }
 }

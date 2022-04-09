@@ -3,14 +3,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image as ImageLib;
 use App\Models\Blog;
-
 class BlogController extends Controller{
     /*
         Function: getAdminAll();
         Description: Returns all articles page in admin panel
         Usage(s): web.php
     */
-    public function getAdminAll(){
+    public function getAdminAll(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application {
         //Get all articles
         $Articles = Blog::latest()->get();
         return view('admin.blogs.all' , compact('Articles'));
@@ -21,7 +20,7 @@ class BlogController extends Controller{
         Description: Returns new article page on admin
         Usage(s): web.php
     */
-    public  function getAdminNew(){
+    public  function getAdminNew(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application {
         return view('admin.blogs.new');
     }
     /*
@@ -29,7 +28,7 @@ class BlogController extends Controller{
         Description: Handles the upload article logic
         Usage(s): web.php
     */
-    public function postAdminNew(Request $r){
+    public function postAdminNew(Request $r): \Illuminate\Http\RedirectResponse {
         //Validate the request
         $r->validate([
             'title' => 'required|min:5',
@@ -56,7 +55,27 @@ class BlogController extends Controller{
             $BlogData['image'] = $BlogData['slug'].'.'.$r->image->getClientOriginalExtension();
         }
         //Upload the article
-        Blog::create($BlogData);
+        $TheArticle = Blog::create($BlogData);
+        //Log this event
+        FireEventLog('Blog', 'Created', $TheArticle->id , auth()->user()->id);
         return redirect()->route('admin.blogs.all');
+    }
+
+    // non-admin routes
+    /*
+        Function: getAll();
+        Description: Returns all articles page
+        Usage(s): web.php
+    */
+    public function getAll(){
+        return view('blog.all');
+    }
+    /*
+        Function: getSingle($slug, $id);
+        Description: Returns single article page based on the id (the slug is required for SEO only)
+        Usage(s): web.php
+    */
+    public  function getSingle($slug, $id){
+        return view('blog.single');
     }
 }

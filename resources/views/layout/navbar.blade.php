@@ -87,3 +87,28 @@
     </div>
 </header>
 <!-- header end-->
+<!-- notifications -->
+@if(session()->has('success'))
+    <div class="notification success-notification @lang('settings.text_align')" dir="@lang('settings.direction')">
+        <div class="notification-icon">
+            <i class="fas fa-check"></i>
+        </div>
+        <div class="notification-content">
+            <b>Success!</b>
+            <p class="mb-0">{{session('success')}}</p>
+        </div>
+    </div>
+@endif
+@if($errors->any())
+    <div class="notification error-notification @lang('settings.text_align')" dir="@lang('settings.direction')">
+        <div class="notification-icon">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="notification-content">
+            <b>Error!</b>
+            @foreach ($errors->all() as $error)
+                <p class="mb-0">{{$error}}</p>
+            @endforeach
+        </div>
+    </div>
+@endif

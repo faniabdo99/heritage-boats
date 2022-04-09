@@ -9,7 +9,7 @@ class AuthController extends Controller{
         Usage(s): web.php
         Notes: Requires to pass the guest middleware
     */
-    public function getLogin(){
+    public function getLogin(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application {
         return view('auth.login');
     }
     /*
@@ -18,7 +18,7 @@ class AuthController extends Controller{
         Usage(s): web.php
         Notes: Requires to pass the guest middleware
     */
-    public function postLogin(Request $r){
+    public function postLogin(Request $r): \Illuminate\Http\RedirectResponse {
         //Validate the request using the validator method on the request class
         $Validator = $r->validate([
             'email' => 'required|email',
@@ -39,7 +39,7 @@ class AuthController extends Controller{
         Usage(s): web.php
         Notes: Requires to pass the admin middleware
     */
-    public function logout(){
+    public function logout(): \Illuminate\Http\RedirectResponse {
         Auth::logout();
         return redirect()->route('home');
     }

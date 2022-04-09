@@ -20,6 +20,10 @@ Route::get('/contact', [ContactController::class , 'getContact'])->name('contact
 Route::post('/contact', [ContactController::class , 'postContact'])->name('contact.post');
 Route::get('/acknowledgments', [AcknowledgmentController::class , 'getAcknowledgments'])->name('acknowledgments'); // Acknowledgments: resources/views/static/acknowledgments.blade.php
 Route::get('/coming-soon', [ComingSoonController::class , 'getComingSoon'])->name('comingSoon'); // Coming Soon: resources/views/static/coming-soon.blade.php
+Route::prefix('blog')->group(function (){
+    Route::get('/' , [BlogController::class , 'getAll'])->name('blog'); // Blog: resources/view/blog/all
+    Route::get('/{slug}/{id}' , [BlogController::class , 'getSingle'])->name('blog.single'); // Blog: resources/view/blog/single
+});
 /*
     AUTH SYSTEM
     Auth routes
@@ -51,5 +55,8 @@ Route::group(['prefix' => 'admin' , 'middleware' => 'admin'] , function(){
         Route::get('/new' , [BlogController::class, 'getAdminNew'])->name('admin.blogs.getNew');
         Route::post('/new' , [BlogController::class, 'postAdminNew'])->name('admin.blogs.postNew');
     });
-    Route::get('contact-requests' , [ContactController::class , 'getAdminAll'])->name('admin.contact.all');
+    Route::prefix('contact-requests')->group(function(){
+        Route::get('/' , [ContactController::class , 'getAdminAll'])->name('admin.contact.all');
+        Route::get('/{id}' , [ContactController::class , 'getAdminSingle'])->name('admin.contact.single');
+    });
 });

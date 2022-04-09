@@ -6,7 +6,7 @@ use App\Models\EventLog;
     Initiated through composer.json autoloader
     Usage(s): UserController.php
 */
-function FireEventLog($Model, $Action, $ResourceId, $UserId = null){
+function FireEventLog($Model, $Action, $ResourceId, $UserId = null): bool {
     if(!$UserId){$UserId = auth()->user()->id;}
     $NewLog = EventLog::create([
         'model' => $Model,
