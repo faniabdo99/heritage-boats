@@ -8,5 +8,8 @@
     <title>Iraqi Heritage Boat Club</title>
     <!-- styles-->
     <link rel="stylesheet" href="{{url('public/css/styles.min.css')}}" />
+    @if(app()->getLocale() == 'ar')
+        <link rel="stylesheet" href="{{url('public/css/styles-ara.css')}}" />
+    @endif
     <link rel="stylesheet" href="{{url('public/css/animate.css')}}">
 </head>

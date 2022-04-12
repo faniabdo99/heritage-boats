@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 //Controllers
+use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
@@ -12,7 +13,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\BlogController;
-
+Route::get('/switch-lang/{locale?}' , [LocalizationController::class , 'postChangeLocal' ])->name('switchLang');
 Route::get('feed-db', [TestController::class, 'feedDb']); //To be ignored by Front end team
 Route::get('/', [HomeController::class , 'getHomepage'])->name('home'); // The homepage: resources/views/home.blade.php
 Route::get('/about', [AboutController::class , 'getAbout'])->name('about'); // About us: resources/views/static/about.blade.php

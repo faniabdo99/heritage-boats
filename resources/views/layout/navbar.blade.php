@@ -5,24 +5,24 @@
             <!-- main menu start-->
             <nav class="menu-holder">
                 <ul class="mobile-menu">
-                    <li class="menu-item"><a href="{{route('home')}}"><span>Home</span></a></li>
-                    <li class="menu-item menu-item--has-child"><a href="javascript:void(0);"><span>Clubs</span> </a>
+                    <li class="menu-item"><a href="{{route('home')}}"><span>@lang('layout.home')</span></a></li>
+                    <li class="menu-item menu-item--has-child"><a href="javascript:void(0);"><span>@lang('layout.clubs')</span> </a>
                         <!-- sub-menu start-->
                         <ul class="sub-menu">
-                            <li><a href="{{route('comingSoon')}}">Basra Heritage Boat Club</a></li>
-                            <li><a href="{{route('comingSoon')}}">Chibayish Heritage Boat Club</a></li>
-                            <li><a href="{{route('comingSoon')}}">Baghdad Heritage Boat Club</a></li>
-                            <li><a href="{{route('comingSoon')}}">Babylon Heritage Boat Club</a></li>
+                            <li><a href="{{route('comingSoon')}}">@lang('layout.club_basra')</a></li>
+                            <li><a href="{{route('comingSoon')}}">@lang('layout.club_chibayish')</a></li>
+                            <li><a href="{{route('comingSoon')}}">@lang('layout.club_baghdad')</a></li>
+                            <li><a href="{{route('comingSoon')}}">@lang('layout.club_babylon')</a></li>
                         </ul>
                         <!-- sub-menu end-->
                     </li>
-                    <li class="menu-item"><a href="{{route('about')}}"><span>About Us</span></a></li>
-                    <li class="menu-item"><a href="{{route('comingSoon')}}"><span>Calendar</span></a></li>
+                    <li class="menu-item"><a href="{{route('about')}}"><span>@lang('layout.about_us')</span></a></li>
+                    <li class="menu-item"><a href="{{route('comingSoon')}}"><span>@lang('layout.calendar')</span></a></li>
 
-                    <li class="menu-item"><a href="{{route('contact.get')}}"><span>Contact Us</span></a></li>
-                    <li class="menu-item"><a href="{{route('acknowledgments')}}"><span>Acknowledgements</span></a>
+                    <li class="menu-item"><a href="{{route('contact.get')}}"><span>@lang('layout.contact_us')</span></a></li>
+                    <li class="menu-item"><a href="{{route('acknowledgments')}}"><span>@lang('layout.acknowledgements')</span></a>
                         <!-- main menu end-->
-                        <div class="button-holder"><a class="button button--filled" href="{{route('contact.get')}}" data-hover="Get In Touch"><span>Get In Touch</span></a>
+                        <div class="button-holder"><a class="button button--filled" href="{{route('contact.get')}}" data-hover="@lang('layout.get_in_touch')"><span>@lang('layout.get_in_touch')</span></a>
                         </div>
                     </li>
                 </ul>
@@ -37,28 +37,28 @@
         <div class="row">
             <div class="col-12 column">
                 <!-- logo block start-->
-                <div class="logo-block"><a class="logo" href="{{route('home')}}"><span>Iraqi Heritage Boat Club</span></a></div>
+                <div class="logo-block"><a class="logo" href="{{route('home')}}"><span>@lang('layout.site_title')</span></a></div>
                 <!-- logo block end-->
                 <!-- menu block start-->
                 <div class="menu-block">
                     <!-- main menu start-->
                     <nav class="menu-holder">
                         <ul class="main-menu">
-                            <li class="menu-item "><a href="{{route('home')}}"><span>Home</span></a>
-                            <li class="menu-item menu-item--has-child"><a href="javascript:void(0);"><span>Clubs</span> </a>
+                            <li class="menu-item "><a href="{{route('home')}}"><span>@lang('layout.home')</span></a>
+                            <li class="menu-item menu-item--has-child"><a href="javascript:void(0);"><span>@lang('layout.clubs')</span> </a>
                                 <!-- sub-menu start-->
                                 <ul class="sub-menu">
-                                    <li><a href="{{route('comingSoon')}}">Basra Heritage Boat Club</a></li>
-                                    <li><a href="{{route('comingSoon')}}">Chibayish Heritage Boat Club</a></li>
-                                    <li><a href="{{route('comingSoon')}}">Baghdad Heritage Boat Club</a></li>
-                                    <li><a href="{{route('comingSoon')}}">Babylon Heritage Boat Club</a></li>
+                                    <li><a href="{{route('comingSoon')}}">@lang('layout.club_basra')</a></li>
+                                    <li><a href="{{route('comingSoon')}}">@lang('layout.club_chibayish')</a></li>
+                                    <li><a href="{{route('comingSoon')}}">@lang('layout.club_baghdad')</a></li>
+                                    <li><a href="{{route('comingSoon')}}">@lang('layout.club_babylon')</a></li>
                                 </ul>
                                 <!-- sub-menu end-->
                             </li>
-                            <li class="menu-item"><a href="{{route('about')}}"><span>About Us</span></a></li>
-                            <li class="menu-item"><a href="{{route('comingSoon')}}"><span>Calendar</span></a></li>
-                            <li class="menu-item"><a href="{{route('contact.get')}}"><span>Contact Us</span></a></li>
-                            <li class="menu-item"><a href="{{route('acknowledgments')}}"><span>Acknowledgements</span></a>
+                            <li class="menu-item"><a href="{{route('about')}}"><span>@lang('layout.about_us')</span></a></li>
+                            <li class="menu-item"><a href="{{route('comingSoon')}}"><span>@lang('layout.calendar')</span></a></li>
+                            <li class="menu-item"><a href="{{route('contact.get')}}"><span>@lang('layout.contact_us')</span></a></li>
+                            <li class="menu-item"><a href="{{route('acknowledgments')}}"><span>@lang('layout.acknowledgements')</span></a>
                         </ul>
                     </nav>
                     <!-- main menu end-->
@@ -67,9 +67,13 @@
                 <!-- lang block start-->
                 <div class="lang-block">
                     <ul class="lang-select">
-                        <li class="lang-item active"><span>EN</span>
+                        <li class="lang-item active text-uppercase"><span>{{app()->getLocale()}}</span>
                             <ul class="sub-list">
-                                <li class="lang-item"><a href="index-ara.html">اللغة العربية</a></li>
+                                @if(app()->getLocale() == 'ar')
+                                    <li class="lang-item text-capitalize"><a href="{{route('switchLang' , 'en')}}">English</a></li>
+                                @else
+                                    <li class="lang-item"><a href="{{route('switchLang' , 'ar')}}">عربي</a></li>
+                                @endif
                             </ul>
                         </li>
                     </ul>
