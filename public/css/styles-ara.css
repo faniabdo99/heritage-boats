@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 
 body {
+    direction: rtl;
     font-family: 'Readex Pro', sans-serif;
 }
 
@@ -36,7 +37,7 @@ body {
     left: auto
 }
 .calendar-ara {
-        direction: ltr;
+    direction: ltr;
     text-align: right;
 }
 .socials-primary li:not(:last-of-type) {
@@ -59,7 +60,7 @@ footer.footer .footer-logo a span {
     transform: rotate(45deg);
         left: -18px;
         right: auto;
-    
+
 }
 .main-menu > li:not(:last-of-type) {
         margin-left: auto;
@@ -69,7 +70,7 @@ footer.footer .footer-logo a span {
 footer.footer .copyright  {
     text-align: center;
 }
-    
+
 }
 @media only screen and (max-width: 576px) {
     .promo-lower .video-block {
@@ -84,7 +85,7 @@ footer.footer .copyright  {
     footer.footer .copyright {
     text-align: right;
 }
-    
+
 }
 .promo-primary .title::before {
         right: 0;
@@ -129,7 +130,7 @@ footer.footer .footer-menu li {
         padding-right: 0px
 }
 @media only screen and (min-width: 1200px) {
-    
+
 .promo-primary {
     padding-right: 53px;
 }

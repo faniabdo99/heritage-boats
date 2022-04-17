@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="@lang('settings.direction')">
 @include('layout.header')
 <body>
 @include('layout.loader')
@@ -25,12 +25,12 @@
                                 <div class="align-container">
                                     <div class="align-item">
                                         <div class="promo-slider__wrapper-1">
-                                            <h2 class="title wow fadeInUp" data-wow-duration="5">Contact a Local Club to <span>join training sessions</span></h2>
+                                            <h2 class="title wow fadeInUp" data-wow-duration="5">@lang('pages/home.hero_headline')</h2>
                                         </div>
                                         <div class="promo-slider__wrapper-2">
-                                            <p class="subtitle wow fadeInUp">please visit our Contacts page for details of local coordinators</p>
+                                            <p class="subtitle wow fadeInUp">@lang('pages/home.hero_description')</p>
                                         </div>
-                                        <div class="promo-slider__wrapper-3"><a class="wow fadeInUp button button--filled" href="comingsoon.html" data-hover="Discover"><span>Discover</span></a>
+                                        <div class="promo-slider__wrapper-3"><a class="wow fadeInUp button button--filled" href="comingsoon.html" data-hover="Discover"><span>@lang('pages/home.hero_cta')</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -46,9 +46,9 @@
             <!-- promo-lower start-->
             <div class="promo-lower">
                 <div class="promo-contacts">
-                    <p class="address">Find more about Heritage Boat Clubs Network:</p>
-                    <p class="e-main">Captain Sabah Al-Rubaie – Network Coordinator</p>
-                    <p class="phone-number">Phone: <a href="tel:+9647716748880">+964 7716 748 880</a></p>
+                    <p class="address">@lang('pages/home.promo_header')</p>
+                    <p class="e-main">@lang('pages/home.promo_coordinator')</p>
+                    <p class="phone-number">@lang('pages/home.promo_phone') <a href="tel:+9647716748880">+964 7716 748 880</a></p>
 
                 </div>
                 <div class="promo-socials">
@@ -66,9 +66,7 @@
                 <div class="video-block">
                     <div class="img-holder">
                         <div class="overlay"></div>
-                        <a href="https://www.youtube.com/embed/Dll5xSNzSzU">
-                            <iframe class="fancy-video" width="395" height="150" src="https://www.youtube.com/embed/Dll5xSNzSzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
-
+                        <a href="https://www.youtube.com/embed/Dll5xSNzSzU"><iframe class="fancy-video" width="395" height="150" src="https://www.youtube.com/embed/Dll5xSNzSzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
                     </div>
                 </div>
             </div>
@@ -79,17 +77,17 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-4 col-lg-5 wow fadeInUp" data-wow-offset="80">
-                        <div class="title-block"><span>About</span>
+                        <div class="title-block"><span>@lang('pages/home.about_header')</span>
                             <picture>
                                 <source srcset="{{url('public/img')}}/aboutholder.jpg" media="(min-width: 992px)" /><img class="img-bg jarallax-img" src="{{url('public/img')}}/aboutholder.jpg" alt="img" />
                             </picture>
-
                         </div>
                     </div>
                     <div class="col-xl-7 col-lg-6 wow fadeInRight" data-wow-offset="80">
                         <div class="description">
-                            <h3 class="title">Iraqi Heritage Boat Clubs</h3>
-                            <p>The Iraqi Heritage Boat Clubs Network is an initiative launched in 2021 that is revitalising the use of traditional boats as a sport and leisure activity organised by local boat clubs across Iraq. The clubs are also focal points for experiential research into the heritage and ecology of their local areas.</p><a class="button button--transparent" href="about.html" data-hover="More about"><span>More about</span></a>
+                            <h3 class="title">@lang('pages/home.about_project_title')</h3>
+                            <p>@lang('pages/home.about_description')</p>
+                            <a class="button button--transparent" href="about.html" data-hover="@lang('pages/home.about_cta')"><span>@lang('pages/home.about_cta')</span></a>
                         </div>
                     </div>
                 </div>
@@ -104,13 +102,14 @@
                 <div class="row align-items-end margin-bottom">
                     <div class="col-lg-9">
                         <div class="heading primary-heading">
-                            <h3 class="title">A overview</h3>
-                            <h5 class="subtitle"><span>Heritage Boat Clubs</span> <span>Around the World</span></h5>
-                            <p>Examples of other heritage boat clubs in different countries.</p>
+                            <h3 class="title">@lang('pages/home.overview_subtitle')</h3>
+                            <h5 class="subtitle">@lang('pages/home.overview_headline')</h5>
+                            <p>@lang('pages/home.overview_description')</p>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="button-block title-button"><a class="button button--transparent" href="#" data-hover="Discover"><span>Discover</span></a>
+                        <div class="button-block title-button">
+                            <a class="button button--transparent" href="#" data-hover="@lang('pages/home.overview_cta')"><span>@lang('pages/home.overview_cta')</span></a>
                         </div>
                     </div>
                 </div>
@@ -118,14 +117,14 @@
 
         </section>
         <!-- services inner start-->
-        <section class="section Clubs services-inner services-inner--style-3 no-padding-bottom">
+        <section class="section Clubs services-inner services-inner--style-3 no-padding-bottom text-center">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="heading primary-heading wow fadeInUp">
-                            <h3 class="title">Our</h3>
-                            <h5 class="subtitle"><span>Clubs</span> <span>In Iraq</span></h5>
-                            <p>Discover the Clubs and Contact them through club page</p>
+                        <div class="heading primary-heading wow fadeInUp @lang('pages/home.clubs_class')">
+                            <h3 class="title">@lang('pages/home.clubs_subtitle')</h3>
+                            <h5 class="subtitle">@lang('pages/home.clubs_headline')</h5>
+                            <p>@lang('pages/home.clubs_description')</p>
                         </div>
                     </div>
                 </div>
@@ -223,12 +222,12 @@
                 <div class="row align-items-end margin-bottom">
                     <div class="col-lg-9 col-md-8">
                         <div class="heading primary-heading">
-                            <h3 class="title">Blog</h3>
-                            <h5 class="subtitle wow fadeInUp"><span>News &amp;</span> <span>Insights</span></h5>
+                            <h3 class="title">@lang('pages/home.blog_subtitle')</h3>
+                            <h5 class="subtitle wow fadeInUp">@lang('pages/home.blog_title')</h5>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 d-none d-lg-block">
-                        <div class="button-holder"><a class="button button--transparent" href="comingsoon.html" data-hover="All Articles"><span>All Articles</span></a>
+                        <div class="button-holder"><a class="button button--transparent" href="comingsoon.html" data-hover="@lang('pages/home.blog_cta')"><span>@lang('pages/home.blog_cta')</span></a>
                         </div>
                     </div>
                 </div>
@@ -268,7 +267,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 d-block d-lg-none">
-                        <div class="button-holder text-center margin-top"><a class="button button--transparent" href="comingsoon.html" data-hover="All Articles"><span>All Articles</span></a>
+                        <div class="button-holder text-center margin-top">
+                            <a class="button button--transparent" href="comingsoon.html" data-hover="@lang('pages/home.blog_cta')"><span>@lang('pages/home.blog_cta')</span></a>
                         </div>
                     </div>
                 </div>
@@ -276,15 +276,16 @@
         </section>
         <!-- news-style-2 end-->
         <!-- banner start-->
-        <section class="section banner">
+        <section class="section banner @lang('pages/home.calendar_class')">
             <picture>
                 <source srcset="{{url('public/img')}}/calendar.jpg" media="(min-width: 576px)" /><img class="img-bg" src="{{url('public/img')}}/calendar-mob.jpg" alt="banner" />
             </picture>
             <div class="container">
                 <div class="row">
                     <div class="col-xl-7 col-lg-8 col-md-9">
-                        <h1 class="title">Calendar</h1>
-                        <p>Calendar of training sessions and other events at all clubs.</p><a class="button button--transparent" href="comingsoon.html" data-hover="Discover"><span>Discover</span></a>
+                        <h1 class="title">@lang('pages/home.calendar_title')</h1>
+                        <p>@lang('pages/home.calendar_description')</p>
+                        <a class="button button--transparent" href="comingsoon.html" data-hover="@lang('pages/home.calendar_cta')"><span>@lang('pages/home.calendar_cta')</span></a>
                     </div>
                 </div>
             </div>
