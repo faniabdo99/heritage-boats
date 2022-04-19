@@ -17,8 +17,8 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="align-container">
-                            <div class="align-item"><span>Iraqi Heritage Boat Clubs Network</span>
-                                <h1 class="title wow fadeInUp">Contact Us</h1>
+                            <div class="align-item"><span>@lang('pages/contact.hero_headline')</span>
+                                <h1 class="title wow fadeInUp">@lang('pages/contact.hero_title')</h1>
                             </div>
                         </div>
                     </div>
@@ -37,17 +37,17 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="title-block">
-                                            <h2 class="title">. <span>Contact</span> Us</h2>
+                                            <h2 class="title">@lang('pages/contact.contact_title')</h2>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="address-block inner-block">
-                                            <p class="address">To find out more about the Heritage Boat Clubs Network, arrange visits to any club, or enquire about establishing a new club, please contact:</p>
+                                            <p class="address">@lang('pages/contact.contact_address_1')</p>
                                         </div>
                                         <div class="address-block inner-block main-contact-network">
-                                            <p class="address">Captain Sabah Al-Rubaie – Network Coordinator</p>
+                                            <p class="address">@lang('pages/contact.contact_address_2')</p>
                                         </div>
                                     </div>
                                     <div class="col-12">
@@ -70,41 +70,41 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="title-block">
-                                            <h3 class="title text-left">Get in <span>Touch</span></h3>
+                                            <h3 class="title text-left">@lang('pages/contact.form_title')</h3>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label class="input-label">
-                                            <input class="form-field input input-name" id="input-name" type="text" name="name" required="required"/><span>Name</span>
+                                            <input class="form-field input input-name" id="input-name" type="text" name="name" required="required"/><span>@lang('pages/contact.form_name')</span>
                                         </label>
                                     </div>
                                     <div class="col-md-6">
                                         <label class="input-label">
-                                            <input class="form-field input input-text" id="input-text" type="text" name="subject" required="required"/><span>Subject</span>
+                                            <input class="form-field input input-text" id="input-text" type="text" name="subject" required="required"/><span>@lang('pages/contact.form_subject')</span>
                                         </label>
                                     </div>
                                     <div class="col-md-6">
                                         <label class="input-label">
-                                            <input class="form-field input input-tel" id="input-tel" type="tel" name="phone" required="required"/><span>Phone</span>
+                                            <input class="form-field input input-tel" id="input-tel" type="tel" name="phone" required="required"/><span>@lang('pages/contact.form_phone')</span>
                                         </label>
                                     </div>
                                     <div class="col-md-6">
                                         <label class="input-label">
-                                            <input class="form-field input input-mail" id="input-mail" type="email" name="email" required="required"/><span>Email</span>
+                                            <input class="form-field input input-mail" id="input-mail" type="email" name="email" required="required"/><span>@lang('pages/contact.form_email')</span>
                                         </label>
                                     </div>
                                     <div class="col-12">
                                         <label class="textarea-label">
-                                            <textarea class="form-field textarea" id="textarea" name="message"></textarea><span>Comment</span>
+                                            <textarea class="form-field textarea" id="textarea" name="message"></textarea><span>@lang('pages/contact.form_comment')</span>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="button-holder text-left">
-                                            <button class="button button--transparent" type="submit" data-hover="Send"><span>Send</span></button>
+                                            <button class="button button--transparent" type="submit" data-hover="Send"><span>@lang('pages/contact.form_send')</span></button>
                                             <div class="form__note"></div>
                                         </div>
                                     </div>
@@ -123,8 +123,8 @@
                     <div class="col-xl-6 col-lg-7">
                         <div class="heading primary-heading heading-with-button">
                             <div class="text-block">
-                                <h3 class="title">Our Clubs</h3>
-                                <h5 class="subtitle"><span>To connect with a specific club directly,</span> <span> contact the following local coordinators:</span></h5>
+                                <h3 class="title">@lang('pages/contact.location_title')</h3>
+                                <h5 class="subtitle">@lang('pages/contact.location_subtitle')</h5>
                             </div>
                         </div>
                     </div>
@@ -141,14 +141,14 @@
                         <!-- team-item--grayscaled start-->
                         <div class="team-item team-item--grayscaled">
                             <div class="img-holder"><img class="img-bg" src="{{url('public/img')}}/citiesphotos/babel.jpg" alt="img"/></div>
-                            <div class="description"><span class="name">Babylon Heritage Boat Club</span>
-                                <span class="position">Sabah Al-Rubaie</span>
+                            <div class="description"><span class="name">@lang('pages/contact.location_babylon_name')</span>
+                                <span class="position">@lang('pages/contact.location_position_name')</span>
                                 <span class="position"><a href="tel:+9647716748880">+964 7716 748 880</a></span>
-                                <span class="position"><a href="">Google Maps Link</a></span>
+                                <span class="position"><a href="">@lang('pages/contact.location_position_google_map')</a></span>
 
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="button-holder"><a class="button button--primary button--dark" href="#" data-hover="Visit Club Page"><span>Visit Club Page</span></a>
+                                        <div class="button-holder"><a class="button button--primary button--dark" href="#" data-hover="Visit Club Page"><span>@lang('pages/contact.location_cta')</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -160,14 +160,14 @@
                         <!-- team-item--grayscaled start-->
                         <div class="team-item team-item--grayscaled">
                             <div class="img-holder"><img class="img-bg" src="{{url('public/img')}}/citiesphotos/basra.jpg" alt="img"/></div>
-                            <div class="description"><span class="name">Basra Heritage Boat Club</span>
-                                <span class="position">Sabah Al-Rubaie</span>
+                            <div class="description"><span class="name">@lang('pages/contact.location_basra_name')</span>
+                                <span class="position">@lang('pages/contact.location_position_name')</span>
                                 <span class="position"><a href="tel:+9647716748880">+964 7716 748 880</a></span>
-                                <span class="position"><a href="">Google Maps Link</a></span>
+                                <span class="position"><a href="">@lang('pages/contact.location_position_google_map')</a></span>
 
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="button-holder"><a class="button button--primary button--dark" href="#" data-hover="Visit Club Page"><span>Visit Club Page</span></a>
+                                        <div class="button-holder"><a class="button button--primary button--dark" href="#" data-hover="Visit Club Page"><span>@lang('pages/contact.location_cta')</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -179,14 +179,14 @@
                         <!-- team-item--grayscaled start-->
                         <div class="team-item team-item--grayscaled">
                             <div class="img-holder"><img class="img-bg" src="{{url('public/img')}}/citiesphotos/chip.jpg" alt="img"/></div>
-                            <div class="description"><span class="name">Chibayish Heritage Boat Club</span>
-                                <span class="position">Sabah Al-Rubaie</span>
+                            <div class="description"><span class="name">@lang('pages/contact.location_chibayish_name')</span>
+                                <span class="position">@lang('pages/contact.location_position_name')</span>
                                 <span class="position"><a href="tel:+9647716748880">+964 7716 748 880</a></span>
-                                <span class="position"><a href="">Google Maps Link</a></span>
+                                <span class="position"><a href="">@lang('pages/contact.location_position_google_map')</a></span>
 
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="button-holder"><a class="button button--primary button--dark" href="#" data-hover="Visit Club Page"><span>Visit Club Page</span></a>
+                                        <div class="button-holder"><a class="button button--primary button--dark" href="#" data-hover="Visit Club Page"><span>@lang('pages/contact.location_cta')</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -198,14 +198,14 @@
                         <!-- team-item--grayscaled start-->
                         <div class="team-item team-item--grayscaled">
                             <div class="img-holder"><img class="img-bg" src="{{url('public/img')}}/citiesphotos/bgd.jpg" alt="img"/></div>
-                            <div class="description"><span class="name">Baghdad Heritage Boat Club</span>
-                                <span class="position">Sabah Al-Rubaie</span>
+                            <div class="description"><span class="name">@lang('pages/contact.location_baghdad_name')</span>
+                                <span class="position">@lang('pages/contact.location_position_name')</span>
                                 <span class="position"><a href="tel:+9647716748880">+964 7716 748 880</a></span>
-                                <span class="position"><a href="">Google Maps Link</a></span>
+                                <span class="position"><a href="">@lang('pages/contact.location_position_google_map')</a></span>
 
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="button-holder"><a class="button button--primary button--dark" href="#" data-hover="Visit Club Page"><span>Visit Club Page</span></a>
+                                        <div class="button-holder"><a class="button button--primary button--dark" href="#" data-hover="Visit Club Page"><span>@lang('pages/contact.location_cta')</span></a>
                                         </div>
                                     </div>
                                 </div>

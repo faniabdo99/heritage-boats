@@ -1,10 +1,10 @@
 <?php
 return [
-       //Hero Section
-      'hero_headline' => 'Contact a Local Club to <span>join training sessions</span>',
-      'hero_description' => 'please visit our Contacts page for details of local coordinators',
-      'hero_cta' => 'Discover',
-      //Hero Promo
+    //Hero Section
+    'hero_headline' => 'Contact a Local Club to <span>join training sessions</span>',
+    'hero_description' => 'please visit our Contacts page for details of local coordinators',
+    'hero_cta' => 'Discover',
+    //Hero Promo
     'promo_header' => 'Find more about Heritage Boat Clubs Network:',
     'promo_coordinator' => 'Captain Sabah Al-Rubaie – Network Coordinator',
     'promo_phone' => 'Phone:',

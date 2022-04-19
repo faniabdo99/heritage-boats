@@ -17,8 +17,8 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="align-container">
-                            <div class="align-item"><span>Iraqi Heritage Boat Clubs Network</span>
-                                <h1 class="title wow fadeInUp">Acknowledgments</h1>
+                            <div class="align-item"><span>@lang('pages/acknowlegement.hero_headline')</span>
+                                <h1 class="title wow fadeInUp">@lang('pages/acknowlegement.hero_title')</h1>
                             </div>
                         </div>
                     </div>
@@ -33,15 +33,12 @@
                     <div class="col-12">
                         <div class="heading primary-heading Acknowledge">
                             <h3 class="title">ـــــــــ</h3>
-                            <h5 class="subtitle"><span>Acknowledgements</span></h5>
-                            <p>The founders of the Heritage Boat Clubs Network firstly wish to honour the makers and communities who have preserved the crafts of traditional boatbuilding, and who have generously shared their knowledge, skills, and spirit to enable this heritage to be passed on for future generations.</p>
+                            <h5 class="subtitle"><span>@lang('pages/acknowlegement.hero_title')</span></h5>
+                            <p>@lang('pages/acknowlegement.pricing_description')</p>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
 
             <!-- pricing table inner start-->
             <div class="pricing-table--inner">
@@ -52,20 +49,20 @@
                             <div class="pricing-item">
                                 <div class="row align-items-center">
                                     <div class="col-lg-6">
-                                        <h4 class="title">Huwair Traditional Boat Workshop</h4>
+                                        <h4 class="title">@lang('pages/acknowlegement.huwair_title')</h4>
                                     </div>
                                     <div class="col-lg-6">
                                         <ul class="item-list">
-                                            <li>Zuhair Rissan Obaid (Abu Sajjad)</li>
-                                            <li>Usta Jewad Kadhim Allawi (Abu Kadhim)</li>
-                                            <li>Hassan Shakir Abdallah</li>
-                                            <li>Adil Shakir Abdallah</li>
-                                            <li>Usta Nassir Saddam Saalim</li>
-                                            <li>Hafedh Ghaji Jabbar</li>
-                                            <li>Yusuf Majid Jassim</li>
-                                            <li>Duway Rissan Obaid/li>
-                                            <li>Munshid Abu Nassir</li>
-                                            <li>KIn fond memory of Ghanim Abed Ali al-Duwaili al-Asadi (Abu Hamid), guiding spirit of our first workshop in 2018</li>
+                                            <li>@lang('pages/acknowlegement.huwair_zuhair')</li>
+                                            <li>@lang('pages/acknowlegement.huwair_gawad')</li>
+                                            <li>@lang('pages/acknowlegement.huwair_hassan')</li>
+                                            <li>@lang('pages/acknowlegement.huwair_adil')</li>
+                                            <li>@lang('pages/acknowlegement.huwair_naser')</li>
+                                            <li>@lang('pages/acknowlegement.huwair_hafedh')</li>
+                                            <li>@lang('pages/acknowlegement.huwair_yusuf')</li>
+                                            <li>@lang('pages/acknowlegement.huwair_duway')</li>
+                                            <li>@lang('pages/acknowlegement.huwair_munshid')</li>
+                                            <li>@lang('pages/acknowlegement.huwair_kin')</li>
 
                                         </ul>
                                     </div>
@@ -80,13 +77,13 @@
                             <div class="pricing-item">
                                 <div class="row align-items-center">
                                     <div class="col-lg-6">
-                                        <h4 class="title">Babylon</h4>
+                                        <h4 class="title">@lang('pages/acknowlegement.babylon_title')</h4>
                                     </div>
                                     <div class="col-lg-6">
                                         <ul class="item-list">
-                                            <li>Khudair Hussain Ali (Abu Amal)</li>
-                                            <li>Ali Khudair Abbas (Abu Haider) </li>
-                                            <li>Rabah Hadi (Abu Ahmed)</li>
+                                            <li>@lang('pages/acknowlegement.babylon_khudair')</li>
+                                            <li>@lang('pages/acknowlegement.babylon_ali') </li>
+                                            <li>@lang('pages/acknowlegement.babylon_rabah')</li>
                                         </ul>
                                     </div>
 
@@ -100,12 +97,12 @@
 
                                 <div class="row align-items-center">
                                     <div class="col-lg-6">
-                                        <h4 class="title">Basra</h4>
+                                        <h4 class="title">@lang('pages/acknowlegement.basra_title')</h4>
                                     </div>
                                     <div class="col-lg-6">
                                         <ul class="item-list">
-                                            <li>Abu Dhafer and sons, Hussain and Dhafer Nouri</li>
-                                            <li>Asaad Salman Dawood</li>
+                                            <li>@lang('pages/acknowlegement.basra_abu_dhafer')</li>
+                                            <li>@lang('pages/acknowlegement.basra_assad')</li>
                                         </ul>
                                     </div>
 
@@ -118,15 +115,15 @@
                             <div class="pricing-item">
                                 <div class="row align-items-center">
                                     <div class="col-lg-6">
-                                        <h4 class="title">Hit</h4>
+                                        <h4 class="title">@lang('pages/acknowlegement.hit_title')</h4>
                                     </div>
                                     <div class="col-lg-6">
                                         <ul class="item-list">
-                                            <li>Haji Hamdi Noaman</li>
-                                            <li>Kain Khudair Jabir</li>
-                                            <li>Sirwan Muhi al-Kurdi</li>
-                                            <li>Saleh Kain Khudair</li>
-                                            <li>Raafat Jabar Raziq al-Hiti</li>
+                                            <li>@lang('pages/acknowlegement.hit_haji')</li>
+                                            <li>@lang('pages/acknowlegement.hit_kain')</li>
+                                            <li>@lang('pages/acknowlegement.hit_sirwan')</li>
+                                            <li>@lang('pages/acknowlegement.hit_saleh')</li>
+                                            <li>@lang('pages/acknowlegement.hit_raafat')</li>
 
                                         </ul>
                                     </div>
@@ -152,17 +149,15 @@
                         <div class="tabs-content">
                             <!-- tabs content item start-->
                             <div class="tabs-content__item">
-
-                                <p>Secondly, we acknowledge the vision and hard work of the artist Rashad Salim, and the dedicated efforts of the Safina Projects team and all their collaborators since 2016 whose work has contributed to revitalising traditional Iraqi boatbuilding and learning from this heritage.</p>
-
-                                <p>The Heritage Boat Clubs Network has been launched in 2021-22 thanks to the kind support of ALIPH Foundation (International Alliance for the Protection of Heritage in Conflict Areas) and the
-                                    the British Council’s Cultural Protection Fund in partnership with DCMS.
+                                <p>
+                                    @lang('pages/acknowlegement.appreciation_letter_one')
                                 </p>
-
+                                <p>
+                                    @lang('pages/acknowlegement.appreciation_letter_two')
+                                </p>
                             </div>
                             <!-- tabs content item end-->
                         </div>
-
                     </div>
                 </div>
                 <!-- details tabs end  -->
