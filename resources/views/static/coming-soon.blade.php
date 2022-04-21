@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{app()->getLocale()}}" dir="@lang('settings.direction')">
 @include('layout.header')
 <body>
 @include('layout.loader')
@@ -12,7 +12,6 @@
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
-
                     <div class="col-md-12 col-sm-12">
                         <div class="home-info">
                             <!-- get in touch start-->
@@ -31,12 +30,10 @@
                                                             </div>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
                                         <!-- contacts-banner end-->
-
                                         <div class="col-md-12 col-xs-12">
                                             <div class="form-wrapper">
                                                 <!-- contact form start-->
@@ -45,7 +42,7 @@
                                                     <div class="row">
                                                         <div class="col-6">
                                                             <div class="title-block">
-                                                                <h3 class="title text-left">@lang('pages/contact.form_title')</h3>
+                                                                <h3 class="title @lang('settings.text_align')">@lang('pages/contact.form_title')</h3>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -78,8 +75,8 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-12">
-                                                            <div class="button-holder text-left">
-                                                                <button class="button button--transparent" type="submit" data-hover="Send"><span>@lang('pages/contact.form_send')</span></button>
+                                                            <div class="button-holder @lang('settings.text_align')">
+                                                                <button class="button button--transparent" type="submit" data-hover="@lang('pages/contact.form_send')"><span>@lang('pages/contact.form_send')</span></button>
                                                                 <div class="form__note"></div>
                                                             </div>
                                                         </div>
@@ -93,7 +90,6 @@
                             </section>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>

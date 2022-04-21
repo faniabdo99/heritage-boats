@@ -31,7 +31,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="heading primary-heading Acknowledge">
+                        <div class="heading primary-heading Acknowledge @lang('pages/acknowlegement.page_title_class')">
                             <h3 class="title">ـــــــــ</h3>
                             <h5 class="subtitle"><span>@lang('pages/acknowlegement.hero_title')</span></h5>
                             <p>@lang('pages/acknowlegement.pricing_description')</p>

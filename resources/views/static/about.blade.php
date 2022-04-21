@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{app()->getLocale()}}" dir="@lang('settings.direction')">
 @include('layout.header')
 <body>
 @include('layout.loader')
@@ -147,13 +147,13 @@
         </section>
         <!-- testimonials-primary end-->
         <!-- statistics start-->
-        <section class="section statistics">
+        <section class="section statistics text-center">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="heading primary-heading">
+                        <div class="heading primary-heading @lang('pages/about.statistics_counter_class')">
                             <h3 class="title">@lang('pages/about.statistics_title')</h3>
-                            <h5 class="subtitle"><span>@lang('pages/about.statistics_subtitle')</span></h5>
+                            <h5 class="subtitle @lang('pages/about.statistics_counter_class_2')"><span>@lang('pages/about.statistics_subtitle')</span></h5>
                         </div>
                     </div>
                 </div>

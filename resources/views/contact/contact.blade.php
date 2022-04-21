@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{app()->getLocale()}}" dir="@lang('settings.direction')">
 @include('layout.header')
 <body>
 @include('layout.loader')
@@ -52,10 +52,9 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="phones-block inner-block main-contact-phone">
-                                            <p><a href="tel:+9647716748880">+964 7716 748 880</a></p>
+                                            <p><a dir="ltr" href="tel:+9647716748880">+964 7716 748 880</a></p>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -70,7 +69,7 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="title-block">
-                                            <h3 class="title text-left">@lang('pages/contact.form_title')</h3>
+                                            <h3 class="title @lang('settings.text_align')">@lang('pages/contact.form_title')</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -103,8 +102,8 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="button-holder text-left">
-                                            <button class="button button--transparent" type="submit" data-hover="Send"><span>@lang('pages/contact.form_send')</span></button>
+                                        <div class="button-holder @lang('settings.text_align')">
+                                            <button class="button button--transparent" type="submit" data-hover="@lang('pages/contact.form_send')"><span>@lang('pages/contact.form_send')</span></button>
                                             <div class="form__note"></div>
                                         </div>
                                     </div>

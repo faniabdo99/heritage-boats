@@ -5,6 +5,7 @@ return [
     'hero_headline' => 'Iraqi Heritage Boat Clubs Network',
     'hero_title' => 'Acknowledgments',
     //Pricing Section
+    'page_title_class' => '',
     'pricing_description' => 'The founders of the Heritage Boat Clubs Network firstly wish to honour the makers and communities who have preserved the crafts of traditional boatbuilding, and who have generously shared their knowledge, skills, and spirit to enable this heritage to be passed on for future generations.',
     'huwair_title' => 'Huwair Traditional Boat Workshop',
     'huwair_zuhair' => 'Zuhair Rissan Obaid (Abu Sajjad)',

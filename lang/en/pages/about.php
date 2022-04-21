@@ -32,5 +32,7 @@ return [
     'statistics_counter_club' => 'Clubs',
     'statistics_counter_events' => 'Events',
     'statistics_counter_visitors' => 'Visitors',
+    'statistics_counter_class' => '',
+    'statistics_counter_class_2' => '',
 ]
 ?>

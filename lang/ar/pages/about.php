@@ -7,8 +7,8 @@ return [
     //About Section
     'about_title' => 'سنتحدث عن',
     'about_description_title' => 'ابتدأت رحلتنا في عام ٢٠٢١',
-    'about_description_paragraph_one' => 'شبكة أندية القوارب التراثية العراقية هي مبادرة تم إطلاقها في عام ٢٠٢١ لإحياء استخدام القوارب التقليدية ضمن نشاط رياضي وترفيهي تنظمه أندية القوارب المحلية في جميع أنحاء العراق.',
-    'about_description_paragraph_two' => 'تعتبر الأندية أيضاً نقاط محورية للبحث التجريبي في التراث والبيئة في مناطق هذه القوارب المحلية.',
+    'about_description_paragraph_1' => 'شبكة أندية القوارب التراثية العراقية هي مبادرة تم إطلاقها في عام ٢٠٢١ لإحياء استخدام القوارب التقليدية ضمن نشاط رياضي وترفيهي تنظمه أندية القوارب المحلية في جميع أنحاء العراق.',
+    'about_description_paragraph_2' => 'تعتبر الأندية أيضاً نقاط محورية للبحث التجريبي في التراث والبيئة في مناطق هذه القوارب المحلية.',
     //Community Section
     'community_title' => 'مجتمع',
     'community_subtitle' => 'لبناء شبكة من المجتمعات من أجزاء البلاد المختلفة',
@@ -32,5 +32,7 @@ return [
     'statistics_counter_club' => 'نادي',
     'statistics_counter_events' => 'حدث',
     'statistics_counter_visitors' => 'زائر',
+    'statistics_counter_class' => 'status-ara',
+    'statistics_counter_class_2' => 'status-heading',
 ]
 ?>
