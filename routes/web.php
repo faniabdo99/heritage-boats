@@ -40,7 +40,7 @@ Route::middleware('guest')->group(function(){
     Admin panel routes:
     Middleware: admin
     Prefix: /admin/
-    */
+*/
 Route::group(['prefix' => 'admin' , 'middleware' => 'admin'] , function(){
     Route::get('/' , [AdminController::class , 'getHome'])->name('admin.home');
     Route::get('logout' , [AuthController::class, 'logout'])->name('logout');
