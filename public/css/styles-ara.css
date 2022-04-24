@@ -160,3 +160,6 @@ footer.footer .footer-menu li {
 .footer-nav {
     direction: ltr
 }
+.article-item__details,.articles__title,.recent-item,.recent-item,.recent-comment {
+    text-align: right;
+}
