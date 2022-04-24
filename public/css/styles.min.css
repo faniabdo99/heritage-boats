@@ -22917,6 +22917,9 @@ footer.footer .socials-holder.socials-mobile {
     color:#fff;
     text-align: left
 }
+.form.contact--form .textarea-label span  {
+    color: #aaaaaa;
+}
 #home .contacts-banner {
     margin-left:auto
 }
@@ -24706,6 +24709,12 @@ footer.footer .socials-holder.socials-mobile {
     .comments-block .comment-detail {
         margin: 0
     }
+}
+.live-comment .primary-heading .subtitle {
+    text-align: center;
+}
+.live-comment .primary-heading {
+    margin-right: auto;
 }
 
 .comments-block .comment-detail .count {
