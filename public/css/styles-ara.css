@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
+@font-face {
+    font-family: "AvenirNextLTPro";
+    src: url("public/fonts/AvenirNextLTPro/AvenirNextLTPro-Bold.otf");
+    src: url("public/fonts/AvenirNextLTPro/AvenirNextLTPro-Regular.otf");
+    src: url("public/fonts/AvenirNextLTPro/AvenirNextLTPro-It.otf");
+    }
 body {
     direction: rtl;
-    font-family: 'Readex Pro', sans-serif;
+    font-family: 'Noto Naskh Arabic','AvenirNextLTPro', serif;
 }
-
 .promo-lower {
     left: 0;
     right: auto;
@@ -178,4 +182,17 @@ footer.footer .footer-menu li {
 }
 .info-box__title a {
     padding-right: 0px
+}
+.main-menu .sub-menu > li > a, .main-menu > li > a {
+    font-size: 17px;
+    font-weight :bold
+}
+.logo-font span {
+    font-weight :bold
+}
+.about-welcome .description .title {
+    font-size: 40px;
+}
+.main-menu .sub-menu {
+    left: -164px;
 }

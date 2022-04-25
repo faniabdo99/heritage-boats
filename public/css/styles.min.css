@@ -1,5 +1,10 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+font-family: "AvenirNextLTPro";
+src: url("public/fonts/AvenirNextLTPro/AvenirNextLTPro-Bold.otf");
+src: url("public/fonts/AvenirNextLTPro/AvenirNextLTPro-Regular.otf");
+src: url("public/fonts/AvenirNextLTPro/AvenirNextLTPro-It.otf");
+}
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -17016,7 +17021,7 @@ body.compensate-for-scrollbar {
 }
 
 body {
-font-family: 'Heebo', sans-serif;
+font-family: 'AvenirNextLTPro', sans-serif;
     color: #333;
     font-size: 14px;
     min-height: 100vh;
@@ -17087,8 +17092,8 @@ textarea {
 
 .button {
     display: inline-block;
-    color: #0d73fc;
-    border: 2px solid #0d73fc;
+    color: #a16133;
+    border: 2px solid #a16133;
     font-weight: 500;
     text-decoration: none;
     position: relative;
@@ -17198,7 +17203,7 @@ textarea {
 }
 
 .button.button--transparent::before {
-    background-color: #0d73fc;
+    background-color: #cb680f;
     color: #fff
 }
 
@@ -17209,7 +17214,7 @@ textarea {
 
 .button.button--filled span {
     color: #fff;
-    background-color: #0d73fc
+    background-color: #cb680f
 }
 
 .button.button--filled::before {
@@ -17307,7 +17312,7 @@ textarea {
 }
 
 .primary-heading .title {
-    color: #0d73fc;
+    color: #8f2324;
     font-size: 13px;
     line-height: 27px;
     font-weight: 500;
@@ -18785,10 +18790,11 @@ ul li::before {
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;
-    width: 120px;
+    width: 150px;
     margin-top: 5px;
     margin-left: 10px;
-
+    text-transform: uppercase;
+    font-weight: bolder;
 }
 .logo-block .logo svg {
     fill: #0d73fc;
@@ -19129,7 +19135,7 @@ ul li::before {
 .main-menu .sub-menu > li > a,
 .main-menu > li > a {
     font-size: 13px;
-    font-weight: 500;
+    font-weight: bolder;
     text-decoration: none;
     text-transform: uppercase;
     position: relative
@@ -19147,7 +19153,7 @@ ul li::before {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: #0d73fc;
+    background-color: #a16133;
     -webkit-transition: width .3s;
     -o-transition: width .3s;
     transition: width .3s
@@ -19180,7 +19186,7 @@ ul li::before {
     display: block;
     width: 6px;
     height: 2px;
-    background-color: #0d73fc;
+    background-color: #a16133;
     position: absolute;
     pointer-events: none;
     -webkit-transition: all .3s;
