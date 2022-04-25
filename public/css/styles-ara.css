@@ -33,7 +33,9 @@ body {
     text-align: right;
 }
 .info-box__category {
-    left: auto
+    left: auto;
+    text-align: right;
+    margin-right: 20px;
 }
 .calendar-ara {
     direction: ltr;
@@ -161,4 +163,19 @@ footer.footer .footer-menu li {
 }
 .article-item__details,.articles__title,.recent-item,.recent-item,.recent-comment {
     text-align: right;
+}
+.info-box__title {
+    text-align: right;
+}
+.info-box__title a {
+    font-size: 16px;
+}
+.info-box__number {
+    text-align: right;
+}
+.info-box__hidden {
+    text-align: right;
+}
+.info-box__title a {
+    padding-right: 0px
 }

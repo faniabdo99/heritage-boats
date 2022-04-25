@@ -18777,9 +18777,19 @@ ul li::before {
     text-decoration: none;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center
+    align-items: center;
+    width: 55px;
 }
+.logo-font span {
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 120px;
+    margin-top: 5px;
+    margin-left: 10px;
 
+}
 .logo-block .logo svg {
     fill: #0d73fc;
     font-size: 30px;
@@ -23236,7 +23246,8 @@ footer.footer .socials-holder.socials-mobile {
     letter-spacing: -.050em;
     margin-bottom: 10px;
     padding: 0 25px;
-    opacity: .3
+    opacity: .3;
+    text-align: left;
 }
 
 .info-box__title {
@@ -23250,7 +23261,8 @@ footer.footer .socials-holder.socials-mobile {
     -ms-flex-align: center;
     align-items: center;
     padding: 25px 0;
-    margin-bottom: 0
+    margin-bottom: 0;
+    text-align: left;
 }
 
 .info-box__title a {
@@ -23295,7 +23307,8 @@ footer.footer .socials-holder.socials-mobile {
 }
 
 .info-box__hidden {
-    padding-bottom: 30px
+    padding-bottom: 30px;
+    text-align: left;
 }
 
 .info-box__link {

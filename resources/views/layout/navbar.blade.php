@@ -5,7 +5,7 @@
             <!-- main menu start-->
             <nav class="menu-holder">
                 <ul class="mobile-menu">
-                    <li class="menu-item"><a href="{{route('home')}}"><span>@lang('layout.home')</span></a></li>
+                    <li class="menu-item"><<img class="jarallax-img img-bg" src="{{url('public/img')}}/contact.jpg" alt="img"/><a href="{{route('home')}}"><span>@lang('layout.home')</span></a></li>
                     <li class="menu-item menu-item--has-child"><a href="javascript:void(0);"><span>@lang('layout.clubs')</span> </a>
                         <!-- sub-menu start-->
                         <ul class="sub-menu">
@@ -37,7 +37,7 @@
         <div class="row">
             <div class="col-12 column">
                 <!-- logo block start-->
-                <div class="logo-block"><a class="logo" href="{{route('home')}}"><span>@lang('layout.site_title')</span></a></div>
+                <div class="logo-block"><a class="logo-font"><img class="logo" src="{{url('public/img')}}/HeritageLogo.svg"><span>@lang('layout.site_title')</span></a></div>
                 <!-- logo block end-->
                 <!-- menu block start-->
                 <div class="menu-block">
