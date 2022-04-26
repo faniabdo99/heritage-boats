@@ -65,7 +65,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Content: *</label>
-                                        <textarea name="content" class="form-control input-default" rows="10" placeholder="The article content" required></textarea>
+                                        <textarea name="content" class="editor form-control input-default" rows="10" placeholder="The article content"></textarea>
                                     </div>
                                     <div class="custom-control custom-checkbox mb-3 checkbox-warning">
                                         <input type="checkbox" class="custom-control-input" name="is_promoted" id="is_promoted">

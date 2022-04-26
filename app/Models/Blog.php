@@ -8,4 +8,10 @@ class Blog extends Model{
     public function getIsPromotedTextAttribute(){
         return ($this->is_promoted) ? 'Yes' : 'No';
     }
+    public function getImagePathAttribute(){
+        return url('storage/app/public/images/blogs/'.$this->image);
+    }
+    public function User() {
+        return $this->belongsTo(User::class , 'user_id');
+    }
 }

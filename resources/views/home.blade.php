@@ -137,15 +137,15 @@
                                 <!-- item start-->
                                 <div class="info-box">
                                     <div class="info-box__img"><img src="{{url('public/img')}}/citiesphotos/basra.jpg" alt="service" /></div>
-                                    <div class="info-box__category">Iraqi Heritage Boat Clubs Network </div>
+                                    <div class="info-box__category">@lang('pages/home.club_card_title') </div>
                                     <div class="info-box__description">
                                         <div class="info-box__number">01</div>
                                         <div class="info-box__inner">
-                                            <h4 class="info-box__title"> <a href="services-details.html">Basra Heritage Boat Club</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
+                                            <h4 class="info-box__title"> <a href="{{route('comingSoon')}}">@lang('pages/home.club_basra')</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
                                             <div class="info-box__hidden">
-                                                <p>Asaad Salman Dawood
-                                                    +964 7730 770 800
-                                                </p><a class="info-box__link with--line" href="services-details.html">Explore more</a>
+                                                <p>@lang('pages/home.assad_salman')<br>
+                                                    <span dir="ltr">+964 773 077 0800</span>
+                                                </p><a class="info-box__link with--line" href="{{route('comingSoon')}}">@lang('pages/home.club_explore_more')</a>
                                             </div>
                                         </div>
                                     </div>
@@ -156,15 +156,15 @@
                                 <!-- item start-->
                                 <div class="info-box">
                                     <div class="info-box__img"><img src="{{url('public/img')}}/citiesphotos/chip.jpg" alt="service" /></div>
-                                    <div class="info-box__category">Iraqi Heritage Boat Clubs Network </div>
+                                    <div class="info-box__category">@lang('pages/home.club_card_title')</div>
                                     <div class="info-box__description">
                                         <div class="info-box__number">02</div>
                                         <div class="info-box__inner">
-                                            <h4 class="info-box__title"> <a href="services-details.html">Chibayish Heritage Boat Club</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
+                                            <h4 class="info-box__title"> <a href="{{route('comingSoon')}}">@lang('pages/home.club_chibayish')</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
                                             <div class="info-box__hidden">
                                                 <p>[name]
                                                     [phone]
-                                                </p><a class="info-box__link with--line" href="services-details.html">Explore more</a>
+                                                </p><a class="info-box__link with--line" href="{{route('comingSoon')}}">@lang('pages/home.club_explore_more')</a>
                                             </div>
                                         </div>
                                     </div>
@@ -175,15 +175,15 @@
                                 <!-- item start-->
                                 <div class="info-box">
                                     <div class="info-box__img"><img src="{{url('public/img')}}/citiesphotos/babel.jpg" alt="service" /></div>
-                                    <div class="info-box__category">Iraqi Heritage Boat Clubs Network </div>
+                                    <div class="info-box__category">@lang('pages/home.club_card_title')</div>
                                     <div class="info-box__description">
                                         <div class="info-box__number">03</div>
                                         <div class="info-box__inner">
-                                            <h4 class="info-box__title"> <a href="services-details.html">Babylon Heritage Boat Club</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
+                                            <h4 class="info-box__title"> <a href="{{route('comingSoon')}}">@lang('pages/home.club_baghdad')</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
                                             <div class="info-box__hidden">
-                                                <p>Sabah Al-Rubaie
-                                                    +964 7716 748 880
-                                                </p><a class="info-box__link with--line" href="services-details.html">Explore more</a>
+                                                <p>@lang('pages/home.sabah_rubaiee')<br>
+                                                    <span dir="ltr">+964 7716 748 880</span>
+                                                </p><a class="info-box__link with--line" href="{{route('comingSoon')}}">@lang('pages/home.club_explore_more')</a>
                                             </div>
                                         </div>
                                     </div>
@@ -194,15 +194,15 @@
                                 <!-- item start-->
                                 <div class="info-box">
                                     <div class="info-box__img"><img src="{{url('public/img')}}/citiesphotos/bgd.jpg" alt="service" /></div>
-                                    <div class="info-box__category">Iraqi Heritage Boat Clubs Network </div>
+                                    <div class="info-box__category">@lang('pages/home.club_card_title')</div>
                                     <div class="info-box__description">
                                         <div class="info-box__number">03</div>
                                         <div class="info-box__inner">
-                                            <h4 class="info-box__title"> <a href="services-details.html">Baghdad Heritage Boat Club</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
+                                            <h4 class="info-box__title"> <a href="{{route('comingSoon')}}">@lang('pages/home.club_babylon')</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
                                             <div class="info-box__hidden">
                                                 <p>[name]
                                                     [phone]
-                                                </p><a class="info-box__link with--line" href="services-details.html">Explore more</a>
+                                                </p><a class="info-box__link with--line" href="{{route('comingSoon')}}">@lang('pages/home.club_explore_more')</a>
                                             </div>
                                         </div>
                                     </div>

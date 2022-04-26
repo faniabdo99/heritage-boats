@@ -68,7 +68,9 @@ class BlogController extends Controller{
         Usage(s): web.php
     */
     public function getAll(){
-        return view('blog.all');
+        $AllArticles = Blog::latest()->get();
+        $RecentPosts = Blog::latest()->limit(4)->get();
+        return view('blog.all' , compact('AllArticles' , 'RecentPosts'));
     }
     /*
         Function: getSingle($slug, $id);
@@ -76,6 +78,10 @@ class BlogController extends Controller{
         Usage(s): web.php
     */
     public  function getSingle($slug, $id){
-        return view('blog.single');
+        $TheArticle = Blog::find($id);
+        if(!$TheArticle){
+            abort(404);
+        }
+        return view('blog.single', compact('TheArticle'));
     }
 }
