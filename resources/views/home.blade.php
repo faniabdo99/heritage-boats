@@ -241,6 +241,7 @@
                         @empty
                         @endforelse
                     </div>
+                    @if($TopFeaturedArticle)
                     <div class="col-lg-6 wow fadeInUp">
                         <!-- item start-->
                         <div class="news-item--style-2"><a class="img-holder" href="#">
@@ -249,6 +250,7 @@
                             <div class="description"><span class="date">{{$TopFeaturedArticle->created_at->format('d.m.Y')}}</span><a href="{{route('blog.single' , [$TopFeaturedArticle->slug , $TopFeaturedArticle->id])}}">{{$TopFeaturedArticle->local_title}}</a></div>
                         </div>
                     </div>
+                    @endif
                 </div>
             </div>
             <div class="container">
