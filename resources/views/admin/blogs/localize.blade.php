@@ -1,7 +1,5 @@
 @include('admin.layout.header')
-
 <body>
-
 <!--*******************
     Preloader start
 ********************-->
@@ -9,24 +7,19 @@
 <!--*******************
         Preloader end
     ********************-->
-
-
 <!--**********************************
     Main wrapper start
 ***********************************-->
 <div id="main-wrapper">
-
     <!--**********************************
         Nav header start
     ***********************************-->
-@include('admin.layout.navbar')
-
-
-<!--**********************************
+    @include('admin.layout.navbar')
+    <!--**********************************
             Sidebar start
         ***********************************-->
-@include('admin.layout.sidebar')
-<!--**********************************
+    @include('admin.layout.sidebar')
+    <!--**********************************
             Sidebar end
         ***********************************-->
 
@@ -41,43 +34,32 @@
                     @include('admin.layout.notifications')
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Add New Article</h4>
+                            <h4 class="card-title">Translate Article: {{$TheArticle->title}}</h4>
                         </div>
                         <div class="card-body">
                             <div class="basic-form">
-                                <form action="{{route('admin.blogs.postNew')}}" method="post" enctype="multipart/form-data">
+                                <form action="{{route('admin.blogs.postLocalize')}}" method="post" enctype="multipart/form-data">
                                     @csrf
+                                    <input type="hidden" name="blog_id" value="{{$TheArticle->id}}">
                                     <div class="form-group">
                                         <label>Title: *</label>
-                                        <input name="title" type="text" class="form-control input-default " placeholder="5 Benefits of joining a heritage club in Iraq!" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Slug: *</label>
-                                        <input name="slug" type="text" class="form-control input-default " placeholder="5-benefits-of-joining-a-heritage-club-in-iraq" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Image: *</label>
-                                        <input name="image" type="file" class="form-control input-default" required>
+                                        <input name="title_value" type="text" class="form-control input-default " placeholder="{{$TheArticle->title}}" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="category">Category: *</label>
-                                        <input class="form-control input-default" type="text" name="category" id="category" placeholder="Enter article category here" required>
+                                        <input class="form-control input-default" type="text" name="category_value" id="category" placeholder="{{$TheArticle->category}}" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="tags">Tags:</label>
-                                        <input class="form-control input-default" type="text" name="tags" id="tags" placeholder="Enter article tags here seperated by comma eg: tag1,tag2">
+                                        <input class="form-control input-default" type="text" name="tags_value" id="tags" placeholder="{{$TheArticle->tags}}">
                                     </div>
                                     <div class="form-group">
                                         <label>Description: *</label>
-                                        <textarea name="description" class="form-control input-default" rows="10" placeholder="Short description about the article" required></textarea>
+                                        <textarea name="description_value" class="form-control input-default" rows="10" placeholder="{{$TheArticle->description}}" required></textarea>
                                     </div>
                                     <div class="form-group">
                                         <label>Content: *</label>
-                                        <textarea name="content" class="editor form-control input-default" rows="10" placeholder="The article content"></textarea>
-                                    </div>
-                                    <div class="custom-control custom-checkbox mb-3 checkbox-warning">
-                                        <input type="checkbox" class="custom-control-input" name="is_promoted" id="is_promoted">
-                                        <label class="custom-control-label" for="is_promoted">Promote on Homepage?</label>
+                                        <textarea name="content_value" class="editor form-control input-default" rows="10">{{$TheArticle->content}}</textarea>
                                     </div>
                                     <br><br>
                                     <button type="submit" class="btn btn-primary">Submit</button>

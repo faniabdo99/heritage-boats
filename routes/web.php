@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use Illuminate\Support\Facades\Route;
 //Controllers
 use App\Http\Controllers\LocalizationController;
@@ -24,6 +25,7 @@ Route::get('/coming-soon', [ComingSoonController::class , 'getComingSoon'])->nam
 Route::prefix('blog')->group(function (){
     Route::get('/' , [BlogController::class , 'getAll'])->name('blog'); // Blog: resources/view/blog/all
     Route::get('/{slug}/{id}' , [BlogController::class , 'getSingle'])->name('blog.single'); // Blog: resources/view/blog/single
+    Route::post('new-comment' , [CommentController::class , 'postNew'])->name('blog.comment.post');
 });
 /*
     AUTH SYSTEM
@@ -55,6 +57,8 @@ Route::group(['prefix' => 'admin' , 'middleware' => 'admin'] , function(){
         Route::get('/' , [BlogController::class, 'getAdminAll'])->name('admin.blogs.all');
         Route::get('/new' , [BlogController::class, 'getAdminNew'])->name('admin.blogs.getNew');
         Route::post('/new' , [BlogController::class, 'postAdminNew'])->name('admin.blogs.postNew');
+        Route::get('/localize/{id}' , [BlogController::class,'getLocalize'])->name('admin.blogs.getLocalize');
+        Route::post('/localize/{id?}' , [BlogController::class,'postLocalize'])->name('admin.blogs.postLocalize');
     });
     Route::prefix('contact-requests')->group(function(){
         Route::get('/' , [ContactController::class , 'getAdminAll'])->name('admin.contact.all');

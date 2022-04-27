@@ -1,5 +1,8 @@
 <?php
 namespace App\Http\Controllers;
+use App\Models\BlogLocal;
+use App\Models\Comment;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image as ImageLib;
 use App\Models\Blog;
@@ -33,6 +36,7 @@ class BlogController extends Controller{
         $r->validate([
             'title' => 'required|min:5',
             'slug' => 'required|min:5|unique:blogs',
+            'category' => 'required',
             'image' => 'required',
             'description' => 'required',
             'content' => 'required'
@@ -60,7 +64,28 @@ class BlogController extends Controller{
         FireEventLog('Blog', 'Created', $TheArticle->id , auth()->user()->id);
         return redirect()->route('admin.blogs.all');
     }
-
+    /*
+        Function: getLocalize();
+        Description: Returns translate article page on admin
+        Usage(s): web.php
+    */
+    public  function getLocalize($id): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application {
+        $TheArticle = Blog::findOrFail($id);
+        if(!$TheArticle){
+            abort(404);
+        }
+        return view('admin.blogs.localize' , compact('TheArticle'));
+    }
+    /*
+        Function: postLocalize();
+        Description: Handles the translation logic
+        Usage(s): web.php
+    */
+    public function postLocalize(Request $r){
+        //TODO: Validate the request
+        BlogLocal::create($r->all());
+        return redirect()->route('admin.blogs.all')->withSuccess('Article translated!');
+    }
     // non-admin routes
     /*
         Function: getAll();
@@ -70,7 +95,20 @@ class BlogController extends Controller{
     public function getAll(){
         $AllArticles = Blog::latest()->get();
         $RecentPosts = Blog::latest()->limit(4)->get();
-        return view('blog.all' , compact('AllArticles' , 'RecentPosts'));
+        $Categories = Blog::pluck('category')->unique();
+        //Archives
+        $Archives = Blog::get()->groupBy(function($val){
+            return ['name' => Carbon::parse($val->created_at)->format('M Y')];
+        })->toArray();
+        $ArchivesKeys = array_keys($Archives);
+        //Tags
+        $Tags = Blog::latest()->pluck('tags')->toArray();
+        $uniqueTags = array_unique(array_merge(...array_map(function($row) {
+            return explode(', ', trim($row));
+        }, $Tags)));
+        //Comments
+        $RecentComments = Comment::latest()->limit(4)->get();
+        return view('blog.all' , compact('AllArticles' , 'RecentPosts' , 'Categories', 'Archives' , 'ArchivesKeys','uniqueTags','RecentComments'));
     }
     /*
         Function: getSingle($slug, $id);

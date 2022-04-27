@@ -30,7 +30,7 @@
                                         <div class="promo-slider__wrapper-2">
                                             <p class="subtitle wow fadeInUp">@lang('pages/home.hero_description')</p>
                                         </div>
-                                        <div class="promo-slider__wrapper-3"><a class="wow fadeInUp button button--filled" href="comingsoon.html" data-hover="Discover"><span>@lang('pages/home.hero_cta')</span></a>
+                                        <div class="promo-slider__wrapper-3"><a class="wow fadeInUp button button--filled" href="{{route('comingSoon')}}" data-hover="Discover"><span>@lang('pages/home.hero_cta')</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -94,8 +94,6 @@
             </div>
         </section>
         <!-- about-welcome-style-2 end-->
-
-
         <!-- main gallery start-->
         <section class="section main-gallery no-padding-top no-padding-bottom wow fadeInLeft" data-wow-offset="100">
             <div class="container">
@@ -114,7 +112,6 @@
                     </div>
                 </div>
             </div>
-
         </section>
         <!-- services inner start-->
         <section class="section Clubs services-inner services-inner--style-3 no-padding-bottom text-center">
@@ -215,7 +212,6 @@
             </div>
         </section>
         <!-- services inner end-->
-
         <!-- news-style-2 start-->
         <section class="section news--style-2">
             <div class="container">
@@ -227,7 +223,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 d-none d-lg-block">
-                        <div class="button-holder"><a class="button button--transparent" href="comingsoon.html" data-hover="@lang('pages/home.blog_cta')"><span>@lang('pages/home.blog_cta')</span></a>
+                        <div class="button-holder"><a class="button button--transparent" href="{{route('blog')}}" data-hover="@lang('pages/home.blog_cta')"><span>@lang('pages/home.blog_cta')</span></a>
                         </div>
                     </div>
                 </div>
@@ -238,19 +234,19 @@
                         <!-- item start-->
                         <div class="news-item--aside">
                             <div class="img-holder"><img class="img-bg" src="{{url('public/img')}}/blog1.jpg" alt="img" /></div>
-                            <div class="description"><span class="date">October 12, 2019</span><a href="comingsoon.html">Germany Sees Solar Installations Spike to Nearly 3GW in 2018</a></div>
+                            <div class="description"><span class="date">October 12, 2019</span><a href="{{route('comingSoon')}}">Germany Sees Solar Installations Spike to Nearly 3GW in 2018</a></div>
                         </div>
                         <!-- item end-->
                         <!-- item start-->
                         <div class="news-item--aside">
                             <div class="img-holder"><img class="img-bg" src="{{url('public/img')}}/blog2.jpg" /></div>
-                            <div class="description"><span class="date">October 17, 2019</span><a href="comingsoon.html">RGS Energy Revives Dow’s Solar Roof, Claiming Better Efficiency </a></div>
+                            <div class="description"><span class="date">October 17, 2019</span><a href="{{route('comingSoon')}}">RGS Energy Revives Dow’s Solar Roof, Claiming Better Efficiency </a></div>
                         </div>
                         <!-- item end-->
                         <!-- item start-->
                         <div class="news-item--aside">
                             <div class="img-holder"><img class="img-bg" src="{{url('public/img')}}/blog3.jpg" alt="img" /></div>
-                            <div class="description"><span class="date">October 25, 2019</span><a href="comingsoon.html">Texas Grid Operator Reports Fuel Mix Is Now 30% Carbon-Free</a></div>
+                            <div class="description"><span class="date">October 25, 2019</span><a href="{{route('comingSoon')}}">Texas Grid Operator Reports Fuel Mix Is Now 30% Carbon-Free</a></div>
                         </div>
                         <!-- item end-->
                     </div>
@@ -259,7 +255,7 @@
                         <div class="news-item--style-2"><a class="img-holder" href="#">
                                 <div class="overlay"></div><img class="img-bg" src="{{url('public/img')}}/blog5.jpeg" alt="img" />
                             </a>
-                            <div class="description"><span class="date">October 12, 2019</span><a href="comingsoon.html">Trends Shaping the Global Solar Market in 2019</a></div>
+                            <div class="description"><span class="date">October 12, 2019</span><a href="{{route('comingSoon')}}">Trends Shaping the Global Solar Market in 2019</a></div>
                         </div>
                     </div>
                 </div>
@@ -268,7 +264,7 @@
                 <div class="row">
                     <div class="col-12 d-block d-lg-none">
                         <div class="button-holder text-center margin-top">
-                            <a class="button button--transparent" href="comingsoon.html" data-hover="@lang('pages/home.blog_cta')"><span>@lang('pages/home.blog_cta')</span></a>
+                            <a class="button button--transparent" href="{{route('comingSoon')}}" data-hover="@lang('pages/home.blog_cta')"><span>@lang('pages/home.blog_cta')</span></a>
                         </div>
                     </div>
                 </div>
@@ -285,7 +281,7 @@
                     <div class="col-xl-7 col-lg-8 col-md-9">
                         <h1 class="title">@lang('pages/home.calendar_title')</h1>
                         <p>@lang('pages/home.calendar_description')</p>
-                        <a class="button button--transparent" href="comingsoon.html" data-hover="@lang('pages/home.calendar_cta')"><span>@lang('pages/home.calendar_cta')</span></a>
+                        <a class="button button--transparent" href="{{route('comingSoon')}}" data-hover="@lang('pages/home.calendar_cta')"><span>@lang('pages/home.calendar_cta')</span></a>
                     </div>
                 </div>
             </div>

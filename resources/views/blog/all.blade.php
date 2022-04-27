@@ -17,8 +17,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="align-container">
-                        <div class="align-item"><span>Iraqi Heritage Boat Clubs Network</span>
-                            <h1 class="title">Our Blog</h1>
+                        <div class="align-item"><span>@lang('pages/blog.site_title')</span>
+                            <h1 class="title">@lang('pages/blog.page_title')</h1>
                         </div>
                     </div>
                 </div>
@@ -35,17 +35,15 @@
                             <div class="col-12">
                                 <div class="article-item">
                                     <div class="article-item__img"><img class="img-bg" src="{{$Article->imagePath}}"  alt="img"/></div>
-                                    <div class="article-item__details"><span class="article-item__category">TODO: Category</span>
-                                        <h3 class="article-item__title"> <a class="article-item__link" href="{{route('blog.single' , [$Article->slug, $Article->id])}}">{{$Article->title}}</a></h3>
-                                        <div class="article-item__date">{{$Article->created_at->format('M Y, d')}}</div>
-                                        <p class="article-item__text">{{$Article->description}}</p>
+                                    <div class="article-item__details"><span class="article-item__category">{{$Article->local_category}}</span>
+                                        <h3 class="article-item__title"> <a class="article-item__link" href="{{route('blog.single' , [$Article->slug, $Article->id])}}">{{$Article->local_title}}</a></h3>
+                                        <div class="article-item__date">{{$Article->created_at->format('d.m.Y')}}</div>
+                                        <p class="article-item__text">{{$Article->local_description}}</p>
                                     </div>
                                 </div>
                             </div>
                         @empty
                         @endforelse
-
-
 {{--                        <div class="col-12 text-center">--}}
 {{--                            <!-- pagination start-->--}}
 {{--                            <ul class="pagination pagination--primary">--}}
@@ -63,25 +61,28 @@
                 </div>
                 <div class="col-sm-8 offset-sm-2 col-md-5 offset-md-0 col-lg-4 col-xl-3">
                     <div class="articles__inner">
-                        <h4 class="articles__title">Category</h4>
+                        <h4 class="articles__title">@lang('pages/blog.category')</h4>
                         <ul class="category-list">
-                            <li class="category-list__item"><span>Event</span><span class="text-right">2</span></li>
-                            <li class="category-list__item"><span>Training</span><span class="text-right">3</span></li>
-                            <li class="category-list__item"><span>News</span><span class="text-right">1</span></li>
-                            <li class="category-list__item"><span>Uncategorized</span><span class="text-right">12</span></li>
+                            @forelse ($Categories as $Category)
+                                @php
+                                    $PostsCount = App\Models\Blog::where('category' , $Category)->count();
+                                @endphp
+                                <li class="category-list__item"><span>{{$Category}}</span><span class="text-right">{{$PostsCount}}</span></li>
+                            @empty
+                            @endforelse
                         </ul>
                     </div>
                     <div class="articles__inner">
-                        <h4 class="articles__title">Recent post</h4>
+                        <h4 class="articles__title">@lang('pages/blog.recent_posts')</h4>
                         @forelse($RecentPosts as $RecentPost)
                             <div class="recent-item">
                                 <div class="row">
                                     <div class="col-4">
-                                        <div class="recent-item__img"><img class="img-bg" src="{{$RecentPost->imagePath}}" alt="{{$RecentPost->title}}"/></div>
+                                        <div class="recent-item__img"><img class="img-bg" src="{{$RecentPost->imagePath}}" alt="{{$RecentPost->local_title}}"/></div>
                                     </div>
                                     <div class="col-8">
-                                        <h6 class="recent-item__title"><a class="recent-item__link" href="#">{{$RecentPost->title}}</a></h6>
-                                        <span class="recent-item__date">{{$RecentPost->created_at->format('m/d')}}</span>
+                                        <h6 class="recent-item__title"><a class="recent-item__link" href="#">{{$RecentPost->local_title}}</a></h6>
+                                        <span class="recent-item__date">{{$RecentPost->created_at->format('m.d.Y')}}</span>
                                     </div>
                                 </div>
                             </div>
@@ -89,28 +90,28 @@
                         @endforelse
                     </div>
                     <div class="articles__inner">
-                        <h4 class="articles__title">Archive</h4>
+                        <h4 class="articles__title">@lang('pages/blog.archive')</h4>
                         <ul class="category-list">
-                            <li class="category-list__item"><span>December</span><span class="text-right">2</span></li>
-                            <li class="category-list__item"><span>January</span><span class="text-right">3</span></li>
-                            <li class="category-list__item"><span>October</span><span class="text-right">1</span></li>
-                            <li class="category-list__item"><span>November</span><span class="text-right">6 </span></li>
-                            <li class="category-list__item"><span>September</span><span class="text-right">12</span></li>
+                            @forelse($ArchivesKeys as $Archive)
+                                <li class="category-list__item"><span>{{$Archive}}</span><span class="text-right">{{count($Archives[$Archive])}}</span></li>
+                            @empty
+                            @endforelse
                         </ul>
                     </div>
                     <div class="articles__inner">
-                        <h4 class="articles__title">Recent comments</h4>
-                        <div class="recent-comment"><span><a href="#">Mohammed Ahmed</a> Event in Basra</span></div>
-                        <div class="recent-comment"><span><a href="#">Abdulrahman</a> Event in Baghdad</span></div>
-                        <div class="recent-comment"><span><a href="#">Dima Hassan</a> Event in Babil</span></div>
+                        <h4 class="articles__title">@lang('pages/blog.recent_comments')</h4>
+                        @forelse($RecentComments as $Comment)
+                            <div class="recent-comment"><span><a href="{{route('blog.single' , [$Comment->Blog->slug , $Comment->Blog->id])}}">{{$Comment->name}}</a> {{$Comment->Blog->local_title}}</span></div>
+                        @empty
+                        @endforelse
                     </div>
                     <div class="articles__inner">
-                        <h4 class="articles__title">Tags</h4>
+                        <h4 class="articles__title">@lang('pages/blog.tags')</h4>
                         <div class="tags-block">
-                            <span class="tag">Clubs</span>
-                            <span class="tag">Clubs</span>
-                            <span class="tag">Clubs</span>
-                            <span class="tag">Clubs</span>
+                            @forelse($uniqueTags as $Tag)
+                                <span class="tag">{{$Tag}}</span>
+                            @empty
+                            @endforelse
                         </div>
                     </div>
                 </div>

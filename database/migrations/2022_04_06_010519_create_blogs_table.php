@@ -11,6 +11,8 @@ return new class extends Migration {
             $table->string('title');
             $table->string('slug')->unique();
             $table->string('image')->default('article.webp');
+            $table->string('category')->default('No Category');
+            $table->string('tags')->nullable();
             $table->text('description');
             $table->text('content');
             $table->integer('user_id');

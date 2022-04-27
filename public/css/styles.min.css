@@ -76,7 +76,6 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
-    text-align: left;
     background-color: #fff;
 }
 
@@ -968,7 +967,7 @@ pre code {
         flex-grow: 1;
         max-width: 100%
     }
-    
+
 
     .col-sm-auto {
         -ms-flex: 0 0 auto;
@@ -3708,7 +3707,7 @@ input[type=submit].btn-block {
         right: auto;
         left: 0
     }
-    
+
 
     .dropdown-menu-sm-right {
         right: 0;
@@ -17060,7 +17059,7 @@ font-family: 'AvenirNextLTPro', sans-serif;
     min-height: 100vh;
     width: 100%;
     scroll-behavior: smooth;
-    
+
 }
 
 main.main {
@@ -18323,7 +18322,7 @@ ul li::before {
         font-size: 18px;
         padding: 40px 35px 40px 35px
     }
-    
+
 }
 
 @media only screen and (min-width:992px) {
@@ -18331,7 +18330,7 @@ ul li::before {
         font-size: 20px;
         padding: 67px 75px 70px 75px
     }
-    
+
 }
 
 .mobile-nav {
@@ -18835,9 +18834,9 @@ ul li::before {
 @media only screen and (max-width:576px) {
     .logo-block .logo span {
         font-size: 16px;
-    
+
     }
-    
+
 }
 
 .lang-block {
@@ -20542,7 +20541,7 @@ ul li::before {
     padding: 11px 40px
 }
 .pricing .Acknowledge p {
-    
+
     margin-top: 18px;
     color: #767778;
     font-size: 17px;
@@ -21225,14 +21224,14 @@ ul li::before {
     .brands-slider .brand-logos {
         height: 60px
     }
-    
+
 }
 
 @media only screen and (min-width:992px) {
     .brands-slider .brand-logos{
         height: 70px
     }
-    
+
 
 }
 
@@ -22982,9 +22981,9 @@ footer.footer .socials-holder.socials-mobile {
         padding: 42px 30px 50px 30px;
         max-width: 500px;
         margin-left: 100px;
-   
+
     }
-    
+
 }
 
 
@@ -24279,7 +24278,7 @@ footer.footer .socials-holder.socials-mobile {
     .cases-details .information-block .detail {
         margin-bottom: 0
     }
-    
+
 }
 .testimonials {
     padding:0px !important;
@@ -25273,7 +25272,7 @@ section.section.product-info {
     .shop-header .lower {
         padding: 0 0 0 15px
     }
-    
+
 }
 
 @media only screen and (min-width:1200px) {
@@ -25300,7 +25299,7 @@ section.section.product-info {
         justify-content: space-between;
         padding: 13px 15px
     }
-   
+
 }
 
 @media only screen and (min-width:1200px) {
@@ -25390,7 +25389,7 @@ section.section.product-info {
         -ms-flex-align: normal;
         align-items: normal
     }
-  
+
 }
 
 .shop-header .lang-select {
@@ -31238,7 +31237,7 @@ footer.footer--style-3 .copyright {
 }
 
 /*---------------------------------------
-      HOME          
+      HOME
   -----------------------------------------*/
 
   #home {
@@ -31275,7 +31274,7 @@ footer.footer--style-3 .copyright {
     z-index: 2;
     width: 100%;
   }
-  
+
   .countdown {
     text-align: center;
     margin: 50px 0;
@@ -31355,5 +31354,5 @@ footer.footer--style-3 .copyright {
     transition: 1s ease;
       box-shadow:2px 5px 20px rgba(0,0,0,0.3);
 
-    
+
 }
