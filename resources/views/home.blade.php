@@ -231,31 +231,22 @@
             <div class="container">
                 <div class="row flex-column-reverse flex-lg-row">
                     <div class="col-lg-6 wow fadeInLeft">
-                        <!-- item start-->
-                        <div class="news-item--aside">
-                            <div class="img-holder"><img class="img-bg" src="{{url('public/img')}}/blog1.jpg" alt="img" /></div>
-                            <div class="description"><span class="date">October 12, 2019</span><a href="{{route('comingSoon')}}">Germany Sees Solar Installations Spike to Nearly 3GW in 2018</a></div>
-                        </div>
-                        <!-- item end-->
-                        <!-- item start-->
-                        <div class="news-item--aside">
-                            <div class="img-holder"><img class="img-bg" src="{{url('public/img')}}/blog2.jpg" /></div>
-                            <div class="description"><span class="date">October 17, 2019</span><a href="{{route('comingSoon')}}">RGS Energy Revives Dow’s Solar Roof, Claiming Better Efficiency </a></div>
-                        </div>
-                        <!-- item end-->
-                        <!-- item start-->
-                        <div class="news-item--aside">
-                            <div class="img-holder"><img class="img-bg" src="{{url('public/img')}}/blog3.jpg" alt="img" /></div>
-                            <div class="description"><span class="date">October 25, 2019</span><a href="{{route('comingSoon')}}">Texas Grid Operator Reports Fuel Mix Is Now 30% Carbon-Free</a></div>
-                        </div>
-                        <!-- item end-->
+                        @forelse($FeaturedArticles as $Article)
+                            <!-- item start-->
+                            <div class="news-item--aside">
+                                <div class="img-holder"><img class="img-bg" src="{{$Article->imagePath}}" alt="{{$Article->local_title}}" /></div>
+                                <div class="description"><span class="date">{{$Article->created_at->format('d.m.Y')}}</span><a href="{{route('blog.single' , [$Article->slug , $Article->id])}}">{{$Article->local_title}}</a></div>
+                            </div>
+                            <!-- item end-->
+                        @empty
+                        @endforelse
                     </div>
                     <div class="col-lg-6 wow fadeInUp">
                         <!-- item start-->
                         <div class="news-item--style-2"><a class="img-holder" href="#">
-                                <div class="overlay"></div><img class="img-bg" src="{{url('public/img')}}/blog5.jpeg" alt="img" />
+                                <div class="overlay"></div><img class="img-bg" src="{{$TopFeaturedArticle->imagePath}}" alt="{{$TopFeaturedArticle->local_title}}" />
                             </a>
-                            <div class="description"><span class="date">October 12, 2019</span><a href="{{route('comingSoon')}}">Trends Shaping the Global Solar Market in 2019</a></div>
+                            <div class="description"><span class="date">{{$TopFeaturedArticle->created_at->format('d.m.Y')}}</span><a href="{{route('blog.single' , [$TopFeaturedArticle->slug , $TopFeaturedArticle->id])}}">{{$TopFeaturedArticle->local_title}}</a></div>
                         </div>
                     </div>
                 </div>
