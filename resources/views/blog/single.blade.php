@@ -125,56 +125,56 @@
     </section>
     <!-- blog detail end-->
     <!-- live comment start-->
-    <section class="section live-comment">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="heading primary-heading">
-                        <h3 class="title">@lang('pages/blog.comment')</h3>
-                        <h5 class="subtitle">@lang('pages/blog.leave_a_comment')</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12 col-lg-12">
-                    <!-- comment form start-->
-                    <form class="form contact--form comment-form" action="{{route('blog.comment.post')}}" method="post">
-                        @csrf
-                        <input type="hidden" name="blog_id" value="{{$TheArticle->id}}">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <label class="input-label" for="#input-name">
-                                        <input class="form-field input input-name" id="input-name" type="text" name="name" required="required"/><span>@lang('pages/blog.name')</span>
-                                    </label>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="input-label" for="#input-mail">
-                                        <input class="form-field input input-mail" id="input-mail" type="email" name="email" required="required"/><span>@lang('pages/blog.email')</span>
-                                    </label>
-                                </div>
-                                <div class="col-12">
-                                    <label class="textarea-label" for="#textarea">
-                                        <textarea class="form-field textarea" id="textarea" name="comment"></textarea><span>@lang('pages/blog.comment_content')</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="button-holder">
-                                        <button class="button button--transparent" type="submit" data-hover=">@lang('pages/blog.send')"><span>@lang('pages/blog.send')</span></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- comment form end-->
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section class="section live-comment">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-12">--}}
+{{--                    <div class="heading primary-heading">--}}
+{{--                        <h3 class="title">@lang('pages/blog.comment')</h3>--}}
+{{--                        <h5 class="subtitle">@lang('pages/blog.leave_a_comment')</h5>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <div class="container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-xl-12 col-lg-12">--}}
+{{--                    <!-- comment form start-->--}}
+{{--                    <form class="form contact--form comment-form" action="{{route('blog.comment.post')}}" method="post">--}}
+{{--                        @csrf--}}
+{{--                        <input type="hidden" name="blog_id" value="{{$TheArticle->id}}">--}}
+{{--                        <div class="container">--}}
+{{--                            <div class="row">--}}
+{{--                                <div class="col-md-6">--}}
+{{--                                    <label class="input-label" for="#input-name">--}}
+{{--                                        <input class="form-field input input-name" id="input-name" type="text" name="name" required="required"/><span>@lang('pages/blog.name')</span>--}}
+{{--                                    </label>--}}
+{{--                                </div>--}}
+{{--                                <div class="col-md-6">--}}
+{{--                                    <label class="input-label" for="#input-mail">--}}
+{{--                                        <input class="form-field input input-mail" id="input-mail" type="email" name="email" required="required"/><span>@lang('pages/blog.email')</span>--}}
+{{--                                    </label>--}}
+{{--                                </div>--}}
+{{--                                <div class="col-12">--}}
+{{--                                    <label class="textarea-label" for="#textarea">--}}
+{{--                                        <textarea class="form-field textarea" id="textarea" name="comment"></textarea><span>@lang('pages/blog.comment_content')</span>--}}
+{{--                                    </label>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                            <div class="row">--}}
+{{--                                <div class="col-12">--}}
+{{--                                    <div class="button-holder">--}}
+{{--                                        <button class="button button--transparent" type="submit" data-hover=">@lang('pages/blog.send')"><span>@lang('pages/blog.send')</span></button>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </form>--}}
+{{--                    <!-- comment form end-->--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
     <!-- live comment end-->
 </main>
 @include('layout.footer')

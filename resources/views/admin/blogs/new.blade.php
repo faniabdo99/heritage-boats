@@ -61,7 +61,13 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="category">Category: *</label>
-                                        <input class="form-control input-default" type="text" name="category" id="category" placeholder="Enter article category here" required>
+                                        <select class="form-control input-default" type="text" name="category_id" id="category" required>
+                                            @forelse ($AllCategories as $Category)
+                                                <option value="{{$Category->id}}">{{$Category->title}}</option>
+                                            @empty
+                                                <option value="">Please enter a category in the system first!</option>
+                                            @endforelse
+                                        </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="tags">Tags:</label>
