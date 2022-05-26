@@ -40,11 +40,12 @@
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:;" aria-expanded="false">
-                    <i class="flaticon-381-heart"></i>
+                    <i class="fas fa-newspaper"></i>
                     <span class="nav-text">Blog</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="{{route('admin.blogs.all')}}">List Articles</a></li>
+                    <li><a href="{{route('admin.categories.all')}}">Categories</a></li>
+                    <li><a href="{{route('admin.blogs.all')}}">Articles</a></li>
                     <li><a href="{{route('admin.blogs.getNew')}}">Add New</a></li>
                 </ul>
             </li>

@@ -5,14 +5,18 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
-    public function up(){
-        Schema::create('blog_locals', function (Blueprint $table) {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->integer('blog_id');
-            $table->string('title_value');
-            $table->string('tags_value');
-            $table->text('description_value');
-            $table->text('content_value');
+            $table->string('title');
+            $table->string('slug');
+            $table->integer('is_promoted')->default(0);
             $table->timestamps();
         });
     }
@@ -24,6 +28,6 @@ return new class extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('blog_locals');
+        Schema::dropIfExists('categories');
     }
 };

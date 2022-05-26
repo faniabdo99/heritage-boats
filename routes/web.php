@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\CommentController;
 use Illuminate\Support\Facades\Route;
 //Controllers
 use App\Http\Controllers\LocalizationController;
@@ -14,6 +13,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CommentController;
 Route::get('/switch-lang/{locale?}' , [LocalizationController::class , 'postChangeLocal' ])->name('switchLang');
 Route::get('feed-db', [TestController::class, 'feedDb']); //To be ignored by Front end team
 Route::get('/', [HomeController::class , 'getHomepage'])->name('home'); // The homepage: resources/views/home.blade.php
@@ -39,7 +40,6 @@ Route::middleware('guest')->group(function(){
 
 /*
     ADMIN PANEL
-    Admin panel routes:
     Middleware: admin
     Prefix: /admin/
 */
@@ -59,6 +59,15 @@ Route::group(['prefix' => 'admin' , 'middleware' => 'admin'] , function(){
         Route::post('/new' , [BlogController::class, 'postAdminNew'])->name('admin.blogs.postNew');
         Route::get('/localize/{id}' , [BlogController::class,'getLocalize'])->name('admin.blogs.getLocalize');
         Route::post('/localize/{id?}' , [BlogController::class,'postLocalize'])->name('admin.blogs.postLocalize');
+        Route::prefix('category')->group(function(){
+            Route::get('/' , [CategoryController::class , 'getAdminAll'])->name('admin.categories.all');
+            Route::get('/new' , [CategoryController::class, 'getNew'])->name('admin.categories.getNew');
+            Route::post('/new' , [CategoryController::class, 'postNew'])->name('admin.categories.postNew');
+            Route::get('/edit/{id}' , [CategoryController::class, 'getEdit'])->name('admin.categories.getEdit');
+            Route::post('/edit/{id}' , [CategoryController::class, 'postEdit'])->name('admin.categories.postEdit');
+            Route::get('/localize/{id}' , [CategoryController::class,'getLocalize'])->name('admin.categories.getLocalize');
+            Route::post('/localize/{id}' , [CategoryController::class,'postLocalize'])->name('admin.categories.postLocalize');
+        });
     });
     Route::prefix('contact-requests')->group(function(){
         Route::get('/' , [ContactController::class , 'getAdminAll'])->name('admin.contact.all');

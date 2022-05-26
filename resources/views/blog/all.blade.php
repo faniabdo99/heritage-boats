@@ -64,10 +64,7 @@
                         <h4 class="articles__title">@lang('pages/blog.category')</h4>
                         <ul class="category-list">
                             @forelse ($Categories as $Category)
-                                @php
-                                    $PostsCount = App\Models\Blog::where('category' , $Category)->count();
-                                @endphp
-                                <li class="category-list__item"><span>{{$Category}}</span><span class="text-right">{{$PostsCount}}</span></li>
+                                <li class="category-list__item"><span>{{$Category->local_title}}</span><span class="text-right">{{$Category->Blog->count()}}</span></li>
                             @empty
                             @endforelse
                         </ul>
@@ -89,31 +86,32 @@
                         @empty
                         @endforelse
                     </div>
-                    <div class="articles__inner">
-                        <h4 class="articles__title">@lang('pages/blog.archive')</h4>
-                        <ul class="category-list">
-                            @forelse($ArchivesKeys as $Archive)
-                                <li class="category-list__item"><span>{{$Archive}}</span><span class="text-right">{{count($Archives[$Archive])}}</span></li>
-                            @empty
-                            @endforelse
-                        </ul>
-                    </div>
-                    <div class="articles__inner">
-                        <h4 class="articles__title">@lang('pages/blog.recent_comments')</h4>
-                        @forelse($RecentComments as $Comment)
-                            <div class="recent-comment"><span><a href="{{route('blog.single' , [$Comment->Blog->slug , $Comment->Blog->id])}}">{{$Comment->name}}</a> {{$Comment->Blog->local_title}}</span></div>
-                        @empty
-                        @endforelse
-                    </div>
-                    <div class="articles__inner">
-                        <h4 class="articles__title">@lang('pages/blog.tags')</h4>
-                        <div class="tags-block">
-                            @forelse($uniqueTags as $Tag)
-                                <span class="tag">{{$Tag}}</span>
-                            @empty
-                            @endforelse
-                        </div>
-                    </div>
+{{--                    <div class="articles__inner">--}}
+{{--                        <h4 class="articles__title">@lang('pages/blog.archive')</h4>--}}
+{{--                        <ul class="category-list">--}}
+{{--                            @forelse($ArchivesKeys as $Archive)--}}
+{{--                                <li class="category-list__item"><span>{{$Archive}}</span><span class="text-right">{{count($Archives[$Archive])}}</span></li>--}}
+{{--                            @empty--}}
+{{--                            @endforelse--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
+{{--                    <div class="articles__inner">--}}
+{{--                        <h4 class="articles__title">@lang('pages/blog.recent_comments')</h4>--}}
+{{--                        @forelse($RecentComments as $Comment)--}}
+{{--                            <div class="recent-comment"><span><a href="{{route('blog.single' , [$Comment->Blog->slug , $Comment->Blog->id])}}">{{$Comment->name}}</a> {{$Comment->Blog->local_title}}</span></div>--}}
+{{--                        @empty--}}
+{{--                            ---}}
+{{--                        @endforelse--}}
+{{--                    </div>--}}
+{{--                    <div class="articles__inner">--}}
+{{--                        <h4 class="articles__title">@lang('pages/blog.tags')</h4>--}}
+{{--                        <div class="tags-block">--}}
+{{--                            @forelse($uniqueTags as $Tag)--}}
+{{--                                <span class="tag">{{$Tag}}</span>--}}
+{{--                            @empty--}}
+{{--                            @endforelse--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                 </div>
             </div>
         </div>

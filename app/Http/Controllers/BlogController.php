@@ -1,6 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 use App\Models\BlogLocal;
+use App\Models\Category;
+use App\Models\CategoryLocal;
 use App\Models\Comment;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -24,7 +26,8 @@ class BlogController extends Controller{
         Usage(s): web.php
     */
     public  function getAdminNew(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application {
-        return view('admin.blogs.new');
+        $AllCategories = Category::latest()->get();
+        return view('admin.blogs.new', compact('AllCategories'));
     }
     /*
         Function: postAdminNew();
@@ -36,7 +39,7 @@ class BlogController extends Controller{
         $r->validate([
             'title' => 'required|min:5',
             'slug' => 'required|min:5|unique:blogs',
-            'category' => 'required',
+            'category_id' => 'required',
             'image' => 'required',
             'description' => 'required',
             'content' => 'required'
@@ -95,7 +98,7 @@ class BlogController extends Controller{
     public function getAll(){
         $AllArticles = Blog::latest()->get();
         $RecentPosts = Blog::latest()->limit(4)->get();
-        $Categories = Blog::pluck('category')->unique();
+        $Categories = Category::where('is_promoted' , 1)->latest()->get();
         //Archives
         $Archives = Blog::get()->groupBy(function($val){
             return ['name' => Carbon::parse($val->created_at)->format('M Y')];
