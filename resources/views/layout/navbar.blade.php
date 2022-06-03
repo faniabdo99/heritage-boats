@@ -6,6 +6,8 @@
             <nav class="menu-holder">
                 <ul class="mobile-menu">
                     <li class="menu-item"><a class="logo-font"><img class="logo" src="{{url('public/img')}}/HeritageLogo.svg"><span>@lang('layout.home')</span></a></li>
+                    
+                    <li class="menu-item"><a href="{{route('about')}}"><span>@lang('layout.about_us')</span></a></li>
                     <li class="menu-item menu-item--has-child"><a href="javascript:void(0);"><span>@lang('layout.clubs')</span> </a>
                         <!-- sub-menu start-->
                         <ul class="sub-menu">
@@ -16,10 +18,10 @@
                         </ul>
                         <!-- sub-menu end-->
                     </li>
-                    <li class="menu-item"><a href="{{route('about')}}"><span>@lang('layout.about_us')</span></a></li>
+                    <li class="menu-item"><a href="{{route('contact.get')}}"><span>@lang('layout.contact_us')</span></a></li>
+
                     <li class="menu-item"><a href="{{route('comingSoon')}}"><span>@lang('layout.calendar')</span></a></li>
 
-                    <li class="menu-item"><a href="{{route('contact.get')}}"><span>@lang('layout.contact_us')</span></a></li>
                     <li class="menu-item"><a href="{{route('acknowledgments')}}"><span>@lang('layout.acknowledgements')</span></a>
                         <!-- main menu end-->
                         <div class="button-holder"><a class="button button--filled" href="{{route('contact.get')}}" data-hover="@lang('layout.get_in_touch')"><span>@lang('layout.get_in_touch')</span></a>
@@ -44,20 +46,22 @@
                     <!-- main menu start-->
                     <nav class="menu-holder">
                         <ul class="main-menu">
-                            <li class="menu-item "><a href="{{route('home')}}"><span>@lang('layout.home')</span></a>
+                            <li class="menu-item "><a href="{{route('home')}}"><span>@lang('layout.home')</span></a></li>
+                            <li class="menu-item"><a href="{{route('about')}}"><span>@lang('layout.about_us')</span></a></li>
+
                             <li class="menu-item menu-item--has-child"><a href="javascript:void(0);"><span>@lang('layout.clubs')</span> </a>
                                 <!-- sub-menu start-->
                                 <ul class="sub-menu">
+                                <li><a href="{{route('comingSoon')}}">@lang('layout.club_babylon')</a></li>
                                     <li><a href="{{route('comingSoon')}}">@lang('layout.club_basra')</a></li>
                                     <li><a href="{{route('comingSoon')}}">@lang('layout.club_chibayish')</a></li>
                                     <li><a href="{{route('comingSoon')}}">@lang('layout.club_baghdad')</a></li>
-                                    <li><a href="{{route('comingSoon')}}">@lang('layout.club_babylon')</a></li>
                                 </ul>
                                 <!-- sub-menu end-->
                             </li>
-                            <li class="menu-item"><a href="{{route('about')}}"><span>@lang('layout.about_us')</span></a></li>
-                            <li class="menu-item"><a href="{{route('comingSoon')}}"><span>@lang('layout.calendar')</span></a></li>
                             <li class="menu-item"><a href="{{route('contact.get')}}"><span>@lang('layout.contact_us')</span></a></li>
+
+                            <li class="menu-item"><a href="{{route('comingSoon')}}"><span>@lang('layout.calendar')</span></a></li>
                             <li class="menu-item"><a href="{{route('acknowledgments')}}"><span>@lang('layout.acknowledgements')</span></a>
                         </ul>
                     </nav>

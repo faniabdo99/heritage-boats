@@ -196,3 +196,37 @@ footer.footer .footer-menu li {
 .main-menu .sub-menu {
     left: -164px;
 }
+.project-gallery-dots .slick-dots li {
+    padding-right: 0px !important
+}
+.slick-slider .slick-list, .slick-slider .slick-track  {
+    direction: ltr;
+}
+.testimonials.testimonials--img-right .img-holder {
+    left: 30px;
+    right: auto;
+}
+.platform .heading {
+    text-align: right;
+}
+.platform .button {
+    display: table;
+}
+.calendar-heading {
+    margin:auto;
+}
+.calendar-heading .subtitle{
+    text-align: center;
+}
+.project-gallery-section {
+    padding: 100px 0;
+}
+.boats-heading {
+    padding-right: 100px;
+}
+.boats-heading .title {
+    text-align: right;
+}
+.slick-initialized .slick-slide {
+    direction: rtl;
+}

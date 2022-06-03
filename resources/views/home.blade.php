@@ -55,10 +55,10 @@
                     <!-- socials start-->
                     <nav class="socials-holder">
                         <ul class="socials-primary">
-                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.facebook.com/arkforiraq"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="https://twitter.com/arkforiraq"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCMhuAo22CQbJ-k9k17z92dg"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.instagram.com/arkforiraq/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                         </ul>
                     </nav>
                     <!-- socials end -->
@@ -66,14 +66,14 @@
                 <div class="video-block">
                     <div class="img-holder">
                         <div class="overlay"></div>
-                        <a href="https://www.youtube.com/embed/Dll5xSNzSzU"><iframe class="fancy-video" width="395" height="150" src="https://www.youtube.com/embed/Dll5xSNzSzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                        <a href="https://www.youtube.com/watch?v=KEpqnJxIHW0"><iframe class="fancy-video" width="395" height="150" src="https://www.youtube.com/embed/Dll5xSNzSzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
                     </div>
                 </div>
             </div>
             <!-- promo-lower end-->
         </section>
         <!-- about-welcome-style-2 start-->
-        <section class="section about-welcome about-welcome--style-2 no-padding-bottom">
+        <section class="section about-welcome about-welcome--style-2 no-padding-bottom margin-bottom">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-4 col-lg-5 wow fadeInUp" data-wow-offset="80">
@@ -94,26 +94,7 @@
             </div>
         </section>
         <!-- about-welcome-style-2 end-->
-        <!-- main gallery start-->
-        <section class="section main-gallery no-padding-top no-padding-bottom wow fadeInLeft" data-wow-offset="100">
-            <div class="container">
-                <div class="row align-items-end margin-bottom">
-                    <div class="col-lg-9">
-                        <div class="heading primary-heading">
-                            <h3 class="title">@lang('pages/home.overview_subtitle')</h3>
-                            <h5 class="subtitle">@lang('pages/home.overview_headline')</h5>
-                            <p>@lang('pages/home.overview_description')</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="button-block title-button">
-                            <a class="button button--transparent" href="#" data-hover="@lang('pages/home.overview_cta')"><span>@lang('pages/home.overview_cta')</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- services inner start-->
+        
         <section class="section Clubs services-inner services-inner--style-3 no-padding-bottom text-center">
             <div class="container">
                 <div class="row">
@@ -159,27 +140,8 @@
                                         <div class="info-box__inner">
                                             <h4 class="info-box__title"> <a href="{{route('comingSoon')}}">@lang('pages/home.club_chibayish')</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
                                             <div class="info-box__hidden">
-                                                <p>[name]
-                                                    [phone]
-                                                </p><a class="info-box__link with--line" href="{{route('comingSoon')}}">@lang('pages/home.club_explore_more')</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- item end-->
-                            </div>
-                            <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInRight">
-                                <!-- item start-->
-                                <div class="info-box">
-                                    <div class="info-box__img"><img src="{{url('public/img')}}/citiesphotos/babel.jpg" alt="service" /></div>
-                                    <div class="info-box__category">@lang('pages/home.club_card_title')</div>
-                                    <div class="info-box__description">
-                                        <div class="info-box__number">03</div>
-                                        <div class="info-box__inner">
-                                            <h4 class="info-box__title"> <a href="{{route('comingSoon')}}">@lang('pages/home.club_baghdad')</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
-                                            <div class="info-box__hidden">
-                                                <p>@lang('pages/home.sabah_rubaiee')<br>
-                                                    <span dir="ltr">+964 7716 748 880</span>
+                                                <p>@lang('pages/home.assad_salman')<br>
+                                                <span dir="ltr">+964 773 077 0800</span>
                                                 </p><a class="info-box__link with--line" href="{{route('comingSoon')}}">@lang('pages/home.club_explore_more')</a>
                                             </div>
                                         </div>
@@ -195,10 +157,9 @@
                                     <div class="info-box__description">
                                         <div class="info-box__number">03</div>
                                         <div class="info-box__inner">
-                                            <h4 class="info-box__title"> <a href="{{route('comingSoon')}}">@lang('pages/home.club_babylon')</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
+                                            <h4 class="info-box__title"> <a href="{{route('comingSoon')}}">@lang('pages/home.club_baghdad')</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
                                             <div class="info-box__hidden">
-                                                <p>[name]
-                                                    [phone]
+                                                <p>In development
                                                 </p><a class="info-box__link with--line" href="{{route('comingSoon')}}">@lang('pages/home.club_explore_more')</a>
                                             </div>
                                         </div>
@@ -206,64 +167,34 @@
                                 </div>
                                 <!-- item end-->
                             </div>
+                            <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInRight">
+                                <!-- item start-->
+                                <div class="info-box">
+                                    <div class="info-box__img"><img src="{{url('public/img')}}/citiesphotos/babel.jpg" alt="service" /></div>
+                                    <div class="info-box__category">@lang('pages/home.club_card_title')</div>
+                                    <div class="info-box__description">
+                                        <div class="info-box__number">04</div>
+                                        <div class="info-box__inner">
+                                            <h4 class="info-box__title"> <a href="{{route('comingSoon')}}">@lang('pages/home.club_babylon')</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
+                                            <div class="info-box__hidden">
+                                                <p>@lang('pages/home.assad_salman')<br>
+                                                <span dir="ltr">+964 773 077 0800</span>
+                                                </p><a class="info-box__link with--line" href="{{route('comingSoon')}}">@lang('pages/home.club_explore_more')</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- item end-->
+                            </div>
+
                         </div>
+                        <a class="button button--transparent" href="{{route('comingSoon')}}" data-hover="@lang('pages/home.calendar_cta')"><span>More Clubs</span></a>
                     </div>
                 </div>
             </div>
         </section>
         <!-- services inner end-->
-        <!-- news-style-2 start-->
-        <section class="section news--style-2">
-            <div class="container">
-                <div class="row align-items-end margin-bottom">
-                    <div class="col-lg-9 col-md-8">
-                        <div class="heading primary-heading">
-                            <h3 class="title">@lang('pages/home.blog_subtitle')</h3>
-                            <h5 class="subtitle wow fadeInUp">@lang('pages/home.blog_title')</h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 d-none d-lg-block">
-                        <div class="button-holder"><a class="button button--transparent" href="{{route('blog')}}" data-hover="@lang('pages/home.blog_cta')"><span>@lang('pages/home.blog_cta')</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row flex-column-reverse flex-lg-row">
-                    <div class="col-lg-6 wow fadeInLeft">
-                        @forelse($FeaturedArticles as $Article)
-                            <!-- item start-->
-                            <div class="news-item--aside">
-                                <div class="img-holder"><img class="img-bg" src="{{$Article->imagePath}}" alt="{{$Article->local_title}}" /></div>
-                                <div class="description"><span class="date">{{$Article->created_at->format('d.m.Y')}}</span><a href="{{route('blog.single' , [$Article->slug , $Article->id])}}">{{$Article->local_title}}</a></div>
-                            </div>
-                            <!-- item end-->
-                        @empty
-                        @endforelse
-                    </div>
-                    @if($TopFeaturedArticle)
-                    <div class="col-lg-6 wow fadeInUp">
-                        <!-- item start-->
-                        <div class="news-item--style-2"><a class="img-holder" href="#">
-                                <div class="overlay"></div><img class="img-bg" src="{{$TopFeaturedArticle->imagePath}}" alt="{{$TopFeaturedArticle->local_title}}" />
-                            </a>
-                            <div class="description"><span class="date">{{$TopFeaturedArticle->created_at->format('d.m.Y')}}</span><a href="{{route('blog.single' , [$TopFeaturedArticle->slug , $TopFeaturedArticle->id])}}">{{$TopFeaturedArticle->local_title}}</a></div>
-                        </div>
-                    </div>
-                    @endif
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 d-block d-lg-none">
-                        <div class="button-holder text-center margin-top">
-                            <a class="button button--transparent" href="{{route('comingSoon')}}" data-hover="@lang('pages/home.blog_cta')"><span>@lang('pages/home.blog_cta')</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- news-style-2 end-->
+        
         <!-- banner start-->
         <section class="section banner @lang('pages/home.calendar_class')">
             <picture>
@@ -280,40 +211,7 @@
             </div>
         </section>
         <!-- banner end-->
-        <!-- brands start-->
-        <section class="section brands">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <!-- logos-grayscaled start-->
-                        <div class="logos logos--grayscaled">
-                            <div class="container">
-                                <div class="row no-gutters">
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4">
-                                        <!-- item start-->
-                                        <div class="logo-item logo-item--grayscaled"><img src="{{url('public/img')}}/brand-1.png" alt="logo" /></div>
-                                        <!-- item end-->
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4">
-                                        <!-- item start-->
-                                        <div class="logo-item logo-item--grayscaled"><img src="{{url('public/img')}}/brand-2.png" alt="logo" /></div>
-                                        <!-- item end-->
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4">
-                                        <!-- item start-->
-                                        <div class="logo-item logo-item--grayscaled"><img src="{{url('public/img')}}/brand-3.png" alt="logo" /></div>
-                                        <!-- item end-->
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- logos-grayscaled end-->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- brands end-->
+        
     </main>
     @include('layout.footer')
 </div>

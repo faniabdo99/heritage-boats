@@ -1,6 +1,6 @@
 <?php
 return [
-  'site_title' => 'Heritage Boat Club',
+  'site_title' => 'Heritage Boat Clubs',
     //Navbar
     'home' => 'Home',
     'clubs' => 'Clubs',
@@ -8,9 +8,9 @@ return [
     'club_chibayish' => 'Chibayish Heritage Boat Club',
     'club_baghdad' => 'Baghdad Heritage Boat Club',
     'club_babylon' => 'Babylon Heritage Boat Club',
-    'about_us' => 'About Us',
+    'about_us' => 'About',
     'calendar' => 'Calendar',
-    'contact_us' => 'Contact Us',
+    'contact_us' => 'Contact',
     'acknowledgements' => 'Acknowledgements',
     'get_in_touch' => 'Get In Touch',
     //footer

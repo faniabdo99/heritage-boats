@@ -173,21 +173,23 @@
                         <div class="logos logos--primary">
                             <div class="container">
                                 <div class="row no-gutters">
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4">
-                                        <!-- item start-->
-                                        <div class="logo-item logo-item--grayscaled"><img src="{{url('public/img')}}/brand-1.png" alt="logo"/></div>
-                                        <!-- item end-->
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4">
-                                        <!-- item start-->
-                                        <div class="logo-item logo-item--grayscaled"><img src="{{url('public/img')}}/brand-2.png" alt="logo"/></div>
-                                        <!-- item end-->
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4">
+                                <div class="col-lg-7 col-md-7 col-sm-5 col-12">
                                         <!-- item start-->
                                         <div class="logo-item logo-item--grayscaled"><img src="{{url('public/img')}}/brand-3.png" alt="logo"/></div>
                                         <!-- item end-->
                                     </div>
+                                    <div class="col-lg-2 col-md-4 col-sm-5 col-12">
+                                        <!-- item start-->
+                                        <div class="logo-item logo-item--grayscaled"><img src="{{url('public/img')}}/brand-1.png" alt="logo"/></div>
+                                        <!-- item end-->
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-5 col-12">
+                                        <!-- item start-->
+                                        <div class="logo-item logo-item--grayscaled"><img src="{{url('public/img')}}/brand-2.png" alt="logo"/></div>
+                                        <!-- item end-->
+                                    </div>
+                                    
+                                   
 
                                 </div>
                             </div>

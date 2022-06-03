@@ -1,11 +1,11 @@
 <?php
 return [
     //Hero Section
-    'hero_headline' => 'Contact a Local Club to <span>join training sessions</span>',
+    'hero_headline' => 'Contact a Local Club <span> to join training sessions</span>',
     'hero_description' => 'please visit our Contacts page for details of local coordinators',
     'hero_cta' => 'Discover',
     //Hero Promo
-    'promo_header' => 'Find more about Heritage Boat Clubs Network:',
+    'promo_header' => 'Find out more about Heritage Boat Clubs Network:',
     'promo_coordinator' => 'Captain Sabah Al-Rubaie – Network Coordinator',
     'promo_phone' => 'Phone:',
     //About
@@ -21,7 +21,7 @@ return [
     //Clubs
     'clubs_subtitle' => 'Our',
     'clubs_headline' => 'Clubs In Iraq',
-    'clubs_description' => 'Discover the Clubs and Contact them through club page',
+    'clubs_description' => 'Discover the clubs and contact them through our club pages',
     'club_card_title' => 'Iraqi Heritage Boat Clubs Network',
     'club_basra' => 'Basra Heritage Boat Club',
     'club_chibayish' => 'Chibayish Heritage Boat Club',
@@ -29,7 +29,7 @@ return [
     'club_babylon' => 'Babylon Heritage Boat Club',
     'club_explore_more' => 'Explore More',
     'sabah_rubaiee' => 'Sabah Al-Rubaie',
-    'assad_salman' => 'Asaad Salman',
+    'assad_salman' => 'Asaad Dawood',
     'clubs_class' => '',
     //Blog
     'blog_subtitle' => 'Blog',

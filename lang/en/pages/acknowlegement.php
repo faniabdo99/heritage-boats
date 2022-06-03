@@ -3,7 +3,7 @@
 return [
     //Hero Section
     'hero_headline' => 'Iraqi Heritage Boat Clubs Network',
-    'hero_title' => 'Acknowledgments',
+    'hero_title' => 'Acknowledgements',
     //Pricing Section
     'page_title_class' => '',
     'pricing_description' => 'The founders of the Heritage Boat Clubs Network firstly wish to honour the makers and communities who have preserved the crafts of traditional boatbuilding, and who have generously shared their knowledge, skills, and spirit to enable this heritage to be passed on for future generations.',
@@ -19,7 +19,7 @@ return [
     'huwair_munshid' => 'Munshid Abu Nassir',
     'huwair_kin' => 'KIn fond memory of Ghanim Abed Ali al-Duwaili al-Asadi (Abu Hamid), guiding spirit of our first workshop in 2018',
     //Babylon List
-    'babylon_title' => 'Huwair Traditional Boat Workshop',
+    'babylon_title' => 'Babylon Traditional Boat Workshop',
     'babylon_khudair' => 'Khudair Hussain Ali (Abu Amal)',
     'babylon_ali' => 'Ali Khudair Abbas (Abu Haider)',
     'babylon_rabah' => 'Rabah Hadi (Abu Ahmed)',

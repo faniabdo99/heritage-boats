@@ -31,7 +31,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-4 col-lg-5">
-                        <div class="title-block"><span>@lang('pages/about.about_title')</span>
+                        <div class="title-block">
                             <h2 class="title">@lang('pages/about.about_title')
                             </h2>
                             <div class="icon-holder">
@@ -163,17 +163,17 @@
                     <div class="row no-gutters counter-holder offset-margin">
                         <div class="col-sm-4">
                             <!-- statistics item start-->
-                            <div class="statistics-item"><span class="counter">50</span><span class="description">@lang('pages/about.statistics_counter_club')</span></div>
+                            <div class="statistics-item"><span class="counter">4</span><span class="description">@lang('pages/about.statistics_counter_club')</span></div>
                             <!-- statistics item end-->
                         </div>
                         <div class="col-sm-4">
                             <!-- statistics item start-->
-                            <div class="statistics-item"><span class="counter">700</span><span class="description">@lang('pages/about.statistics_counter_events')</span></div>
+                            <div class="statistics-item"><span class="counter">7</span><span class="description">@lang('pages/about.statistics_counter_events')</span></div>
                             <!-- statistics item end-->
                         </div>
                         <div class="col-sm-4">
                             <!-- statistics item start-->
-                            <div class="statistics-item"><span class="counter">200</span><span class="description">@lang('pages/about.statistics_counter_visitors')</span></div>
+                            <div class="statistics-item"><span class="counter">1000</span><span class="description">@lang('pages/about.statistics_counter_visitors')</span></div>
                             <!-- statistics item end-->
                         </div>
                     </div>

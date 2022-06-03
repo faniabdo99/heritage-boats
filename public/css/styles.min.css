@@ -181,7 +181,7 @@ a {
 }
 
 a:hover {
-    color: #0056b3;
+    color: #fff;
     text-decoration: underline
 }
 
@@ -17103,7 +17103,9 @@ textarea {
 }
 
 .button:hover {
-    text-decoration: none
+    text-decoration: none;
+    background-color: #cb680f;
+
 }
 
 .button span {
@@ -17116,33 +17118,24 @@ textarea {
 }
 
 .button::before {
-    content: attr(data-hover);
-    position: absolute;
-    top: 0;
-    left: 0;
+
     z-index: -2;
     padding: 21px 56px;
     width: 100%;
     height: 100%;
-    -webkit-transform: translateX(-25%);
-    -ms-transform: translateX(-25%);
-    transform: translateX(-25%);
     -webkit-transition: all .3s;
     -o-transition: all .3s;
     transition: all .3s
 }
 
 .button:hover span {
-    -webkit-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    transform: translateX(100%)
+    background-color: #cb680f;
 }
 
 .button:focus::before,
 .button:hover::before {
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0)
+    background-color: #cb680f;
+    color: #fff;
 }
 
 .button--transparent.button--primary span,
@@ -21188,7 +21181,7 @@ ul li::before {
 }
 
 .banner .button span {
-    background: #e4eff3
+    background: transparent
 }
 
 .banner .button span,
@@ -30041,7 +30034,7 @@ footer.footer--style-3 .copyright {
 
 .logos .logo-item img {
     display: inline-block;
-    max-width: 80px;
+    max-width: 175px;
     height: auto
 }
 
@@ -31355,4 +31348,31 @@ footer.footer--style-3 .copyright {
       box-shadow:2px 5px 20px rgba(0,0,0,0.3);
 
 
+}
+.statistics-item .description {
+    top: auto;
+}
+.statistics-item {
+margin-top: 45px;
+margin-bottom: 25px;
+}
+
+@media only screen and (min-width: 992px) {
+
+.elements .members {
+padding-bottom: 20px;
+}
+
+}
+
+.contact-each-club {
+margin-left:0px
+}
+
+.testimonials .text-block {
+padding-left: 90px;
+padding-right: 90px;
+}
+.testimonials-slider {
+margin-left: 12px;
 }
