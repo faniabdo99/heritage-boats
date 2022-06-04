@@ -21,7 +21,7 @@
                             <li><a href="{{route('home')}}">@lang('layout.home')</a></li>
                             <li><a href="{{route('about')}}">@lang('layout.about_us')</a></li>
                             <li><a href="{{route('contact.get')}}">@lang('layout.contact_us')</a></li>
-                            <li><a href="{{route('comingSoon')}}">@lang('layout.calendar')</a></li>
+                            <li><a href="{{route('calendar')}}">@lang('layout.calendar')</a></li>
                             <li><a href="{{route('acknowledgments')}}">@lang('layout.acknowledgements')</a></li>
                         </ul>
                     </nav>

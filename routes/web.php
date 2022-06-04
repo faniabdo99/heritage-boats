@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 //Controllers
 use App\Http\Controllers\LocalizationController;
@@ -15,6 +14,9 @@ use App\Http\Controllers\TestController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ClubController;
+use App\Http\Controllers\EventsCalendarController;
+
 Route::get('/switch-lang/{locale?}' , [LocalizationController::class , 'postChangeLocal' ])->name('switchLang');
 Route::get('feed-db', [TestController::class, 'feedDb']); //To be ignored by Front end team
 Route::get('/', [HomeController::class , 'getHomepage'])->name('home'); // The homepage: resources/views/home.blade.php
@@ -22,6 +24,8 @@ Route::get('/about', [AboutController::class , 'getAbout'])->name('about'); // A
 Route::get('/contact', [ContactController::class , 'getContact'])->name('contact.get'); // Contact us: resources/views/contact/contact.blade.php
 Route::post('/contact', [ContactController::class , 'postContact'])->name('contact.post');
 Route::get('/acknowledgments', [AcknowledgmentController::class , 'getAcknowledgments'])->name('acknowledgments'); // Acknowledgments: resources/views/static/acknowledgments.blade.php
+Route::get('/events-calendar', [EventsCalendarController::class , 'getCalendar'])->name('calendar'); // Calendar: resources/views/static/calendar.blade.php
+Route::get('/club/{slug}/{id}' , [ClubController::class , 'getSingle'])->name('club.single');
 Route::get('/coming-soon', [ComingSoonController::class , 'getComingSoon'])->name('comingSoon'); // Coming Soon: resources/views/static/coming-soon.blade.php
 Route::prefix('blog')->group(function (){
     Route::get('/' , [BlogController::class , 'getAll'])->name('blog'); // Blog: resources/view/blog/all
@@ -68,6 +72,13 @@ Route::group(['prefix' => 'admin' , 'middleware' => 'admin'] , function(){
             Route::get('/localize/{id}' , [CategoryController::class,'getLocalize'])->name('admin.categories.getLocalize');
             Route::post('/localize/{id}' , [CategoryController::class,'postLocalize'])->name('admin.categories.postLocalize');
         });
+    });
+    Route::prefix('club')->group(function(){
+        Route::get('/' , [ClubController::class, 'getAdminAll'])->name('admin.clubs.all');
+        Route::get('/new' , [ClubController::class, 'getAdminNew'])->name('admin.clubs.getNew');
+        Route::post('/new' , [ClubController::class, 'postAdminNew'])->name('admin.clubs.postNew');
+        Route::get('/localize/{id}' , [ClubController::class,'getLocalize'])->name('admin.clubs.getLocalize');
+        Route::post('/localize/{id?}' , [ClubController::class,'postLocalize'])->name('admin.clubs.postLocalize');
     });
     Route::prefix('contact-requests')->group(function(){
         Route::get('/' , [ContactController::class , 'getAdminAll'])->name('admin.contact.all');

@@ -8,3 +8,4 @@
     });
     new WOW().init();
 </script>
+<script src="https://cdn.lordicon.com/xdjxvujz.js"></script>

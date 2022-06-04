@@ -19,24 +19,11 @@
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:;" aria-expanded="false">
-                    <i class="flaticon-381-controls-3"></i>
+                    <i class="fa fa-user-tie"></i>
                     <span class="nav-text">Management</span>
                 </a>
                 <ul aria-expanded="false">
                     <li><a href="{{route('admin.contact.all')}}">Contact Requests</a></li>
-                    <li><a href="./chart-morris.html">Club Views</a></li>
-                    <li><a href="./form-element.html">Overall Report</a></li>
-                    <li><a href="./form-element.html">Traffic Report</a></li>
-                    <li><a href="./form-element.html">Conversions Report</a></li>
-                </ul>
-            </li>
-            <li><a class="has-arrow ai-icon" href="javascript:;" aria-expanded="false">
-                    <i class="flaticon-381-internet"></i>
-                    <span class="nav-text">Events</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="./ui-accordion.html">List Events</a></li>
-                    <li><a href="./ui-alert.html">Add New</a></li>
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:;" aria-expanded="false">
@@ -50,40 +37,21 @@
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:;" aria-expanded="false">
-                    <i class="flaticon-381-heart"></i>
+                    <i class="fa fa-ship"></i>
                     <span class="nav-text">Clubs</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="./uc-select2.html">List Clubs</a></li>
-                    <li><a href="./uc-nestable.html">Add New</a></li>
-                </ul>
-            </li>
-            <li><a class="has-arrow ai-icon" href="javascript:;" aria-expanded="false">
-                    <i class="flaticon-381-layer-1"></i>
-                    <span class="nav-text">Pages</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="./page-register.html">Register</a></li>
-                    <li><a href="./page-login.html">Login</a></li>
-                    <li><a class="has-arrow" href="javascript:;" aria-expanded="false">Error</a>
-                        <ul aria-expanded="false">
-                            <li><a href="./page-error-400.html">Error 400</a></li>
-                            <li><a href="./page-error-403.html">Error 403</a></li>
-                            <li><a href="./page-error-404.html">Error 404</a></li>
-                            <li><a href="./page-error-500.html">Error 500</a></li>
-                            <li><a href="./page-error-503.html">Error 503</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./page-lock-screen.html">Lock Screen</a></li>
+                    <li><a href="{{route('admin.clubs.all')}}">List Clubs</a></li>
+                    <li><a href="{{route('admin.clubs.getNew')}}">Add New</a></li>
                 </ul>
             </li>
             <li><a class="ai-icon" href="{{route('home')}}">
-                    <i class="fas fa-globe"></i>
+                    <i class="fa fa-globe"></i>
                     <span class="nav-text">Back to Website</span>
                 </a>
             </li>
-            <li><a class="ai-icon" href="#">
-                    <i class="fas fa-sign-out"></i>
+            <li><a class="ai-icon" href="{{route('logout')}}">
+                    <i class="fa fa-sign-out"></i>
                     <span class="nav-text">Logout</span>
                 </a>
             </li>

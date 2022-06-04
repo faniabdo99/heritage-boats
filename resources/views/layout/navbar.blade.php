@@ -6,7 +6,7 @@
             <nav class="menu-holder">
                 <ul class="mobile-menu">
                     <li class="menu-item"><a class="logo-font"><img class="logo" src="{{url('public/img')}}/HeritageLogo.svg"><span>@lang('layout.home')</span></a></li>
-                    
+
                     <li class="menu-item"><a href="{{route('about')}}"><span>@lang('layout.about_us')</span></a></li>
                     <li class="menu-item menu-item--has-child"><a href="javascript:void(0);"><span>@lang('layout.clubs')</span> </a>
                         <!-- sub-menu start-->
@@ -20,7 +20,7 @@
                     </li>
                     <li class="menu-item"><a href="{{route('contact.get')}}"><span>@lang('layout.contact_us')</span></a></li>
 
-                    <li class="menu-item"><a href="{{route('comingSoon')}}"><span>@lang('layout.calendar')</span></a></li>
+                    <li class="menu-item"><a href="{{route('calendar')}}"><span>@lang('layout.calendar')</span></a></li>
 
                     <li class="menu-item"><a href="{{route('acknowledgments')}}"><span>@lang('layout.acknowledgements')</span></a>
                         <!-- main menu end-->
@@ -61,7 +61,7 @@
                             </li>
                             <li class="menu-item"><a href="{{route('contact.get')}}"><span>@lang('layout.contact_us')</span></a></li>
 
-                            <li class="menu-item"><a href="{{route('comingSoon')}}"><span>@lang('layout.calendar')</span></a></li>
+                            <li class="menu-item"><a href="{{route('calendar')}}"><span>@lang('layout.calendar')</span></a></li>
                             <li class="menu-item"><a href="{{route('acknowledgments')}}"><span>@lang('layout.acknowledgements')</span></a>
                         </ul>
                     </nav>
