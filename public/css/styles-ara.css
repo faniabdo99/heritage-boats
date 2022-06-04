@@ -230,3 +230,10 @@ footer.footer .footer-menu li {
 .slick-initialized .slick-slide {
     direction: rtl;
 }
+.four-o-four-page  .primary-heading{
+    margin: auto;
+    text-align: center;
+}
+.four-o-four-page .subtitle {
+    text-align: center
+}

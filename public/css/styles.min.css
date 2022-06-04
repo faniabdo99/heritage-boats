@@ -15184,7 +15184,7 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-error p {
-    color: #444;
+    color: #fff;
     font-size: 16px;
     line-height: 20px;
     margin: 0;
@@ -25169,7 +25169,7 @@ section.section.product-info {
 }
 
 .error p {
-    color: #fff;
+    color: #000;
     font-size: 18px;
     line-height: 70px;
     font-weight: 700;
@@ -31375,4 +31375,10 @@ padding-right: 90px;
 }
 .testimonials-slider {
 margin-left: 12px;
+}
+.four-o-four-page .error {
+    padding: 220px 0px;
+} 
+.four-o-four-page .error .heading .primary-heading {
+    margin-bottom:0px
 }
