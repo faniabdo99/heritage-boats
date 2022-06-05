@@ -11,10 +11,10 @@
                     <li class="menu-item menu-item--has-child"><a href="javascript:void(0);"><span>@lang('layout.clubs')</span> </a>
                         <!-- sub-menu start-->
                         <ul class="sub-menu">
-                            <li><a href="{{route('comingSoon')}}">@lang('layout.club_basra')</a></li>
-                            <li><a href="{{route('comingSoon')}}">@lang('layout.club_chibayish')</a></li>
-                            <li><a href="{{route('comingSoon')}}">@lang('layout.club_baghdad')</a></li>
-                            <li><a href="{{route('comingSoon')}}">@lang('layout.club_babylon')</a></li>
+                            @forelse(getClubs() as $Club)
+                                <li><a href="{{route('club.single' , [$Club->slug, $Club->id])}}">{{$Club->LocalTitle}}</a></li>
+                            @empty
+                            @endforelse
                         </ul>
                         <!-- sub-menu end-->
                     </li>
@@ -52,15 +52,14 @@
                             <li class="menu-item menu-item--has-child"><a href="javascript:void(0);"><span>@lang('layout.clubs')</span> </a>
                                 <!-- sub-menu start-->
                                 <ul class="sub-menu">
-                                <li><a href="{{route('comingSoon')}}">@lang('layout.club_babylon')</a></li>
-                                    <li><a href="{{route('comingSoon')}}">@lang('layout.club_basra')</a></li>
-                                    <li><a href="{{route('comingSoon')}}">@lang('layout.club_chibayish')</a></li>
-                                    <li><a href="{{route('comingSoon')}}">@lang('layout.club_baghdad')</a></li>
+                                    @forelse(getClubs() as $Club)
+                                        <li><a href="{{route('club.single' , [$Club->slug, $Club->id])}}">{{$Club->LocalTitle}}</a></li>
+                                    @empty
+                                    @endforelse
                                 </ul>
                                 <!-- sub-menu end-->
                             </li>
                             <li class="menu-item"><a href="{{route('contact.get')}}"><span>@lang('layout.contact_us')</span></a></li>
-
                             <li class="menu-item"><a href="{{route('calendar')}}"><span>@lang('layout.calendar')</span></a></li>
                             <li class="menu-item"><a href="{{route('acknowledgments')}}"><span>@lang('layout.acknowledgements')</span></a>
                         </ul>

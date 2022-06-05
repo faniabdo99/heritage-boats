@@ -44,10 +44,10 @@
                     <!-- footer nav start-->
                     <nav class="footer-nav">
                         <ul class="footer-menu">
-                            <li><a href="{{route('comingSoon')}}">@lang('layout.club_basra')</a></li>
-                            <li><a href="{{route('comingSoon')}}">@lang('layout.club_chibayish')</a></li>
-                            <li><a href="{{route('comingSoon')}}">@lang('layout.club_baghdad')</a></li>
-                            <li><a href="{{route('comingSoon')}}">@lang('layout.club_babylon')</a></li>
+                            @forelse(getClubs() as $Club)
+                                <li><a href="{{route('club.single' , [$Club->slug, $Club->id])}}">{{$Club->LocalTitle}}</a></li>
+                            @empty
+                            @endforelse
                         </ul>
                     </nav>
                     <!-- footer nav end-->

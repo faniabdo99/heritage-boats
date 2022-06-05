@@ -77,6 +77,10 @@ Route::group(['prefix' => 'admin' , 'middleware' => 'admin'] , function(){
         Route::get('/' , [ClubController::class, 'getAdminAll'])->name('admin.clubs.all');
         Route::get('/new' , [ClubController::class, 'getAdminNew'])->name('admin.clubs.getNew');
         Route::post('/new' , [ClubController::class, 'postAdminNew'])->name('admin.clubs.postNew');
+        Route::get('/edit/{id}' , [ClubController::class, 'getAdminEdit'])->name('admin.clubs.getEdit');
+        Route::post('/edit/{id}' , [ClubController::class, 'postAdminEdit'])->name('admin.clubs.postEdit');
+        Route::get('/attachments/{id}' , [ClubController::class , 'getAdminAttachments'])->name('admin.clubs.getAttachments');
+        Route::get('/delete-attachments/{id}' , [ClubController::class , 'deleteGalleryImage'])->name('admin.clubs.deleteAttachments');
         Route::get('/localize/{id}' , [ClubController::class,'getLocalize'])->name('admin.clubs.getLocalize');
         Route::post('/localize/{id?}' , [ClubController::class,'postLocalize'])->name('admin.clubs.postLocalize');
     });

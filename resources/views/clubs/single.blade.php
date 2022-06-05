@@ -129,13 +129,12 @@
             <div class="row no-gutters">
                 <div class="col-12">
                     <div class="project-gallery-holder">
-                        <div class="project-gallery"><a class="gallery-item" href="img/ig-1.jpg" data-fancybox="project-gallery">
-                                <div class="overlay"></div><img class="img-bg" src="img/ig-1.jpg" alt="img"/></a><a class="gallery-item" href="img/ig-2.jpg" data-fancybox="project-gallery">
-                                <div class="overlay"></div><img class="img-bg" src="img/ig-2.jpg" alt="img"/></a><a class="gallery-item" href="img/ig-3.jpg" data-fancybox="project-gallery">
-                                <div class="overlay"></div><img class="img-bg" src="img/ig-3.jpg" alt="img"/></a><a class="gallery-item" href="img/ig-4.jpg" data-fancybox="project-gallery">
-                                <div class="overlay"></div><img class="img-bg" src="img/ig-4.jpg" alt="img"/></a><a class="gallery-item" href="img/ig-5.jpg" data-fancybox="project-gallery">
-                                <div class="overlay"></div><img class="img-bg" src="img/ig-5.jpg" alt="img"/></a><a class="gallery-item" href="img/ig-6.jpg" data-fancybox="project-gallery">
-                                <div class="overlay"></div><img class="img-bg" src="img/ig-6.jpg" alt="img"/></a></div>
+                        <div class="project-gallery">
+                            @forelse($TheClub->Gallery as $Image)
+                                <a class="gallery-item" href="{{$Image->ImageSrc}}" data-fancybox="project-gallery"><div class="overlay"></div><img class="img-bg" src="{{$Image->ImageSrc}}" alt="img"/></a>
+                            @empty
+                            @endforelse
+                        </div>
                         <div class="project-gallery-dots"></div>
                     </div>
                 </div>
@@ -237,9 +236,6 @@
                         </div>
                         <div class="contacts-banner contact-each-club">
                             <div class="container">
-                                <div class="row">
-
-                                </div>
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="address-block inner-block main-contact-network">

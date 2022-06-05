@@ -14,6 +14,10 @@ class Club extends Model{
     public function getBackgroundImageSrcAttribute(){
         return url('storage/app/public/images/club-covers/'.$this->background_image);
     }
+    //Relations
+    public function Gallery(){
+        return $this->hasMany(ClubImage::class,'club_id');
+    }
     public function getLocalTitleAttribute(){
         if(session()->get('locale') == 'en') {
 //            $Locale = BlogLocal::where('blog_id' , $this->id)->first();

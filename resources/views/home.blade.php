@@ -94,7 +94,7 @@
             </div>
         </section>
         <!-- about-welcome-style-2 end-->
-        
+
         <section class="section Clubs services-inner services-inner--style-3 no-padding-bottom text-center">
             <div class="container">
                 <div class="row">
@@ -111,82 +111,28 @@
                 <div class="content">
                     <div class="container">
                         <div class="row offset-margin">
-                            <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInLeft" data-wow-offset="100">
-                                <!-- item start-->
-                                <div class="info-box">
-                                    <div class="info-box__img"><img src="{{url('public/img')}}/citiesphotos/basra.jpg" alt="service" /></div>
-                                    <div class="info-box__category">@lang('pages/home.club_card_title') </div>
-                                    <div class="info-box__description">
-                                        <div class="info-box__number">01</div>
-                                        <div class="info-box__inner">
-                                            <h4 class="info-box__title"> <a href="{{route('comingSoon')}}">@lang('pages/home.club_basra')</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
-                                            <div class="info-box__hidden">
-                                                <p>@lang('pages/home.assad_salman')<br>
-                                                    <span dir="ltr">+964 773 077 0800</span>
-                                                </p><a class="info-box__link with--line" href="{{route('comingSoon')}}">@lang('pages/home.club_explore_more')</a>
+                            @forelse(getClubs() as $key => $Club)
+                                <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInLeft">
+                                    <!-- item start-->
+                                    <div class="info-box">
+                                        <div class="info-box__img"><img src="{{$Club->ImageSrc}}" alt="{{$Club->LocalTitle}}" /></div>
+                                        <div class="info-box__category">{{$Club->LocalTitle}}</div>
+                                        <div class="info-box__description">
+                                            <div class="info-box__number">0{{$key+1}}</div>
+                                            <div class="info-box__inner">
+                                                <h4 class="info-box__title"> <a href="{{route('club.single' , [$Club->slug, $Club->id])}}">{{$Club->LocalTitle}}</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
+                                                <div class="info-box__hidden">
+                                                    <p>{{$Club->cord_name}}<br>
+                                                        <span dir="ltr">{{$Club->cord_phone}}</span>
+                                                    </p><a class="info-box__link with--line" href="{{route('club.single' , [$Club->slug, $Club->id])}}">@lang('pages/home.club_explore_more')</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- item end-->
                                 </div>
-                                <!-- item end-->
-                            </div>
-                            <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInLeft" data-wow-offset="100">
-                                <!-- item start-->
-                                <div class="info-box">
-                                    <div class="info-box__img"><img src="{{url('public/img')}}/citiesphotos/chip.jpg" alt="service" /></div>
-                                    <div class="info-box__category">@lang('pages/home.club_card_title')</div>
-                                    <div class="info-box__description">
-                                        <div class="info-box__number">02</div>
-                                        <div class="info-box__inner">
-                                            <h4 class="info-box__title"> <a href="{{route('comingSoon')}}">@lang('pages/home.club_chibayish')</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
-                                            <div class="info-box__hidden">
-                                                <p>@lang('pages/home.assad_salman')<br>
-                                                <span dir="ltr">+964 773 077 0800</span>
-                                                </p><a class="info-box__link with--line" href="{{route('comingSoon')}}">@lang('pages/home.club_explore_more')</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- item end-->
-                            </div>
-                            <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInRight">
-                                <!-- item start-->
-                                <div class="info-box">
-                                    <div class="info-box__img"><img src="{{url('public/img')}}/citiesphotos/bgd.jpg" alt="service" /></div>
-                                    <div class="info-box__category">@lang('pages/home.club_card_title')</div>
-                                    <div class="info-box__description">
-                                        <div class="info-box__number">03</div>
-                                        <div class="info-box__inner">
-                                            <h4 class="info-box__title"> <a href="{{route('comingSoon')}}">@lang('pages/home.club_baghdad')</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
-                                            <div class="info-box__hidden">
-                                                <p>In development
-                                                </p><a class="info-box__link with--line" href="{{route('comingSoon')}}">@lang('pages/home.club_explore_more')</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- item end-->
-                            </div>
-                            <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInRight">
-                                <!-- item start-->
-                                <div class="info-box">
-                                    <div class="info-box__img"><img src="{{url('public/img')}}/citiesphotos/babel.jpg" alt="service" /></div>
-                                    <div class="info-box__category">@lang('pages/home.club_card_title')</div>
-                                    <div class="info-box__description">
-                                        <div class="info-box__number">04</div>
-                                        <div class="info-box__inner">
-                                            <h4 class="info-box__title"> <a href="{{route('comingSoon')}}">@lang('pages/home.club_babylon')</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
-                                            <div class="info-box__hidden">
-                                                <p>@lang('pages/home.assad_salman')<br>
-                                                <span dir="ltr">+964 773 077 0800</span>
-                                                </p><a class="info-box__link with--line" href="{{route('comingSoon')}}">@lang('pages/home.club_explore_more')</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- item end-->
-                            </div>
-
+                            @empty
+                            @endforelse
                         </div>
                         <a class="button button--transparent" href="{{route('comingSoon')}}" data-hover="@lang('pages/home.calendar_cta')"><span>More Clubs</span></a>
                     </div>
@@ -194,7 +140,7 @@
             </div>
         </section>
         <!-- services inner end-->
-        
+
         <!-- banner start-->
         <section class="section banner @lang('pages/home.calendar_class')">
             <picture>
@@ -211,7 +157,7 @@
             </div>
         </section>
         <!-- banner end-->
-        
+
     </main>
     @include('layout.footer')
 </div>

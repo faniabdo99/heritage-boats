@@ -132,9 +132,9 @@
                                             <b>@lang('pages/about.slide_headline')</b>
                                         </p>
                                         <span class="user">
-                                                <span class="position"><a href="arkforiraq.org">arkforiraq.org</a> </span>, <span class="name">@lang('pages/about.slide_overall_guideline')</span></span>
+                                                <span class="position"><a target="_blank" href="https://arkforiraq.org">arkforiraq.org</a> </span>, <span class="name">@lang('pages/about.slide_overall_guideline')</span></span>
                                         <span class="user">
-                                                <span class="position"><a href="safinaprojects.org">safinaprojects.org</a> </span>, <span class="name">@lang('pages/about.slide_project_guideline')</span></span>
+                                                <span class="position"><a target="_blank" href="https://safinaprojects.org">safinaprojects.org</a> </span>, <span class="name">@lang('pages/about.slide_project_guideline')</span></span>
                                     </div>
                                     <!-- item end-->
                                 </div>

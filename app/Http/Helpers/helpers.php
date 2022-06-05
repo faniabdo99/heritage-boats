@@ -1,4 +1,6 @@
 <?php
+
+use App\Models\Club;
 use App\Models\EventLog;
 /*
     Function: FireEventLog();
@@ -15,4 +17,13 @@ function FireEventLog($Model, $Action, $ResourceId, $UserId = null): bool {
         'resource_id' => $ResourceId
     ]);
     if($NewLog){return true;}else{return false;}
+}
+/*
+    Function: getClubs();
+    Description: Get a Laravel collection of all the clubs in the system
+    Initiated through composer.json autoloader
+    Usage(s): Navbar, Homepage, ContactUs
+*/
+function getClubs(){
+    return Club::latest()->get();
 }

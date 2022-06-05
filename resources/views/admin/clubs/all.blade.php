@@ -69,7 +69,8 @@
                                             <td>
                                                 <div class="d-flex">
                                                     @if(auth()->user()->role == 1)
-                                                        <a href="{{route('admin.admins.getEdit' , $Club->id)}}" title="Edit" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+                                                        <a href="{{route('admin.clubs.getEdit' , $Club->id)}}" title="Edit" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+                                                        <a href="{{route('admin.clubs.getAttachments' , $Club->id)}}" title="Edit" class="btn btn-warning shadow btn-xs sharp mr-1"><i class="fas fa-paperclip"></i></a>
                                                         <a href="{{route('admin.blogs.getLocalize' , $Club->id)}}" title="Translate to English" class="btn btn-success shadow btn-xs sharp mr-1"><i class="fa fa-language"></i></a>
                                                         <a href="javascript:;" data-id="{{$Club->id}}" class="btn btn-danger shadow btn-xs sharp delete-btn"><i class="fa fa-trash"></i></a>
                                                     @endif
@@ -104,7 +105,7 @@
         $('#notos-container').prepend(`
                 <div class="alert alert-warning alert-dismissible fade show">
                     <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
-                    <strong>Info!</strong> Double click to delete the user
+                    <strong>Info!</strong> Double click to delete the club
                     <button type="button" class="close h-100" data-dismiss="alert" aria-label="Close"><span><i class="mdi mdi-close"></i></span>
                     </button>
                 </div>
@@ -116,9 +117,9 @@
         //Perform Ajax request to delete-user endpoint
         $.ajax({
             method: 'post',
-            url: '{{route("delete-user-api")}}',
+            url: '{{route("delete-club-api")}}',
             data: {
-                'user_id': This.data('id'),
+                'club_id': This.data('id'),
                 'admin_id': "{{auth()->user()->id}}"
             },
             success: function(response){

@@ -136,82 +136,26 @@
             </div>
             <div class="container">
                 <div class="row offset-margin">
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <!-- team-item--grayscaled start-->
-                        <div class="team-item team-item--grayscaled">
-                            <div class="img-holder"><img class="img-bg" src="{{url('public/img')}}/citiesphotos/babel.jpg" alt="img"/></div>
-                            <div class="description"><span class="name">@lang('pages/contact.location_babylon_name')</span>
-                                <span class="position">@lang('pages/contact.location_position_name')</span>
-                                <span class="position"><a href="tel:+9647716748880">+964 7716 748 880</a></span>
-                                <span class="position"><a href="">@lang('pages/contact.location_position_google_map')</a></span>
-
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="button-holder"><a class="button button--primary button--dark" href="#" data-hover="Visit Club Page"><span>@lang('pages/contact.location_cta')</span></a>
+                    @forelse(getClubs() as $key => $Club)
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <!-- team-item--grayscaled start-->
+                            <div class="team-item team-item--grayscaled">
+                                <div class="img-holder"><img class="img-bg" src="{{$Club->ImageSrc}}" alt="{{$Club->LocalTitle}}"/></div>
+                                <div class="description"><span class="name">{{$Club->LocalTitle}}</span>
+                                    <span class="position">{{$Club->cord_name}}</span>
+                                    <span class="position"><a href="tel:+9647716748880">{{$Club->cord_phone}}</a></span>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="button-holder"><a class="button button--primary button--dark" href="{{route('club.single' , [$Club->slug, $Club->id])}}" data-hover="Visit Club Page"><span>@lang('pages/contact.location_cta')</span></a>
+                                            </div>
                                         </div>
                                     </div>
+                                    <!-- team-item--grayscaled end-->
                                 </div>
-                                <!-- team-item--grayscaled end-->
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <!-- team-item--grayscaled start-->
-                        <div class="team-item team-item--grayscaled">
-                            <div class="img-holder"><img class="img-bg" src="{{url('public/img')}}/citiesphotos/basra.jpg" alt="img"/></div>
-                            <div class="description"><span class="name">@lang('pages/contact.location_basra_name')</span>
-                                <span class="position">@lang('pages/contact.location_position_name')</span>
-                                <span class="position"><a href="tel:+9647716748880">+964 7716 748 880</a></span>
-                                <span class="position"><a href="">@lang('pages/contact.location_position_google_map')</a></span>
-
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="button-holder"><a class="button button--primary button--dark" href="#" data-hover="Visit Club Page"><span>@lang('pages/contact.location_cta')</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- team-item--grayscaled end-->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <!-- team-item--grayscaled start-->
-                        <div class="team-item team-item--grayscaled">
-                            <div class="img-holder"><img class="img-bg" src="{{url('public/img')}}/citiesphotos/chip.jpg" alt="img"/></div>
-                            <div class="description"><span class="name">@lang('pages/contact.location_chibayish_name')</span>
-                                <span class="position">@lang('pages/contact.location_position_name')</span>
-                                <span class="position"><a href="tel:+9647716748880">+964 7716 748 880</a></span>
-                                <span class="position"><a href="">@lang('pages/contact.location_position_google_map')</a></span>
-
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="button-holder"><a class="button button--primary button--dark" href="#" data-hover="Visit Club Page"><span>@lang('pages/contact.location_cta')</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- team-item--grayscaled end-->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <!-- team-item--grayscaled start-->
-                        <div class="team-item team-item--grayscaled">
-                            <div class="img-holder"><img class="img-bg" src="{{url('public/img')}}/citiesphotos/bgd.jpg" alt="img"/></div>
-                            <div class="description"><span class="name">@lang('pages/contact.location_baghdad_name')</span>
-                                <span class="position">@lang('pages/contact.location_position_name')</span>
-                                <span class="position"><a href="tel:+9647716748880">+964 7716 748 880</a></span>
-                                <span class="position"><a href="">@lang('pages/contact.location_position_google_map')</a></span>
-
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="button-holder"><a class="button button--primary button--dark" href="#" data-hover="Visit Club Page"><span>@lang('pages/contact.location_cta')</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- team-item--grayscaled end-->
-                            </div>
-                        </div>
-                    </div>
+                    @empty
+                    @endforelse
                 </div>
             </div>
         </div>
