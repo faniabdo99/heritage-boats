@@ -137,7 +137,9 @@
                             @empty
                             @endforelse
                         </div>
-                        <a class="button button--transparent" href="{{route('comingSoon')}}" data-hover="@lang('pages/home.calendar_cta')"><span>@lang('pages/home.more_clubs_cta')</span></a>
+                        @if(count(getClubs()) > 4)
+                            <a class="button button--transparent" href="{{route('comingSoon')}}" data-hover="@lang('pages/home.calendar_cta')"><span>@lang('pages/home.more_clubs_cta')</span></a>
+                        @endif
                     </div>
                 </div>
             </div>
