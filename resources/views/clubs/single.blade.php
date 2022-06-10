@@ -157,7 +157,7 @@
                                         <div class="slider-item">
                                             <!-- statistics item start-->
                                             <div class="statistics-item"><span class="counter">{{$TheClub->palms}}</span></div>
-                                            <!-- statistics item end--><span class="user"><span class="name">@lang('pages/club.palms')</span></span>
+                                            <!-- statistics item end--><span class="user"><span class="name text-left">@lang('pages/club.palms')</span></span>
                                         </div>
                                         <!-- item end-->
                                     </div>

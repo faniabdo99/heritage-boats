@@ -16,7 +16,7 @@ return [
     //footer
     'footer_description' => 'تجمع أندية قوارب التراث الناس معاً للاستمتاع بجمال القوارب وبيئة الأنهار والأراضي الرطبة في العراق، والتعرف على تراث العراق، ومعالجة القضايا ذات الصلة مثل التلوث والاستخدام العام للممرات المائية.',
     'links' => 'الروابط',
-    'copy_writes' => '© 2022 شبكة أندية القوارب التراثية العراقية صمم بواسطة <a href="#">Alkarnak</a> و <a href="https://naqrah.net" target="_blank">Naqrah Productions</a>',
+    'copy_writes' => '© 2022 شبكة أندية القوارب التراثية العراقية صمم بواسطة <a href="https://www.facebook.com/alkarnakp/" target="_blank">Alkarnak</a> و <a href="https://productions.naqrah.net/" target="_blank">Naqrah Productions</a>',
     'privacy_policy' => 'سياسة الخصوصية',
     'terms' => 'شروط الاستخدام'
 ];
