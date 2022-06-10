@@ -11,7 +11,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="heading primary-heading">
+                        <div class="heading primary-heading mx-auto">
                             <img src="https://cdn.rawgit.com/ahmedhosna95/upload/1731955f/sad404.svg" alt="404">
                             <h1 class="primary-heading">404</h1>
                             <h5 class="subtitle"><span>Something Went Wrong</span></h5>
