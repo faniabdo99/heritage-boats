@@ -54,10 +54,10 @@
                     <!-- socials start-->
                     <nav class="socials-holder">
                         <ul class="socials-primary">
-                            <li><a href="https://www.facebook.com/arkforiraq"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="https://twitter.com/arkforiraq"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="https://www.youtube.com/channel/UCMhuAo22CQbJ-k9k17z92dg"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                            <li><a href="https://www.instagram.com/arkforiraq/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.facebook.com/arkforiraq" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="https://twitter.com/arkforiraq" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCMhuAo22CQbJ-k9k17z92dg" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.instagram.com/arkforiraq/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                         </ul>
                     </nav>
                     <!-- socials end -->
