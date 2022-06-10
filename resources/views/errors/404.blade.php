@@ -7,11 +7,20 @@
 @include('layout.navbar')
 <!-- header end-->
     <main class="main">
-        <div class="mt-5 pt-5">
-            {{-- This is a blade comment, you can use it instead of <!-- --> if you want --}}
-            <h1>404.</h1>
-            <p>Start adding your HTML here.</p>
-        </div>
+        <section class="section error">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="heading primary-heading">
+                            <img src="https://cdn.rawgit.com/ahmedhosna95/upload/1731955f/sad404.svg" alt="404">
+                            <h1 class="primary-heading">404</h1>
+                            <h5 class="subtitle"><span>Something Went Wrong</span></h5>
+                            <p>The page not found</p><a class="button button--filled" href="index.html" data-hover="Home Page"><span>Home Page</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     @include('layout.footer')
 </div>
