@@ -30,7 +30,7 @@
                                         <div class="promo-slider__wrapper-2">
                                             <p class="subtitle wow fadeInUp">@lang('pages/home.hero_description')</p>
                                         </div>
-                                        <div class="promo-slider__wrapper-3"><a class="wow fadeInUp button button--filled" href="{{route('comingSoon')}}" data-hover="Discover"><span>@lang('pages/home.hero_cta')</span></a>
+                                        <div class="promo-slider__wrapper-3"><a class="wow fadeInUp button button--filled" href="{{route('about')}}" data-hover="Discover"><span>@lang('pages/home.hero_cta')</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -66,9 +66,9 @@
                     <div class="img-holder">
                         <div class="overlay"></div>
                         @if(session()->get('locale') == "en")
-                            <a href="https://www.youtube.com/watch?v=KEpqnJxIHW0"><iframe class="fancy-video" width="395" height="150" src="https://www.youtube.com/embed/Dll5xSNzSzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                            <a href="https://www.youtube.com/watch?v=KEpqnJxIHW0"><iframe class="fancy-video" width="395" height="150" src="https://www.youtube.com/embed/KEpqnJxIHW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
                         @else
-                            <a href="https://www.youtube.com/watch?v=QUW2hsKNiPY"><iframe class="fancy-video" width="395" height="150" src="https://www.youtube.com/embed/Dll5xSNzSzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                            <a href="https://www.youtube.com/watch?v=QUW2hsKNiPY"><iframe class="fancy-video" width="395" height="150" src="https://www.youtube.com/embed/QUW2hsKNiPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
                         @endif
                     </div>
                 </div>
