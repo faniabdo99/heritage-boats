@@ -77,7 +77,8 @@ class BlogController extends Controller{
         if(!$TheArticle){
             abort(404);
         }
-        return view('admin.blogs.localize' , compact('TheArticle'));
+        $CurrentLocale = BlogLocal::where('blog_id' , $id)->first();
+        return view('admin.blogs.localize' , compact('TheArticle' , 'CurrentLocale'));
     }
     /*
         Function: postLocalize();
@@ -85,8 +86,17 @@ class BlogController extends Controller{
         Usage(s): web.php
     */
     public function postLocalize(Request $r){
-        //TODO: Validate the request
-        BlogLocal::create($r->all());
+        $r->validate([
+            'title_value' => 'required|min:5',
+            'description_value' => 'required',
+            'content_value' => 'required'
+        ]);
+        $CurrentLocal = BlogLocal::where('blog_id' , $r->blog_id)->first();
+        if($CurrentLocal){
+            $CurrentLocal->update($r->all());
+        }else{
+            BlogLocal::create($r->all());
+        }
         return redirect()->route('admin.blogs.all')->withSuccess('Article translated!');
     }
     // non-admin routes
@@ -98,7 +108,7 @@ class BlogController extends Controller{
     public function getAll(){
         $AllArticles = Blog::latest()->get();
         $RecentPosts = Blog::latest()->limit(4)->get();
-        $Categories = Category::where('is_promoted' , 1)->latest()->get();
+        $Categories = Category::latest()->get();
         //Archives
         $Archives = Blog::get()->groupBy(function($val){
             return ['name' => Carbon::parse($val->created_at)->format('M Y')];

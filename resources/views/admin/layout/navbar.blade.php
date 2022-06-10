@@ -27,14 +27,6 @@
 					</div>
 				</div>
 				<ul class="navbar-nav header-right">
-					<li class="nav-item">
-						<div class="input-group search-area d-xl-inline-flex d-none">
-							<input type="text" class="form-control" placeholder="Search here...">
-							<div class="input-group-append">
-								<span class="input-group-text"><a href="javascript:void(0)"><i class="fas fa-search"></i></a></span>
-							</div>
-						</div>
-					</li>
 					<li class="nav-item dropdown header-profile">
 						<a class="nav-link" href="javascript:void(0)" role="button" data-toggle="dropdown">
 							<div class="header-info">

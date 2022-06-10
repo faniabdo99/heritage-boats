@@ -44,19 +44,6 @@
                             </div>
                         @empty
                         @endforelse
-{{--                        <div class="col-12 text-center">--}}
-{{--                            <!-- pagination start-->--}}
-{{--                            <ul class="pagination pagination--primary">--}}
-{{--                                <li class="back"><a href="#">Back</a></li>--}}
-{{--                                <li class="number current"><a href="#">1</a></li>--}}
-{{--                                <li class="number"><a href="#">2</a></li>--}}
-{{--                                <li class="number"><a href="#">3</a></li>--}}
-{{--                                <li class="number"><a href="#">4</a></li>--}}
-{{--                                <li class="number"><a href="#">5</a></li>--}}
-{{--                                <li class="next"><a href="#">Next</a></li>--}}
-{{--                            </ul>--}}
-{{--                            <!-- pagination end-->--}}
-{{--                        </div>--}}
                     </div>
                 </div>
                 <div class="col-sm-8 offset-sm-2 col-md-5 offset-md-0 col-lg-4 col-xl-3">

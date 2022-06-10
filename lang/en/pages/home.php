@@ -31,6 +31,7 @@ return [
     'sabah_rubaiee' => 'Sabah Al-Rubaie',
     'assad_salman' => 'Asaad Dawood',
     'clubs_class' => '',
+    'more_clubs_cta' => 'More Clubs',
     //Blog
     'blog_subtitle' => 'Blog',
     'blog_title' => 'News & Insights',

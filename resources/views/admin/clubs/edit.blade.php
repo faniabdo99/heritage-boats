@@ -55,7 +55,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Background Image: *</label>
-                                        <input name="background_image" type="file" class="form-control input-default" required>
+                                        <input name="background_image" type="file" class="form-control input-default">
                                         <br>
                                         <img src="{{$TheClub->BackgroundImageSrc}}" width="350" class="h-auto">
                                     </div>

@@ -49,7 +49,8 @@ class CategoryController extends Controller{
         if(!$TheCategory){
             abort(404);
         }
-        return view('admin.categories.localize' , compact('TheCategory'));
+        $CurrentLocal = CategoryLocal::where('category_id' , $id)->first();
+        return view('admin.categories.localize' , compact('TheCategory' , 'CurrentLocal'));
     }
     public function postLocalize(Request $r, $id){
         $r->validate([
@@ -57,7 +58,12 @@ class CategoryController extends Controller{
         ]);
         $CategoryLocalData = $r->all();
         $CategoryLocalData['category_id'] = $id;
-        CategoryLocal::create($CategoryLocalData);
+        $CurrentLocal = CategoryLocal::where('category_id' , $id)->first();
+        if($CurrentLocal){
+            $CurrentLocal->update($CategoryLocalData);
+        }else{
+            CategoryLocal::create($CategoryLocalData);
+        }
         return redirect()->route('admin.categories.all')->withSuccess('Category Translated Successfully');
     }
 

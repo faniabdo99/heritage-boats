@@ -31,6 +31,7 @@ return [
     'sabah_rubaiee' => 'صباح الربيعي',
     'assad_salman' => 'أسعد سلمان',
     'clubs_class' => 'Acknowledge Acknow-heading',
+    'more_clubs_cta' => 'المزيد',
     //Blog
     'blog_subtitle' => 'مدونة',
     'blog_title' => 'الأخبار الحصرية',

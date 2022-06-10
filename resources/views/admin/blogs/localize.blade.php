@@ -43,19 +43,19 @@
                                     <input type="hidden" name="blog_id" value="{{$TheArticle->id}}">
                                     <div class="form-group">
                                         <label>Title: *</label>
-                                        <input name="title_value" type="text" class="form-control input-default " placeholder="{{$TheArticle->title}}" required>
+                                        <input name="title_value" type="text" class="form-control input-default " placeholder="{{$TheArticle->title}}" value="{{$CurrentLocale->title_value ?? ''}}" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="tags">Tags:</label>
-                                        <input class="form-control input-default" type="text" name="tags_value" id="tags" placeholder="{{$TheArticle->tags}}">
+                                        <input class="form-control input-default" type="text" name="tags_value" id="tags" placeholder="{{$TheArticle->tags}}" value="{{$CurrentLocale->tags_value ?? ''}}">
                                     </div>
                                     <div class="form-group">
                                         <label>Description: *</label>
-                                        <textarea name="description_value" class="form-control input-default" rows="10" placeholder="{{$TheArticle->description}}" required></textarea>
+                                        <textarea name="description_value" class="form-control input-default" rows="10" placeholder="{{$TheArticle->description}}" required>{{$CurrentLocale->description_value ?? ''}}</textarea>
                                     </div>
                                     <div class="form-group">
                                         <label>Content: *</label>
-                                        <textarea name="content_value" class="editor form-control input-default" rows="10">{{$TheArticle->content}}</textarea>
+                                        <textarea name="content_value" class="editor form-control input-default" rows="10">{{$CurrentLocale->content_value ?? $TheArticle->content}}</textarea>
                                     </div>
                                     <br><br>
                                     <button type="submit" class="btn btn-primary">Submit</button>

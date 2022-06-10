@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Club;
 use App\Models\ClubImage;
+use App\Models\ClubLocal;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image as ImageLib;
@@ -155,9 +156,9 @@ class ClubController extends Controller{
                     if($TheClub){
                         FireEventLog('Club', 'Deleted', $TheClub->id , $r->admin_id);
                         $TheClub->delete();
-                        return response('Category has been deleted' , 200);
+                        return response('Club has been deleted' , 200);
                     }else{
-                        return response('Category is already deleted' , 404);
+                        return response('Club is already deleted' , 404);
                     }
                 }else{
                     return response('Something went wrong' , 403);
@@ -168,6 +169,27 @@ class ClubController extends Controller{
         }else{
             return response('Something went wrong! Please refresh the page and try again' , 400);
         }
+    }
+    //Localization
+    public function getLocalize($id){
+        $TheClub = Club::findOrFail($id);
+        $ClubLocal = ClubLocal::where('club_id' , $id)->first();
+        return view('admin.clubs.localize' , compact('TheClub' , 'ClubLocal'));
+    }
+    public function postLocalize(Request $r){
+        $r->validate([
+            'title_value' => 'required|min:5',
+            'short_title_value' => 'required|min:5',
+            'description_value' => 'required',
+            'cord_name_value' => 'required|min:5'
+        ]);
+        $CurrentLocal = ClubLocal::where('club_id' , $r->club_id)->first();
+        if($CurrentLocal){
+            $CurrentLocal->update($r->all());
+        }else{
+            ClubLocal::create($r->all());
+        }
+        return redirect()->route('admin.clubs.all')->withSuccess('The club data has been translated');
     }
     //Front end methods
     public function getSingle($slug,$id){

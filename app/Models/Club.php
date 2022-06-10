@@ -8,6 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Club extends Model{
     use HasFactory;
     protected $guarded = [];
+    private function getClubLocale(){
+        if(session()->get('locale') == 'en') {
+            $Locale = ClubLocal::where('club_id' , $this->id)->first();
+            if($Locale){
+                return $Locale;
+            }else{
+                return null;
+            }
+        }else{
+            return null;
+        }
+    }
     public function getImageSrcAttribute(){
         return url('storage/app/public/images/clubs/'.$this->image);
     }
@@ -19,26 +31,31 @@ class Club extends Model{
         return $this->hasMany(ClubImage::class,'club_id');
     }
     public function getLocalTitleAttribute(){
-        if(session()->get('locale') == 'en') {
-//            $Locale = BlogLocal::where('blog_id' , $this->id)->first();
-            $Locale = null;
-            if($Locale){
-//                return $Locale->title_value;
-                return $this->title;
-            }else{
-                return $this->title;
-            }
+        if($this->getClubLocale()){
+            return $this->getClubLocale()->title_value;
         }else{
             return $this->title;
         }
     }
     public function getLocalShortTitleAttribute(){
-        return $this->short_title;
+        if($this->getClubLocale()){
+            return $this->getClubLocale()->short_title_value;
+        }else{
+            return $this->short_title;
+        }
     }
     public function getLocalDescriptionAttribute(){
-        return $this->description;
+        if($this->getClubLocale()){
+            return $this->getClubLocale()->description_value;
+        }else{
+            return $this->description;
+        }
     }
     public function getLocalCordNameAttribute(){
-        return $this->cord_name;
+        if($this->getClubLocale()){
+            return $this->getClubLocale()->cord_name_value;
+        }else{
+            return $this->cord_name;
+        }
     }
 }

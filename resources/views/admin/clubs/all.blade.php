@@ -71,7 +71,7 @@
                                                     @if(auth()->user()->role == 1)
                                                         <a href="{{route('admin.clubs.getEdit' , $Club->id)}}" title="Edit" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
                                                         <a href="{{route('admin.clubs.getAttachments' , $Club->id)}}" title="Edit" class="btn btn-warning shadow btn-xs sharp mr-1"><i class="fas fa-paperclip"></i></a>
-                                                        <a href="{{route('admin.blogs.getLocalize' , $Club->id)}}" title="Translate to English" class="btn btn-success shadow btn-xs sharp mr-1"><i class="fa fa-language"></i></a>
+                                                        <a href="{{route('admin.clubs.getLocalize' , $Club->id)}}" title="Translate to English" class="btn btn-success shadow btn-xs sharp mr-1"><i class="fa fa-language"></i></a>
                                                         <a href="javascript:;" data-id="{{$Club->id}}" class="btn btn-danger shadow btn-xs sharp delete-btn"><i class="fa fa-trash"></i></a>
                                                     @endif
                                                 </div>

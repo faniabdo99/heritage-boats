@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="align-container">
-                            <div class="align-item"> <span>Iraqi Heritage Boat Clubs Network </span>
+                            <div class="align-item"> <span>@lang('pages/club.page_subtitle')</span>
                                 <h1 class="title wow fadeInUp">{{$TheClub->LocalTitle}}</h1>
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                         <div class="heading primary-heading inner-heading">
                             <div class="title-holder">
                                 <div class="title-block">
-                                    <h3 class="title">Clubs</h3>
+                                    <h3 class="title @lang('settings.text_align')">@lang('pages/club.clubs')</h3>
                                     <p class="subtitle">{{$TheClub->LocalShortTitle}}</p>
                                 </div>
                                 <div class="img-block">
@@ -74,8 +74,8 @@
                                 <div class="row align-items-end">
                                     <div class="col-md-6 col-sm-12 text-center">
                                         <div class="heading primary-heading">
-                                            <h3 class="title">Members</h3>
-                                            <h5 class="subtitle"><span>Babylon Club Consists of</span></h5>
+                                            <h3 class="title @lang('settings.text_align')">@lang('pages/club.members')</h3>
+                                            <h5 class="subtitle"><span>{{$TheClub->LocalShortTitle}} @lang('pages/club.members_desc')</span></h5>
                                             <div class="statistics-item"><div class="col-sm-4">
                                                     <!-- statistics item start-->
                                                     <div class="statistics-item"><span class="counter">{{$TheClub->members}}</span></div>
@@ -91,19 +91,9 @@
                                         <div class="testimonials-slider testimonials-img-left-slider">
                                             <!-- item start-->
                                             <div class="slider-item">
-                                                <p>Registered member in club records</p>
+                                                <p>@lang('pages/club.members_registered')</p>
                                             </div>
                                             <!-- item end-->
-
-                                            <!-- item start-->
-                                            <div class="slider-item">
-                                                <p>Slickhead grunion lake trout. Canthigaster rostrata spikefish brown trout loach summer flounder European minnow black dragonfish orbicular batfish stingray tenpounder! Flying characin herring, Moses sole sea snail grouper discus. European eel slender snipe eel. Gulper eel dealfish ocean sunfish; rohu yellow-and-black triplefin Atlantic saury swordfish</p><span class="user"><span class="name">John Maclein</span></span>
-                                            </div>
-                                            <!-- item end-->
-                                            <!-- item start-->
-
-                                            <!-- item end-->
-                                            <!-- testimonials slider end-->
                                         </div>
                                     </div>
                                     <!-- content end-->
@@ -113,6 +103,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
         <!-- testimonials img left end-->
         <!-- project gallery start-->
@@ -121,7 +112,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="heading primary-heading">
-                            <h5 class="subtitle"><span>Project</span> <span>Gallery</span></h5>
+                            <h5 class="subtitle"><span>@lang('pages/club.club_gallery')</span></h5>
                         </div>
                     </div>
                 </div>
@@ -141,7 +132,6 @@
             </div>
         </section>
         <!-- project gallery end-->
-
         <section class="section testimonials testimonials--img-right elements">
             <div class="container element-holder">
                 <div class="row">
@@ -153,10 +143,9 @@
                                 <div class="heading primary-heading">
                                     <div class="row align-items-end">
                                         <div class="col-md-8">
-                                            <h3 class="title">Boats</h3>
-                                            <h5 class="subtitle"><span>In Babylon there are</span></h5>
+                                            <h3 class="title @lang('settings.text_align')">@lang('pages/club.boats')</h3>
+                                            <h5 class="subtitle"><span>{{$TheClub->LocalShortTitle}} @lang('pages/club.boats_desc')</span></h5>
                                         </div>
-
                                     </div>
                                 </div>
                                 <!-- heading end-->
@@ -168,11 +157,9 @@
                                         <div class="slider-item">
                                             <!-- statistics item start-->
                                             <div class="statistics-item"><span class="counter">{{$TheClub->palms}}</span></div>
-                                            <!-- statistics item end--><span class="user"><span class="name">Palms</span></span>
+                                            <!-- statistics item end--><span class="user"><span class="name">@lang('pages/club.palms')</span></span>
                                         </div>
                                         <!-- item end-->
-                                        <!-- item start-->
-
                                     </div>
                                     <!-- testimonials slider end-->
                                 </div>
@@ -200,10 +187,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="heading primary-heading">
-                            <h3 class="title">Events</h3>
-                            <h5 class="subtitle"><span>Calendar</span></h5>
-                            <p>join us with our new events and activities across different clubs</p>
+                        <div class="heading primary-heading mx-auto">
+                            <h3 class="title">@lang('pages/club.events')</h3>
+                            <h5 class="subtitle text-center"><span>@lang('pages/club.calendar')</span></h5>
+                            <p>@lang('pages/club.calendar_desc')</p>
                         </div>
                     </div>
                 </div>
@@ -231,8 +218,8 @@
                 <div class="row">
                     <div class="col-xl-6 offset-xl-5">
                         <div class="heading primary-heading">
-                            <h3 class="title">Join Us</h3>
-                            <h5 class="subtitle"><span>Contact Club Coordinator</span></h5>
+                            <h3 class="title">@lang('pages/club.main_cta')</h3>
+                            <h5 class="subtitle"><span>@lang('pages/club.contact_cord')</span></h5>
                         </div>
                         <div class="contacts-banner contact-each-club">
                             <div class="container">
@@ -257,7 +244,7 @@
 
                                 </div>
                             </div>
-                        </div><a class="button button--transparent" href="tel:{{$TheClub->cord_phone}}" data-hover="Discover"><span>Call Now</span></a>
+                        </div><a class="button button--transparent" href="tel:{{$TheClub->cord_phone}}" data-hover="Discover"><span>@lang('pages/club.call_now')</span></a>
                     </div>
                 </div>
             </div>

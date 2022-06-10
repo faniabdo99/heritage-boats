@@ -49,7 +49,6 @@
                     <p class="address">@lang('pages/home.promo_header')</p>
                     <p class="e-main">@lang('pages/home.promo_coordinator')</p>
                     <p class="phone-number">@lang('pages/home.promo_phone') <a href="tel:+9647716748880">+964 7716 748 880</a></p>
-
                 </div>
                 <div class="promo-socials">
                     <!-- socials start-->
@@ -66,7 +65,11 @@
                 <div class="video-block">
                     <div class="img-holder">
                         <div class="overlay"></div>
-                        <a href="https://www.youtube.com/watch?v=KEpqnJxIHW0"><iframe class="fancy-video" width="395" height="150" src="https://www.youtube.com/embed/Dll5xSNzSzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                        @if(session()->get('locale') == "en")
+                            <a href="https://www.youtube.com/watch?v=KEpqnJxIHW0"><iframe class="fancy-video" width="395" height="150" src="https://www.youtube.com/embed/Dll5xSNzSzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                        @else
+                            <a href="https://www.youtube.com/watch?v=QUW2hsKNiPY"><iframe class="fancy-video" width="395" height="150" src="https://www.youtube.com/embed/Dll5xSNzSzU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -87,7 +90,7 @@
                         <div class="description">
                             <h3 class="title">@lang('pages/home.about_project_title')</h3>
                             <p>@lang('pages/home.about_description')</p>
-                            <a class="button button--transparent" href="about.html" data-hover="@lang('pages/home.about_cta')"><span>@lang('pages/home.about_cta')</span></a>
+                            <a class="button button--transparent" href="{{route('about')}}" data-hover="@lang('pages/home.about_cta')"><span>@lang('pages/home.about_cta')</span></a>
                         </div>
                     </div>
                 </div>
@@ -122,7 +125,7 @@
                                             <div class="info-box__inner">
                                                 <h4 class="info-box__title"> <a href="{{route('club.single' , [$Club->slug, $Club->id])}}">{{$Club->LocalTitle}}</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
                                                 <div class="info-box__hidden">
-                                                    <p>{{$Club->cord_name}}<br>
+                                                    <p>{{$Club->LocalCordName}}<br>
                                                         <span dir="ltr">{{$Club->cord_phone}}</span>
                                                     </p><a class="info-box__link with--line" href="{{route('club.single' , [$Club->slug, $Club->id])}}">@lang('pages/home.club_explore_more')</a>
                                                 </div>
@@ -134,7 +137,7 @@
                             @empty
                             @endforelse
                         </div>
-                        <a class="button button--transparent" href="{{route('comingSoon')}}" data-hover="@lang('pages/home.calendar_cta')"><span>More Clubs</span></a>
+                        <a class="button button--transparent" href="{{route('comingSoon')}}" data-hover="@lang('pages/home.calendar_cta')"><span>@lang('pages/home.more_clubs_cta')</span></a>
                     </div>
                 </div>
             </div>
