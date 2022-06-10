@@ -228,7 +228,7 @@ footer.footer .footer-menu li {
     text-align: right;
 }
 .slick-initialized .slick-slide {
-    direction: rtl;
+    direction: ltr;
 }
 .four-o-four-page  .primary-heading{
     margin: auto;

@@ -90,7 +90,7 @@
                                         <!-- testimonials slider start-->
                                         <div class="testimonials-slider testimonials-img-left-slider">
                                             <!-- item start-->
-                                            <div class="slider-item">
+                                            <div class="slider-item @lang('settings.text_align')">
                                                 <p>@lang('pages/club.members_registered')</p>
                                             </div>
                                             <!-- item end-->
