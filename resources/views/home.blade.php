@@ -154,7 +154,7 @@
                     <div class="col-xl-7 col-lg-8 col-md-9">
                         <h1 class="title">@lang('pages/home.calendar_title')</h1>
                         <p>@lang('pages/home.calendar_description')</p>
-                        <a class="button button--transparent" href="{{route('comingSoon')}}" data-hover="@lang('pages/home.calendar_cta')"><span>@lang('pages/home.calendar_cta')</span></a>
+                        <a class="button button--transparent" href="{{route('calendar')}}" data-hover="@lang('pages/home.calendar_cta')"><span>@lang('pages/home.calendar_cta')</span></a>
                     </div>
                 </div>
             </div>
