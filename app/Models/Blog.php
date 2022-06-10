@@ -15,8 +15,11 @@ class Blog extends Model{
         if($this->tags){
             if(session()->get('locale') == 'en') {
                 $Locale = BlogLocal::where('blog_id' , $this->id)->first();
-                return explode(',' ,$Locale->tags_value );
-
+                if($Locale){
+                    return explode(',' ,$Locale->tags_value );
+                }else{
+                    return explode(',' ,$this->tags );
+                }
             }else{
                 return explode(',' ,$this->tags );
             }

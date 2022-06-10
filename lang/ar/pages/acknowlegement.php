@@ -24,7 +24,7 @@ return [
     'babylon_ali' => 'علي خضير عباس (أبو حيدر)',
     'babylon_rabah' => 'رباح هادي (أبو احمد)',
     //Basra List
-    'basra_title' => 'البصرة:',
+    'basra_title' => 'البصرة :',
     'basra_abu_dhafer' => 'أبو ظافر وابناءه حسين وظافر نوري',
     'basra_assad' => 'أسعد سلمان داوود',
     //Hit List

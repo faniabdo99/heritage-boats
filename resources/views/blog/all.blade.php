@@ -65,7 +65,7 @@
                                         <div class="recent-item__img"><img class="img-bg" src="{{$RecentPost->imagePath}}" alt="{{$RecentPost->local_title}}"/></div>
                                     </div>
                                     <div class="col-8">
-                                        <h6 class="recent-item__title"><a class="recent-item__link" href="#">{{$RecentPost->local_title}}</a></h6>
+                                        <h6 class="recent-item__title"><a class="recent-item__link" href="{{route('blog.single' , [$RecentPost->slug, $RecentPost->id])}}">{{$RecentPost->local_title}}</a></h6>
                                         <span class="recent-item__date">{{$RecentPost->created_at->format('m.d.Y')}}</span>
                                     </div>
                                 </div>
@@ -73,32 +73,6 @@
                         @empty
                         @endforelse
                     </div>
-{{--                    <div class="articles__inner">--}}
-{{--                        <h4 class="articles__title">@lang('pages/blog.archive')</h4>--}}
-{{--                        <ul class="category-list">--}}
-{{--                            @forelse($ArchivesKeys as $Archive)--}}
-{{--                                <li class="category-list__item"><span>{{$Archive}}</span><span class="text-right">{{count($Archives[$Archive])}}</span></li>--}}
-{{--                            @empty--}}
-{{--                            @endforelse--}}
-{{--                        </ul>--}}
-{{--                    </div>--}}
-{{--                    <div class="articles__inner">--}}
-{{--                        <h4 class="articles__title">@lang('pages/blog.recent_comments')</h4>--}}
-{{--                        @forelse($RecentComments as $Comment)--}}
-{{--                            <div class="recent-comment"><span><a href="{{route('blog.single' , [$Comment->Blog->slug , $Comment->Blog->id])}}">{{$Comment->name}}</a> {{$Comment->Blog->local_title}}</span></div>--}}
-{{--                        @empty--}}
-{{--                            ---}}
-{{--                        @endforelse--}}
-{{--                    </div>--}}
-{{--                    <div class="articles__inner">--}}
-{{--                        <h4 class="articles__title">@lang('pages/blog.tags')</h4>--}}
-{{--                        <div class="tags-block">--}}
-{{--                            @forelse($uniqueTags as $Tag)--}}
-{{--                                <span class="tag">{{$Tag}}</span>--}}
-{{--                            @empty--}}
-{{--                            @endforelse--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
                 </div>
             </div>
         </div>
