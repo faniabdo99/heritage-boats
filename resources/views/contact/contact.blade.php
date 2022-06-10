@@ -142,7 +142,7 @@
                             <div class="team-item team-item--grayscaled">
                                 <div class="img-holder"><img class="img-bg" src="{{$Club->ImageSrc}}" alt="{{$Club->LocalTitle}}"/></div>
                                 <div class="description"><span class="name">{{$Club->LocalTitle}}</span>
-                                    <span class="position">{{$Club->cord_name}}</span>
+                                    <span class="position">{{$Club->LocalCordName}}</span>
                                     <span class="position"><a href="tel:+9647716748880">{{$Club->cord_phone}}</a></span>
                                     <div class="row">
                                         <div class="col-12">
