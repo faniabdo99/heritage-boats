@@ -29,6 +29,22 @@
         <!-- get in touch start-->
         <section class="section get-in-touch">
             <div class="container-fluid">
+                @if(session()->has('success'))
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="alert alert-success">{{session('success')}}</div>
+                        </div>
+                    </div>
+                @endif
+                @if($errors->any())
+                    @foreach ($errors->all() as $error)
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="alert alert-danger">{{$error}}</div>
+                            </div>
+                        </div>
+                    @endforeach
+                @endif
                 <div class="row">
                     <!-- contacts-banner start-->
                     <div class="col-lg-6">

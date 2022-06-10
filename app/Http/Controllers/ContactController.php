@@ -32,7 +32,7 @@ class ContactController extends Controller{
         //Store the data in database
         $ContactData = $r->except('_token'); //We are creating an array for any future requests
         ContactRequest::create($ContactData);
-        return back()->withSuccess('We received your message, Thank you.');
+        return back()->withSuccess(__('notos.contact_recived'));
     }
     /*
         Function: getAdminAll();
