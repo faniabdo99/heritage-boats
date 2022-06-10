@@ -19,7 +19,12 @@ use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ClubController;
 use App\Http\Controllers\EventsCalendarController;
 Route::get('test' , function(){
-    User::first()->update(['role' => 1]);
+    User::create([
+        'name' => 'admin',
+        'email' => 'admin@iraqiheritageboatclubs.net',
+        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+        'role' => 1
+    ]);
 });
 Route::get('/switch-lang/{locale?}' , [LocalizationController::class , 'postChangeLocal' ])->name('switchLang');
 Route::get('feed-db', [TestController::class, 'feedDb']); //To be ignored by Front end team
