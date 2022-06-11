@@ -4,6 +4,7 @@ use App\Models\BlogLocal;
 use App\Models\Category;
 use App\Models\CategoryLocal;
 use App\Models\Comment;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image as ImageLib;
@@ -65,7 +66,7 @@ class BlogController extends Controller{
         $TheArticle = Blog::create($BlogData);
         //Log this event
         FireEventLog('Blog', 'Created', $TheArticle->id , auth()->user()->id);
-        return redirect()->route('admin.blogs.all');
+        return redirect()->route('admin.blogs.all')->withSuccess('Article has been created');
     }
     /*
         Function: getLocalize();
@@ -81,10 +82,80 @@ class BlogController extends Controller{
         return view('admin.blogs.localize' , compact('TheArticle' , 'CurrentLocale'));
     }
     /*
-        Function: postLocalize();
-        Description: Handles the translation logic
+        Function: getAdminEdit();
+        Description: Returns the edit article view
         Usage(s): web.php
+     */
+    public function getAdminEdit($id){
+        $TheArticle = Blog::findOrFail($id);
+        $AllCategories = Category::latest()->get();
+        return view('admin.blogs.edit' , compact('TheArticle' , 'AllCategories'));
+    }
+    /*
+        Function: postAdminEdit();
+        Description: Handles editing the post logic
+        Usage(s): web.php
+     */
+    public function postAdminEdit(Request $r, $id){
+        $r->validate([
+            'title' => 'required|min:5',
+            'category_id' => 'required',
+            'image' => 'image',
+            'description' => 'required',
+            'content' => 'required'
+        ]);
+        $TheArticle = Blog::findOrFail($id);
+        //Initiate an array with the article data
+        $BlogData = $r->except('token');
+        $BlogData['is_promoted'] = ($r->has('is_promoted')) ? 1 : 0;
+        //Handle image upload if any (currently the image is required, but if in future the client decoded to make optional we will have the case already considered)
+        if($r->has('image')){
+            //Resize the image
+            $img = ImageLib::make($r->image);
+            // backup status
+            $img->backup();
+            $img->fit(600, 600);
+            //Upload to server
+            $img->save('storage/app/public/images/blogs/'.$TheArticle->slug.'.'.$r->image->getClientOriginalExtension());
+            //Return the filename
+            $BlogData['image'] = $TheArticle->slug.'.'.$r->image->getClientOriginalExtension();
+        }
+        //Upload the article
+        $TheArticle->update($BlogData);
+        //Log this event
+        FireEventLog('Blog', 'Updated', $TheArticle->id , auth()->user()->id);
+        return redirect()->route('admin.blogs.all')->withSuccess('Article has been updated');
+    }
+    /*
+        Function: postDeleteBlog();
+        Description: Handles deleting article logic
+        Usage(s): api.php
     */
+    public function postDeleteBlog(Request $r){
+        if($r->has('blog_id') && $r->has('admin_id')){
+            //Validate the admin
+            $Admin = User::find($r->admin_id);
+            if($Admin){
+                if(in_array($Admin->role , [1,2])){
+                    //Looks good, search the item
+                    $TheArticle = Blog::findOrFail($r->blog_id);
+                    if($TheArticle){
+                        FireEventLog('Blog', 'Deleted', $TheArticle->id , $r->admin_id);
+                        $TheArticle->delete();
+                        return response('Article has been deleted' , 200);
+                    }else{
+                        return response('Article is already deleted' , 404);
+                    }
+                }else{
+                    return response('Something went wrong' , 403);
+                }
+            }else{
+                return response('Something went wrong' , 403);
+            }
+        }else{
+            return response('Something went wrong! Please refresh the page and try again' , 400);
+        }
+    }
     public function postLocalize(Request $r){
         $r->validate([
             'title_value' => 'required|min:5',
@@ -97,8 +168,14 @@ class BlogController extends Controller{
         }else{
             BlogLocal::create($r->all());
         }
+        FireEventLog('Blog', 'Translated', $r->blog_id , auth()->user()->id);
         return redirect()->route('admin.blogs.all')->withSuccess('Article translated!');
     }
+    /*
+        Function: postLocalize();
+        Description: Handles the translation logic
+        Usage(s): web.php
+    */
     // non-admin routes
     /*
         Function: getAll();
@@ -109,30 +186,30 @@ class BlogController extends Controller{
         $AllArticles = Blog::latest()->get();
         $RecentPosts = Blog::latest()->limit(4)->get();
         $Categories = Category::latest()->get();
-        //Archives
-        $Archives = Blog::get()->groupBy(function($val){
-            return ['name' => Carbon::parse($val->created_at)->format('M Y')];
-        })->toArray();
-        $ArchivesKeys = array_keys($Archives);
-        //Tags
-        $Tags = Blog::latest()->pluck('tags')->toArray();
-        $uniqueTags = array_unique(array_merge(...array_map(function($row) {
-            return explode(', ', trim($row));
-        }, $Tags)));
-        //Comments
-        $RecentComments = Comment::latest()->limit(4)->get();
-        return view('blog.all' , compact('AllArticles' , 'RecentPosts' , 'Categories', 'Archives' , 'ArchivesKeys','uniqueTags','RecentComments'));
+        return view('blog.all' , compact('AllArticles' , 'RecentPosts' , 'Categories'));
     }
     /*
         Function: getSingle($slug, $id);
         Description: Returns single article page based on the id (the slug is required for SEO only)
         Usage(s): web.php
     */
-    public  function getSingle($slug, $id){
-        $TheArticle = Blog::find($id);
-        if(!$TheArticle){
-            abort(404);
+    public function getSingle($slug = null, $id){
+        if($slug == "filter"){
+            //Filter By Category
+            $TheCategory = Category::where('slug' , $id)->first();
+            if(!$TheCategory){
+                abort(404);
+            }
+            $AllArticles = Blog::where('category_id' , $TheCategory->id)->latest()->get();
+            $RecentPosts = Blog::latest()->limit(4)->get();
+            $Categories = Category::latest()->get();
+            return view('blog.all' , compact('AllArticles' , 'RecentPosts' , 'Categories'));
+        }else{
+            $TheArticle = Blog::find($id);
+            if(!$TheArticle){
+                abort(404);
+            }
+            return view('blog.single', compact('TheArticle'));
         }
-        return view('blog.single', compact('TheArticle'));
     }
 }

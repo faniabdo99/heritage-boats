@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-@include('layout.header')
+@include('layout.header' , ['PageTitle' => 'Error 404'])
 <body>
 @include('layout.loader')
 <div class="page-wrapper">

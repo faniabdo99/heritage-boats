@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="@lang('settings.direction')">
-@include('layout.header')
+@include('layout.header' , ['PageTitle' => __('pages/blog.page_title')])
 <body>
 @include('layout.loader')
 <div class="page-wrapper">
@@ -51,7 +51,7 @@
                         <h4 class="articles__title">@lang('pages/blog.category')</h4>
                         <ul class="category-list">
                             @forelse ($Categories as $Category)
-                                <li class="category-list__item"><span>{{$Category->local_title}}</span><span class="text-right">{{$Category->Blog->count()}}</span></li>
+                                <a href="{{route('blog.category' , ['filter' , $Category->slug])}}"><li class="category-list__item"><span>{{$Category->local_title}}</span><span class="text-right">{{$Category->Blog->count()}}</span></li></a>
                             @empty
                             @endforelse
                         </ul>

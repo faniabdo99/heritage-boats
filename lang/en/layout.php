@@ -1,6 +1,6 @@
 <?php
 return [
-  'site_title' => 'Heritage Boat Clubs',
+    'site_title' => 'Iraqi Heritage Boat Clubs',
     //Navbar
     'home' => 'Home',
     'clubs' => 'Clubs',

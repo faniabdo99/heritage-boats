@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="@lang('settings.direction')">
-@include('layout.header')
+@include('layout.header' , ['PageTitle' => $TheArticle->local_title])
 <body>
 @include('layout.loader')
 <div class="page-wrapper">

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-@include('layout.header')
+@include('layout.header' , ['PageTitle' => __('pages/acknowlegement.hero_title')])
 <body>
 @include('layout.loader')
 <div class="page-wrapper">
@@ -188,8 +188,8 @@
                                         <div class="logo-item logo-item--grayscaled"><img src="{{url('public/img')}}/brand-2.png" alt="logo"/></div>
                                         <!-- item end-->
                                     </div>
-                                    
-                                   
+
+
 
                                 </div>
                             </div>

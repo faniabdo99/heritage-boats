@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="@lang('settings.direction')">
-@include('layout.header')
+@include('layout.header' , ['PageTitle' => __('layout.home')])
 <body>
 @include('layout.loader')
 <div class="page-wrapper">
@@ -136,144 +136,31 @@
                                 </div>
                             @empty
                             @endforelse
+                            <!--Collapse Elements-->
 
-
-
-                            <!-- Test Club-->
-
-
-
-                            <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInLeft" data-wow-offset="100">
-                                    <!-- item start-->
-                                    <div class="info-box">
-                                        <div class="info-box__img"><img src="{{url('public/img/citiesphotos')}}/basra.jpg" alt="service" /></div>
-                                        <div class="info-box__category">Iraqi Heritage Boat Clubs Network </div>
-                                        <div class="info-box__description">
-                                            <div class="info-box__number">01</div>
-                                            <div class="info-box__inner">
-                                                <h4 class="info-box__title"> <a href="services-details.html">Basra Heritage Boat Club</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
-                                                <div class="info-box__hidden">
-                                                    <p>Asaad Salman Dawood
-                                                        +964 7730 770 800
-                                                    </p><a class="info-box__link with--line" href="services-details.html">Explore more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- item end-->
-                            </div>
-                            <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInLeft" data-wow-offset="100">
-                                    <!-- item start-->
-                                    <div class="info-box">
-                                        <div class="info-box__img"><img src="{{url('public/img/citiesphotos')}}/basra.jpg" alt="service" /></div>
-                                        <div class="info-box__category">Iraqi Heritage Boat Clubs Network </div>
-                                        <div class="info-box__description">
-                                            <div class="info-box__number">01</div>
-                                            <div class="info-box__inner">
-                                                <h4 class="info-box__title"> <a href="services-details.html">Basra Heritage Boat Club</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
-                                                <div class="info-box__hidden">
-                                                    <p>Asaad Salman Dawood
-                                                        +964 7730 770 800
-                                                    </p><a class="info-box__link with--line" href="services-details.html">Explore more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- item end-->
-                            </div>
-
-                            <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInLeft" data-wow-offset="100">
-                                    <!-- item start-->
-                                    <div class="info-box">
-                                        <div class="info-box__img"><img src="{{url('public/img/citiesphotos')}}/basra.jpg" alt="service" /></div>
-                                        <div class="info-box__category">Iraqi Heritage Boat Clubs Network </div>
-                                        <div class="info-box__description">
-                                            <div class="info-box__number">01</div>
-                                            <div class="info-box__inner">
-                                                <h4 class="info-box__title"> <a href="services-details.html">Basra Heritage Boat Club</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
-                                                <div class="info-box__hidden">
-                                                    <p>Asaad Salman Dawood
-                                                        +964 7730 770 800
-                                                    </p><a class="info-box__link with--line" href="services-details.html">Explore more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- item end-->
-                            </div>
-
-                            <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInLeft" data-wow-offset="100">
-                                    <!-- item start-->
-                                    <div class="info-box">
-                                        <div class="info-box__img"><img src="{{url('public/img/citiesphotos')}}/basra.jpg" alt="service" /></div>
-                                        <div class="info-box__category">Iraqi Heritage Boat Clubs Network </div>
-                                        <div class="info-box__description">
-                                            <div class="info-box__number">01</div>
-                                            <div class="info-box__inner">
-                                                <h4 class="info-box__title"> <a href="services-details.html">Basra Heritage Boat Club</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
-                                                <div class="info-box__hidden">
-                                                    <p>Asaad Salman Dawood
-                                                        +964 7730 770 800
-                                                    </p><a class="info-box__link with--line" href="services-details.html">Explore more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- item end-->
-                            </div>
-
-                        <!--Collapse Elements-->
-                        <div class="collapse multi-collapse col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInLeft" data-wow-offset="100" id="multiCollapseExample1">
-                                    <!-- item start-->
-                                    <div class="info-box">
-                                        <div class="info-box__img"><img src="{{url('public/img/citiesphotos')}}/basra.jpg" alt="service" /></div>
-                                        <div class="info-box__category">Iraqi Heritage Boat Clubs Network </div>
-                                        <div class="info-box__description">
-                                            <div class="info-box__number">01</div>
-                                            <div class="info-box__inner">
-                                                <h4 class="info-box__title"> <a href="services-details.html">Basra Heritage Boat Club</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
-                                                <div class="info-box__hidden">
-                                                    <p>Asaad Salman Dawood
-                                                        +964 7730 770 800
-                                                    </p><a class="info-box__link with--line" href="services-details.html">Explore more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- item end-->
-                            </div>
                             <div class="collapse multi-collapse col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInLeft" data-wow-offset="100" id="multiCollapseExample1">
-                                    <!-- item start-->
-                                    <div class="info-box">
-                                        <div class="info-box__img"><img src="{{url('public/img/citiesphotos')}}/basra.jpg" alt="service" /></div>
-                                        <div class="info-box__category">Iraqi Heritage Boat Clubs Network </div>
-                                        <div class="info-box__description">
-                                            <div class="info-box__number">01</div>
-                                            <div class="info-box__inner">
-                                                <h4 class="info-box__title"> <a href="services-details.html">Basra Heritage Boat Club</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
-                                                <div class="info-box__hidden">
-                                                    <p>Asaad Salman Dawood
-                                                        +964 7730 770 800
-                                                    </p><a class="info-box__link with--line" href="services-details.html">Explore more</a>
-                                                </div>
+                                <!-- item start-->
+                                <div class="info-box">
+                                    <div class="info-box__img"><img src="{{url('public/img/citiesphotos')}}/basra.jpg" alt="service" /></div>
+                                    <div class="info-box__category">Iraqi Heritage Boat Clubs Network </div>
+                                    <div class="info-box__description">
+                                        <div class="info-box__number">01</div>
+                                        <div class="info-box__inner">
+                                            <h4 class="info-box__title"> <a href="services-details.html">Basra Heritage Boat Club</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
+                                            <div class="info-box__hidden">
+                                                <p>Asaad Salman Dawood
+                                                    +964 7730 770 800
+                                                </p><a class="info-box__link with--line" href="services-details.html">Explore more</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- item end-->
+                                </div>
+                                <!-- item end-->
                             </div>
                         </div>
-
                         <!--End of Collapse Elements-->
-
-
-
-                        <!-- TEST Buttom-->
-                        <a class="button button--transparent" data-toggle="collapse" href="#multiCollapseExample1"  data-hover="@lang('pages/home.calendar_cta')" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><span>TEST</span></a>
-
-                        <!--END OF TEST-->
-
                         @if(count(getClubs()) > 4)
-                        <a class="button button--transparent" href="{{route('comingSoon')}}" data-hover="@lang('pages/home.calendar_cta')"><span>@lang('pages/home.more_clubs_cta')</span></a>
+                            <a class="button button--transparent" data-toggle="collapse" href="#multiCollapseExample1"  data-hover="@lang('pages/home.calendar_cta')" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><span>@lang('pages/home.more_clubs_cta')</span></a>
                         @endif
                     </div>
                 </div>

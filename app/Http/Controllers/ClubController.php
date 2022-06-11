@@ -62,7 +62,7 @@ class ClubController extends Controller{
         //Upload the club
         $TheClub = Club::create($ClubData);
         //Log this event
-        FireEventLog('Blog', 'Created', $TheClub->id , auth()->user()->id);
+        FireEventLog('Club', 'Created', $TheClub->id , auth()->user()->id);
         return redirect()->route('admin.clubs.all')->withSuccess('Club has been created');
     }
     public function getAdminEdit($id){
@@ -112,7 +112,7 @@ class ClubController extends Controller{
         //Upload the club
         $TheClub->update($ClubData);
         //Log this event
-        FireEventLog('Blog', 'Updated', $TheClub->id , auth()->user()->id);
+        FireEventLog('Club', 'Updated', $TheClub->id , auth()->user()->id);
         return redirect()->route('admin.clubs.all')->withSuccess('Club has been updated');
     }
     public function getAdminAttachments($id){
@@ -143,6 +143,8 @@ class ClubController extends Controller{
         $TheGallery->map(function($item){
             $item->delete();
         });
+        //Log this event
+        FireEventLog('Club', 'AttachmentsDeleted', $id, auth()->user()->id);
         return back()->withSuccess('Gallery has been cleared');
     }
     public function postDeleteClub(Request $r){
@@ -189,6 +191,7 @@ class ClubController extends Controller{
         }else{
             ClubLocal::create($r->all());
         }
+        FireEventLog('Club', 'Translated', $r->id , auth()->user()->id);
         return redirect()->route('admin.clubs.all')->withSuccess('The club data has been translated');
     }
     //Front end methods

@@ -38,7 +38,8 @@ Route::get('/club/{slug}/{id}' , [ClubController::class , 'getSingle'])->name('c
 Route::get('/coming-soon', [ComingSoonController::class , 'getComingSoon'])->name('comingSoon'); // Coming Soon: resources/views/static/coming-soon.blade.php
 Route::prefix('blog')->group(function (){
     Route::get('/' , [BlogController::class , 'getAll'])->name('blog'); // Blog: resources/view/blog/all
-    Route::get('/{slug}/{id}' , [BlogController::class , 'getSingle'])->name('blog.single'); // Blog: resources/view/blog/single
+    Route::get('/{filter}/{category_slug}' , [BlogController::class, 'getSingle'])->name('blog.category');
+    Route::get('/{slug?}/{id}' , [BlogController::class , 'getSingle'])->name('blog.single'); // Blog: resources/view/blog/single
     Route::post('new-comment' , [CommentController::class , 'postNew'])->name('blog.comment.post');
 });
 /*
@@ -70,6 +71,8 @@ Route::group(['prefix' => 'admin' , 'middleware' => 'admin'] , function(){
         Route::get('/' , [BlogController::class, 'getAdminAll'])->name('admin.blogs.all');
         Route::get('/new' , [BlogController::class, 'getAdminNew'])->name('admin.blogs.getNew');
         Route::post('/new' , [BlogController::class, 'postAdminNew'])->name('admin.blogs.postNew');
+        Route::get('/edit/{id}' , [BlogController::class,'getAdminEdit'])->name('admin.blogs.getEdit');
+        Route::post('/edit/{id?}' , [BlogController::class,'postAdminEdit'])->name('admin.blogs.postEdit');
         Route::get('/localize/{id}' , [BlogController::class,'getLocalize'])->name('admin.blogs.getLocalize');
         Route::post('/localize/{id?}' , [BlogController::class,'postLocalize'])->name('admin.blogs.postLocalize');
         Route::prefix('category')->group(function(){

@@ -1,8 +1,6 @@
 <div class="nav-header">
     <a href="{{route('admin.home')}}" class="brand-logo">
-        <img class="logo-abbr" src="{{url('public/admin')}}/images/logo.png" alt="">
-        <img class="logo-compact" src="{{url('public/admin')}}/images/logo-text.png" alt="">
-        <img class="brand-title" src="{{url('public/admin')}}/images/logo-text.png" alt="">
+        <img class="logo-abbr" src="{{url('public/img')}}/HeritageLogo.svg" alt="">
     </a>
     <div class="nav-control">
         <div class="hamburger">

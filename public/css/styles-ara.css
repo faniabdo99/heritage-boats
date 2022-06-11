@@ -9,7 +9,7 @@
     }
 body {
     direction: rtl;
-    font-family: 'Readex Pro','AvenirNextLTPro', serif;
+    font-family: 'Readex Pro','AvenirNextLTPro', serif !important;
 }
 .promo-lower {
     left: 0;

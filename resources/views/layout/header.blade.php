@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="shortcut icon" href="{{url('public/img/favicon.ico')}}" />
-    <title>Iraqi Heritage Boat Club</title>
+    <title>@lang('layout.site_title') - {{$PageTitle ?? ''}}</title>
     <!-- styles-->
     <link rel="stylesheet" href="{{url('public/css/styles.min.css')}}" />
     @if(app()->getLocale() == 'ar')
@@ -13,6 +13,14 @@
     @endif
     <link rel="stylesheet" href="{{url('public/css/animate.css')}}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-65D0ZZZVKN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-65D0ZZZVKN');
+    </script>
 </head>

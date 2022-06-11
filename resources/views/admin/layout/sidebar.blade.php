@@ -1,6 +1,6 @@
 <div class="deznav">
     <div class="deznav-scroll">
-        <a href="javascript:void(0)" class="add-menu-sidebar" data-toggle="modal" data-target="#addOrderModalside" >+ New Article</a>
+        <a href="{{route('admin.blogs.getNew')}}" class="add-menu-sidebar" data-toggle="modal" data-target="#addOrderModalside" >+ New Article</a>
         <ul class="metismenu" id="menu">
             <li><a class="ai-icon" href="{{route('admin.home')}}">
                     <i class="fas fa-home"></i>

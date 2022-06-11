@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="@lang('settings.direction')">
-@include('layout.header')
+@include('layout.header' , ['PageTitle' => $TheClub->LocalTitle])
 <body>
 @include('layout.loader')
 <div class="page-wrapper">
@@ -83,7 +83,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                     <!-- content start-->
                                     <div class="content">
