@@ -138,33 +138,183 @@
                             @endforelse
                             <!--Collapse Elements-->
 
-                            <div class="collapse multi-collapse col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInLeft" data-wow-offset="100" id="multiCollapseExample1">
-                                <!-- item start-->
-                                <div class="info-box">
-                                    <div class="info-box__img"><img src="{{url('public/img/citiesphotos')}}/basra.jpg" alt="service" /></div>
-                                    <div class="info-box__category">Iraqi Heritage Boat Clubs Network </div>
-                                    <div class="info-box__description">
-                                        <div class="info-box__number">01</div>
-                                        <div class="info-box__inner">
-                                            <h4 class="info-box__title"> <a href="services-details.html">Basra Heritage Boat Club</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
-                                            <div class="info-box__hidden">
-                                                <p>Asaad Salman Dawood
-                                                    +964 7730 770 800
-                                                </p><a class="info-box__link with--line" href="services-details.html">Explore more</a>
+                            
+
+
+                            <!-- Test------------------------------------>
+                            
+                                
+                               
+                               
+                                <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInRight">
+                                    <!-- item start-->
+                                    <div class="info-box">
+                                        <div class="info-box__img"><img src="{{url('public/img/citiesphotos')}}/basra.jpg" alt="service" /></div>
+                                        <div class="info-box__category">شبكة أندية القوارب</div>
+                                        <div class="info-box__description">
+                                            <div class="info-box__number">01</div>
+                                            <div class="info-box__inner">
+                                                <h4 class="info-box__title">
+                                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                                    <a href="services-details.html">نادي البصرة للقوارب التراثية</a>
+                                                </h4>
+                                                <div class="info-box__hidden">
+                                                    <p>اسعد سلمان داوود
+                                                        ٩٦٤٧٧٣٠٧٧٠٨٠٠+
+                                                    </p><a class="info-box__link with--line" href="services-details.html">موقع النادي</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- item end-->
                                 </div>
-                                <!-- item end-->
+                                <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInRight">
+                                    <!-- item start-->
+                                    <div class="info-box">
+                                        <div class="info-box__img"><img src="{{url('public/img/citiesphotos')}}/basra.jpg" alt="service" /></div>
+                                        <div class="info-box__category">شبكة أندية القوارب</div>
+                                        <div class="info-box__description">
+                                            <div class="info-box__number">01</div>
+                                            <div class="info-box__inner">
+                                                <h4 class="info-box__title">
+                                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                                    <a href="services-details.html">نادي البصرة للقوارب التراثية</a>
+                                                </h4>
+                                                <div class="info-box__hidden">
+                                                    <p>اسعد سلمان داوود
+                                                        ٩٦٤٧٧٣٠٧٧٠٨٠٠+
+                                                    </p><a class="info-box__link with--line" href="services-details.html">موقع النادي</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- item end-->
+                                </div>
+                                <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInRight">
+                                    <!-- item start-->
+                                    <div class="info-box">
+                                        <div class="info-box__img"><img src="{{url('public/img/citiesphotos')}}/basra.jpg" alt="service" /></div>
+                                        <div class="info-box__category">شبكة أندية القوارب</div>
+                                        <div class="info-box__description">
+                                            <div class="info-box__number">01</div>
+                                            <div class="info-box__inner">
+                                                <h4 class="info-box__title">
+                                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                                    <a href="services-details.html">نادي البصرة للقوارب التراثية</a>
+                                                </h4>
+                                                <div class="info-box__hidden">
+                                                    <p>اسعد سلمان داوود
+                                                        ٩٦٤٧٧٣٠٧٧٠٨٠٠+
+                                                    </p><a class="info-box__link with--line" href="services-details.html">موقع النادي</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- item end-->
+                                </div>
+                                <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInRight">
+                                    <!-- item start-->
+                                    <div class="info-box">
+                                        <div class="info-box__img"><img src="{{url('public/img/citiesphotos')}}/basra.jpg" alt="service" /></div>
+                                        <div class="info-box__category">شبكة أندية القوارب</div>
+                                        <div class="info-box__description">
+                                            <div class="info-box__number">01</div>
+                                            <div class="info-box__inner">
+                                                <h4 class="info-box__title">
+                                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                                    <a href="services-details.html">نادي البصرة للقوارب التراثية</a>
+                                                </h4>
+                                                <div class="info-box__hidden">
+                                                    <p>اسعد سلمان داوود
+                                                        ٩٦٤٧٧٣٠٧٧٠٨٠٠+
+                                                    </p><a class="info-box__link with--line" href="services-details.html">موقع النادي</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- item end-->
+                                </div>
+
+                                <!-- Inside this item you can add more than 4 clubs-->
+                            <div class="col-12 collapse row" id="MoreClubs">
+
+                                <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInRight">
+                                    <!-- item start-->
+                                    <div class="info-box">
+                                        <div class="info-box__img"><img src="{{url('public/img/citiesphotos')}}/basra.jpg" alt="service" /></div>
+                                        <div class="info-box__category">شبكة أندية القوارب</div>
+                                        <div class="info-box__description">
+                                            <div class="info-box__number">01</div>
+                                            <div class="info-box__inner">
+                                                <h4 class="info-box__title">
+                                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                                    <a href="services-details.html">نادي البصرة للقوارب التراثية</a>
+                                                </h4>
+                                                <div class="info-box__hidden">
+                                                    <p>اسعد سلمان داوود
+                                                        ٩٦٤٧٧٣٠٧٧٠٨٠٠+
+                                                    </p><a class="info-box__link with--line" href="services-details.html">موقع النادي</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- item end-->
+                                </div>
+                                <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInRight">
+                                    <!-- item start-->
+                                    <div class="info-box">
+                                        <div class="info-box__img"><img src="{{url('public/img/citiesphotos')}}/basra.jpg" alt="service" /></div>
+                                        <div class="info-box__category">شبكة أندية القوارب</div>
+                                        <div class="info-box__description">
+                                            <div class="info-box__number">01</div>
+                                            <div class="info-box__inner">
+                                                <h4 class="info-box__title">
+                                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                                    <a href="services-details.html">نادي البصرة للقوارب التراثية</a>
+                                                </h4>
+                                                <div class="info-box__hidden">
+                                                    <p>اسعد سلمان داوود
+                                                        ٩٦٤٧٧٣٠٧٧٠٨٠٠+
+                                                    </p><a class="info-box__link with--line" href="services-details.html">موقع النادي</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- item end-->
+                                </div>
                             </div>
+                            <!-- End of the Test Item-------------------------------->
+
+                                
+
+
+
+
                         </div>
+
+
+
+                       
+
+                            
+                    
                         <!--End of Collapse Elements-->
                         @if(count(getClubs()) > 4)
                             <a class="button button--transparent" data-toggle="collapse" href="#multiCollapseExample1"  data-hover="@lang('pages/home.calendar_cta')" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><span>@lang('pages/home.more_clubs_cta')</span></a>
                         @endif
                     </div>
+                    
                 </div>
+                
             </div>
+            <!--Test Button-------------->
+            
+            <a class="button button--transparent" data-toggle="collapse" href="#MoreClubs" role="button" aria-expanded="false" aria-controls="collapseExample">
+
+   More Clubs</a>
+
+    <!--End of Test----------------------------->
+
         </section>
         <!-- services inner end-->
 

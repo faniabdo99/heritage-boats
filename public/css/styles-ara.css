@@ -237,3 +237,9 @@ footer.footer .footer-menu li {
 .four-o-four-page .subtitle {
     text-align: center
 }
+.promo-slider .slider-item {
+    direction: rtl;
+}
+.testimonials--img-right .primary-heading {
+    margin-right: 100px;
+}
