@@ -191,7 +191,7 @@ class ClubController extends Controller{
         }else{
             ClubLocal::create($r->all());
         }
-        FireEventLog('Club', 'Translated', $r->id , auth()->user()->id);
+        FireEventLog('Club', 'Translated', $r->club_id , auth()->user()->id);
         return redirect()->route('admin.clubs.all')->withSuccess('The club data has been translated');
     }
     //Front end methods

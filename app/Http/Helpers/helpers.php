@@ -24,6 +24,16 @@ function FireEventLog($Model, $Action, $ResourceId, $UserId = null): bool {
     Initiated through composer.json autoloader
     Usage(s): Navbar, Homepage, ContactUs
 */
-function getClubs(){
-    return Club::latest()->get();
+function getClubs($skip = null){
+    if($skip){
+        $TotalClubs = Club::count();
+        if($skip > $TotalClubs){
+            $take = 4;
+        }else{
+            $take = $TotalClubs - $skip;
+        }
+        return Club::latest()->skip($skip)->take($take)->get();
+    }else{
+        return Club::latest()->get();
+    }
 }
