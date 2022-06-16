@@ -31381,3 +31381,6 @@ margin-left: 12px;
 .four-o-four-page .error .heading .primary-heading {
     margin-bottom:0px
 }
+.logos .alpha-logo img{
+    max-width: 320px;
+}

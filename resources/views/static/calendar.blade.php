@@ -8,6 +8,23 @@
     <!-- header end-->
     <main class="main">
         <!--calendar start-->
+        <section class="promo-primary">
+            <div class="overlay"></div>
+            <picture class="wow fadeIn">
+                <source srcset="{{url('public/img')}}/groupphoto.jpg" media="(min-width: 992px)"/><img class="jarallax-img img-bg" src="{{url('public/img')}}/aknloagment.jpg" alt="img"/>
+            </picture>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="align-container">
+                            <div class="align-item"><span>@lang('pages/acknowlegement.hero_headline')</span>
+                                <h1 class="title wow fadeInUp">Calendar</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="section services">
             <div class="container">
                 <div class="row">
