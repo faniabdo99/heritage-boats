@@ -198,7 +198,7 @@
                 <div class="row offset-margin">
                     <div class="col-md-12 col-12 text-center">
                         <!-- icon item start-->
-                        <iframe src="https://calendar.google.com/calendar/embed?src=tayseerip%40gmail.com&ctz=Asia%2FBaghdad" style="border: 0" width="90%" height="600" frameborder="0" scrolling="no"></iframe>
+                        <iframe src="https://calendar.google.com/calendar/embed?src=iraqiheritageboatclubs%40gmail.com&ctz=Asia%2FBaghdad" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
                         <!-- icon item end-->
                     </div>
                 </div>
