@@ -124,8 +124,13 @@
                                             <div class="info-box__inner">
                                                 <h4 class="info-box__title"> <a href="{{route('club.single' , [$Club->slug, $Club->id])}}">{{$Club->LocalTitle}}</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
                                                 <div class="info-box__hidden">
-                                                    <p>{{$Club->LocalCordName}}<br>
+                                                    <p>
+                                                        {{$Club->LocalCordName}}<br>
                                                         <span dir="ltr">{{$Club->cord_phone}}</span>
+                                                        @if($Club->google_maps_link)
+                                                            <br><span><a target="_blank" class="text-white" href="{{$Club->google_maps_link}}">@lang('pages/home.google_maps_link')</a></span>
+                                                        @endif
+                                                    </p>
                                                     </p><a class="info-box__link with--line" href="{{route('club.single' , [$Club->slug, $Club->id])}}">@lang('pages/home.club_explore_more')</a>
                                                 </div>
                                             </div>
@@ -148,9 +153,14 @@
                                                 <div class="info-box__inner">
                                                     <h4 class="info-box__title"> <a href="{{route('club.single' , [$Club->slug, $Club->id])}}">{{$Club->LocalTitle}}</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
                                                     <div class="info-box__hidden">
-                                                        <p>{{$Club->LocalCordName}}<br>
+                                                        <p>
+                                                            {{$Club->LocalCordName}}<br>
                                                             <span dir="ltr">{{$Club->cord_phone}}</span>
-                                                        </p><a class="info-box__link with--line" href="{{route('club.single' , [$Club->slug, $Club->id])}}">@lang('pages/home.club_explore_more')</a>
+                                                            @if($Club->google_maps_link)
+                                                                <br><span><a class="text-white" href="{{$Club->google_maps_link}}">@lang('pages/home.google_maps_link')</a></span>
+                                                            @endif
+                                                        </p>
+                                                        <a class="info-box__link with--line" href="{{route('club.single' , [$Club->slug, $Club->id])}}">@lang('pages/home.club_explore_more')</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -164,13 +174,12 @@
                         </div>
                         <!--End of Collapse Elements-->
                         @if(count(getClubs()) > 4)
-                            <a class="button button--transparent" data-toggle="collapse" href="#multiCollapseExample1"  data-hover="@lang('pages/home.calendar_cta')" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><span>@lang('pages/home.more_clubs_cta')</span></a>
+                            <a class="button button--transparent" data-toggle="collapse" href="#MoreClubs" role="button" aria-expanded="false" aria-controls="collapseExample">@lang('pages/home.more_clubs_cta')</a>
                         @endif
                     </div>
                 </div>
             </div>
             <!--Test Button-------------->
-            <a class="button button--transparent" data-toggle="collapse" href="#MoreClubs" role="button" aria-expanded="false" aria-controls="collapseExample">More Clubs</a>
         </section>
         <!-- services inner end-->
         <!-- banner start-->

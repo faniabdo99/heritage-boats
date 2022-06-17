@@ -80,6 +80,10 @@
                                         <label>Palms: *</label>
                                         <input name="palms" type="number" class="form-control input-default " placeholder="X" required>
                                     </div>
+                                    <div class="form-group">
+                                        <label>Google Maps Link:</label>
+                                        <input type="url" name="google_maps_link" class="form-control input-default" placeholder="Enter Google Maps link here">
+                                    </div>
                                     <h4>Coordinator:</h4>
                                     <div class="form-group">
                                         <label>Name: *</label>

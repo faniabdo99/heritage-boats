@@ -240,6 +240,13 @@
                                             </div>
                                         </div>
                                     @endif
+                                    @if($TheClub->google_maps_link)
+                                        <div class="col-12">
+                                            <div class="phones-block inner-block main-contact-phone">
+                                                <p><a target="_blank" href="{{$TheClub->google_maps_link}}">@lang('pages/home.google_maps_link')</a></p>
+                                            </div>
+                                        </div>
+                                    @endif
 
                                 </div>
                             </div>

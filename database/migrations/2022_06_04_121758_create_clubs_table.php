@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->text('description');
             $table->integer('members');
             $table->integer('palms');
+            $table->string('google_maps_link')->nullable();
             $table->string('cord_name');
             $table->string('cord_email')->nullable();
             $table->string('cord_phone');

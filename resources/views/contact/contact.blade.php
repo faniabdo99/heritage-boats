@@ -160,6 +160,9 @@
                                 <div class="description"><span class="name">{{$Club->LocalTitle}}</span>
                                     <span class="position">{{$Club->LocalCordName}}</span>
                                     <span class="position"><a href="tel:+9647716748880">{{$Club->cord_phone}}</a></span>
+                                    @if($Club->google_maps_link)
+                                        <span class="position"><a target="_blank" href="{{$Club->google_maps_link}}">@lang('pages/home.google_maps_link')</a></span>
+                                    @endif
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="button-holder"><a class="button button--primary button--dark" href="{{route('club.single' , [$Club->slug, $Club->id])}}" data-hover="Visit Club Page"><span>@lang('pages/contact.location_cta')</span></a>

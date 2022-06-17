@@ -31,6 +31,7 @@ return [
     'sabah_rubaiee' => 'صباح الربيعي',
     'assad_salman' => 'أسعد سلمان',
     'clubs_class' => 'Acknowledge Acknow-heading',
+    'google_maps_link' => 'عرض على خرائط جوجل',
     'more_clubs_cta' => 'المزيد',
     //Blog
     'blog_subtitle' => 'مدونة',
