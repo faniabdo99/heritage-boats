@@ -21,6 +21,7 @@ return new class extends Migration {
             $table->string('cord_email')->nullable();
             $table->string('cord_phone');
             $table->integer('user_id');
+            $table->integer('is_featured')->default(0);
             $table->timestamps();
         });
     }

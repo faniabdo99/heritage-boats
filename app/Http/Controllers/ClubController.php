@@ -35,6 +35,7 @@ class ClubController extends Controller{
         $ClubData = $r->except(['_token', 'image' , 'background_image']);
         $ClubData['slug'] = strtolower(str_replace(' ' , '-' , $r->slug));
         $ClubData['user_id'] = auth()->user()->id;
+        $ClubData['is_featured'] = ($r->has('is_featured') ? 1 : 0);
         //Handle image upload if any (currently the image is required, but if in future the client decoded to make optional we will have the case already considered)
         if($r->has('image')){
             //Resize the image
@@ -109,6 +110,7 @@ class ClubController extends Controller{
             //Return the filename
             $ClubData['background_image'] = $TheClub->slug.'.'.$r->background_image->getClientOriginalExtension();
         }
+        $ClubData['is_featured'] = ($r->has('is_featured') ? 1 : 0);
         //Upload the club
         $TheClub->update($ClubData);
         //Log this event

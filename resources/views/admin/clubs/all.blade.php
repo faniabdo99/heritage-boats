@@ -52,6 +52,7 @@
                                         <th>Title</th>
                                         <th>Members</th>
                                         <th>Palms</th>
+                                        <th>Featured</th>
                                         <th>Coordinator</th>
                                         <th>Date</th>
                                         <th>Action</th>
@@ -64,6 +65,7 @@
                                             <td>{{$Club->title}}</td>
                                             <td>{{$Club->members}}</td>
                                             <td>{{$Club->palms}}</td>
+                                            <td>{{$Club->is_featured ? 'Yes' : 'No'}}</td>
                                             <td>{{$Club->cord_name}}</td>
                                             <td>{{$Club->created_at->format('d-m-Y')}}</td>
                                             <td>

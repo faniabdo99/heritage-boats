@@ -44,7 +44,7 @@
                     <!-- footer nav start-->
                     <nav class="footer-nav">
                         <ul class="footer-menu">
-                            @forelse(getClubs() as $Club)
+                            @forelse(getFeaturedClubs() as $Club)
                                 <li><a href="{{route('club.single' , [$Club->slug, $Club->id])}}">{{$Club->LocalTitle}}</a></li>
                             @empty
                             @endforelse

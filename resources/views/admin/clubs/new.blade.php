@@ -41,7 +41,7 @@
                     @include('admin.layout.notifications')
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Add New Article</h4>
+                            <h4 class="card-title">Add New Club</h4>
                         </div>
                         <div class="card-body">
                             <div class="basic-form">
@@ -96,6 +96,11 @@
                                     <div class="form-group">
                                         <label>Phone Number: *</label>
                                         <input name="cord_phone" type="text" class="form-control input-default " placeholder="xxxxxxxxxxx" required>
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <input type="checkbox" id="is-featured" name="is_featured">
+                                        <label for="is-featured">Featured ?</label>
                                     </div>
                                     <br><br>
                                     <button type="submit" class="btn btn-primary">Submit</button>

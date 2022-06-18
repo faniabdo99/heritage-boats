@@ -152,7 +152,7 @@
             </div>
             <div class="container">
                 <div class="row offset-margin">
-                    @forelse(getClubs() as $key => $Club)
+                    @forelse(getFeaturedClubs() as $key => $Club)
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <!-- team-item--grayscaled start-->
                             <div class="team-item team-item--grayscaled">

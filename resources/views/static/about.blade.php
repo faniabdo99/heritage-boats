@@ -163,17 +163,17 @@
                     <div class="row no-gutters counter-holder offset-margin">
                         <div class="col-sm-4">
                             <!-- statistics item start-->
-                            <div class="statistics-item"><span class="counter">4</span><span class="description">@lang('pages/about.statistics_counter_club')</span></div>
+                            <div class="statistics-item"><span class="counter">{{getCounterValues()->clubs}}</span><span class="description">@lang('pages/about.statistics_counter_club')</span></div>
                             <!-- statistics item end-->
                         </div>
                         <div class="col-sm-4">
                             <!-- statistics item start-->
-                            <div class="statistics-item"><span class="counter">7</span><span class="description">@lang('pages/about.statistics_counter_events')</span></div>
+                            <div class="statistics-item"><span class="counter">{{getCounterValues()->events}}</span><span class="description">@lang('pages/about.statistics_counter_events')</span></div>
                             <!-- statistics item end-->
                         </div>
                         <div class="col-sm-4">
                             <!-- statistics item start-->
-                            <div class="statistics-item"><span class="counter">1000</span><span class="description">@lang('pages/about.statistics_counter_visitors')</span></div>
+                            <div class="statistics-item"><span class="counter">{{getCounterValues()->visits}}</span><span class="description">@lang('pages/about.statistics_counter_visitors')</span></div>
                             <!-- statistics item end-->
                         </div>
                     </div>

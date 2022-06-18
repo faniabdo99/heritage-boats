@@ -11,7 +11,7 @@
                     <li class="menu-item menu-item--has-child"><a href="javascript:void(0);"><span>@lang('layout.clubs')</span> </a>
                         <!-- sub-menu start-->
                         <ul class="sub-menu">
-                            @forelse(getClubs() as $Club)
+                            @forelse(getFeaturedClubs() as $Club)
                                 <li><a href="{{route('club.single' , [$Club->slug, $Club->id])}}">{{$Club->LocalTitle}}</a></li>
                             @empty
                             @endforelse
@@ -52,7 +52,7 @@
                             <li class="menu-item menu-item--has-child"><a href="javascript:void(0);"><span>@lang('layout.clubs')</span> </a>
                                 <!-- sub-menu start-->
                                 <ul class="sub-menu">
-                                    @forelse(getClubs() as $Club)
+                                    @forelse(getFeaturedClubs() as $Club)
                                         <li><a href="{{route('club.single' , [$Club->slug, $Club->id])}}">{{$Club->LocalTitle}}</a></li>
                                     @empty
                                     @endforelse

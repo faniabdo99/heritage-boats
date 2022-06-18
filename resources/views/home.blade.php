@@ -113,7 +113,7 @@
                 <div class="content">
                     <div class="container">
                         <div class="row offset-margin">
-                            @forelse(getClubs() as $key => $Club)
+                            @forelse(getFeaturedClubs() as $key => $Club)
                                 <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInLeft">
                                     <!-- item start-->
                                     <div class="info-box">
@@ -142,14 +142,14 @@
                             @endforelse
                             <!-- Inside this item you can add more than 4 clubs-->
                             <div class="col-12 collapse row" id="MoreClubs">
-                                @forelse(getClubs(4) as $key => $Club)
+                                @forelse(getFeaturedClubs(4) as $key => $Club)
                                     <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-3 wow fadeInLeft">
                                         <!-- item start-->
                                         <div class="info-box">
                                             <div class="info-box__img"><img src="{{$Club->ImageSrc}}" alt="{{$Club->LocalTitle}}" /></div>
                                             <div class="info-box__category">{{$Club->LocalTitle}}</div>
                                             <div class="info-box__description">
-                                                <div class="info-box__number">0{{$key+1}}</div>
+                                                <div class="info-box__number">0{{$key+5}}</div>
                                                 <div class="info-box__inner">
                                                     <h4 class="info-box__title"> <a href="{{route('club.single' , [$Club->slug, $Club->id])}}">{{$Club->LocalTitle}}</a><i class="fa fa-chevron-right" aria-hidden="true"></i></h4>
                                                     <div class="info-box__hidden">
@@ -173,7 +173,7 @@
                             <!-- End of the Test Item-------------------------------->
                         </div>
                         <!--End of Collapse Elements-->
-                        @if(count(getClubs()) > 4)
+                        @if(getClubsCount(true) > 4)
                             <a class="button button--transparent" data-toggle="collapse" href="#MoreClubs" role="button" aria-expanded="false" aria-controls="collapseExample">@lang('pages/home.more_clubs_cta')</a>
                         @endif
                     </div>

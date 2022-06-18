@@ -89,6 +89,11 @@
                                         <label>Phone Number: *</label>
                                         <input name="cord_phone" type="text" class="form-control input-default " value="{{$TheClub->cord_phone}}" placeholder="xxxxxxxxxxx" required>
                                     </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <input type="checkbox" id="is-featured" name="is_featured"  @if($TheClub->is_featured) checked @endif >
+                                        <label for="is-featured">Featured ?</label>
+                                    </div>
                                     <br><br>
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>

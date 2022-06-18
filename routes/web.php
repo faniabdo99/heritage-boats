@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CounterController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 //Controllers
@@ -100,4 +101,7 @@ Route::group(['prefix' => 'admin' , 'middleware' => 'admin'] , function(){
         Route::get('/' , [ContactController::class , 'getAdminAll'])->name('admin.contact.all');
         Route::get('/{id}' , [ContactController::class , 'getAdminSingle'])->name('admin.contact.single');
     });
+    Route::get('counters' , [CounterController::class , 'getUpdate'])->name('admin.counter.all');
+    Route::post('counters' , [CounterController::class , 'postUpdate'])->name('admin.counter.postUpdate');
+
 });
