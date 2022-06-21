@@ -6,7 +6,6 @@ use App\Mail\ContactUsNotification;
 use App\Models\ContactRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
-use App\Jobs\SendContactNotificationJob;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller{
@@ -33,7 +32,8 @@ class ContactController extends Controller{
             'message' => 'required|min:5'
         ]);
         //Store the data in database
-        $ContactData = $r->except('_token'); //We are creating an array for any future request
+        $ContactData = $r->except('_token'); //We are creating an array for any future requests
+        ContactRequest::create($ContactData);
         //Send a notification email
         Mail::to('faniabdo99@gmail.com')->send(new ContactUsNotification());
         return back()->withSuccess(__('notos.contact_recived'));
