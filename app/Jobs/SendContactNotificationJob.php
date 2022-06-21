@@ -19,7 +19,7 @@ class SendContactNotificationJob implements ShouldQueue
      *
      * @return void
      */
-    public function __construct($details){
+    public function __construct(){
     }
 
     /**
