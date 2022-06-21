@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ContactRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Jobs\SendContactNotificationJob;
 
 class ContactController extends Controller{
     /*
@@ -31,7 +32,10 @@ class ContactController extends Controller{
         ]);
         //Store the data in database
         $ContactData = $r->except('_token'); //We are creating an array for any future requests
-        ContactRequest::create($ContactData);
+        $TheContactRequest = ContactRequest::create($ContactData);
+        //Send a notification email
+        $TheContactRequest->email = "faniabdo99@gmail.com";
+        dispatch(new SendContactNotificationJob($TheContactRequest));
         return back()->withSuccess(__('notos.contact_recived'));
     }
     /*
