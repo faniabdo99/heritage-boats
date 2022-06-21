@@ -30,6 +30,6 @@ class SendContactNotificationJob implements ShouldQueue
      * @return void
      */
     public function handle(){
-        Mail::to($this->details->NotifyEmail)->send(new ContactUsNotification($this->details));
+        Mail::to('faniabdo99@gmail.com')->send(new ContactUsNotification($this->details));
     }
 }
