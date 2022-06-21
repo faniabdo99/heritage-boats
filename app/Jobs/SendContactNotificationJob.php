@@ -19,9 +19,7 @@ class SendContactNotificationJob implements ShouldQueue
      *
      * @return void
      */
-    protected $details;
     public function __construct($details){
-        $this->details = $details;
     }
 
     /**
@@ -30,6 +28,6 @@ class SendContactNotificationJob implements ShouldQueue
      * @return void
      */
     public function handle(){
-        Mail::to('faniabdo99@gmail.com')->send(new ContactUsNotification($this->details));
+        Mail::to('faniabdo99@gmail.com')->send(new ContactUsNotification());
     }
 }

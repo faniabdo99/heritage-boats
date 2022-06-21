@@ -31,10 +31,9 @@ class ContactController extends Controller{
             'message' => 'required|min:5'
         ]);
         //Store the data in database
-        $ContactData = $r->except('_token'); //We are creating an array for any future requests
-        $TheContactRequest = ContactRequest::create($ContactData);
+        $ContactData = $r->except('_token'); //We are creating an array for any future request
         //Send a notification email
-        dispatch(new SendContactNotificationJob($TheContactRequest));
+        dispatch(new SendContactNotificationJob);
         return back()->withSuccess(__('notos.contact_recived'));
     }
     /*

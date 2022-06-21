@@ -10,9 +10,8 @@ use Illuminate\Queue\SerializesModels;
 class ContactUsNotification extends Mailable
 {
     use Queueable, SerializesModels;
-    public $EmailData;
-    public function __construct($EmailData){
-        $this->EmailData = $EmailData;
+
+    public function __construct(){
     }
     public function build(){
         return $this->markdown('emails/contact-us-notification')->subject('New Contact Request');
