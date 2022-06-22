@@ -94,7 +94,9 @@ Route::group(['prefix' => 'admin' , 'middleware' => 'admin'] , function(){
         Route::get('/' , [ContactController::class , 'getAdminAll'])->name('admin.contact.all');
         Route::get('/{id}' , [ContactController::class , 'getAdminSingle'])->name('admin.contact.single');
     });
-    Route::get('counters' , [CounterController::class , 'getUpdate'])->name('admin.counter.all');
-    Route::post('counters' , [CounterController::class , 'postUpdate'])->name('admin.counter.postUpdate');
+    Route::get('settings' , [CounterController::class , 'getUpdate'])->name('admin.settings.all');
+    Route::post('settings' , [CounterController::class , 'postUpdate'])->name('admin.settings.postUpdate');
+    Route::get('hero-images' , [CounterController::class , 'getHero'])->name('admin.hero.all');
+    Route::post('hero-images' , [CounterController::class , 'postHero'])->name('admin.hero.postUpdate');
 
 });

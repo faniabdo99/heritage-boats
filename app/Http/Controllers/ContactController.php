@@ -35,7 +35,7 @@ class ContactController extends Controller{
         $ContactData = $r->except('_token'); //We are creating an array for any future requests
         ContactRequest::create($ContactData);
         //Send a notification email
-        Mail::to('faniabdo99@gmail.com')->send(new ContactUsNotification());
+        Mail::to(getCounterValues()->notify_email)->send(new ContactUsNotification());
         return back()->withSuccess(__('notos.contact_recived'));
     }
     /*

@@ -24,7 +24,8 @@
                 </a>
                 <ul aria-expanded="false">
                     <li><a href="{{route('admin.contact.all')}}">Contact Requests</a></li>
-                    <li><a href="{{route('admin.counter.all')}}">System Counters</a></li>
+                    <li><a href="{{route('admin.settings.all')}}">System Settings</a></li>
+                    <li><a href="{{route('admin.hero.all')}}">Hero Images</a></li>
                 </ul>
             </li>
             <li><a class="has-arrow ai-icon" href="javascript:;" aria-expanded="false">

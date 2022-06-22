@@ -45,24 +45,27 @@
                         </div>
                         <div class="card-body">
                             <div class="basic-form">
-                                <form action="{{route('admin.settings.postUpdate')}}" method="post" enctype="multipart/form-data">
+                                <form action="{{route('admin.hero.postUpdate')}}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">
-                                        <label>Clubs Count: *</label>
-                                        <p style="font-size: 12px;">The actual count of the clubs currently in the system: <b>{{getClubsCount()}}</b> but you can specify another value in the input below if needed, the specified value in the input is the one that will be shown in the counters.</p>
-                                        <input name="clubs" type="number" class="form-control input-default " placeholder="Enter clubs counter value" value="{{$Counters->clubs ?? 0}}" required>
+                                        <label>Homepage Hero: *</label>
+                                        <input name="homepage" type="file" class="form-control input-default" />
                                     </div>
                                     <div class="form-group">
-                                        <label>Events Count: *</label>
-                                        <input name="events" type="number" class="form-control input-default " placeholder="Enter events counter value" value="{{$Counters->events ?? 0}}" required>
+                                        <label>About Hero: *</label>
+                                        <input name="about" type="file" class="form-control input-default" />
                                     </div>
                                     <div class="form-group">
-                                        <label>Visits Count: *</label>
-                                        <input name="visits" type="number" class="form-control input-default " placeholder="Enter visits counter value" value="{{$Counters->visits ?? 0}}" required>
+                                        <label>Contact Hero: *</label>
+                                        <input name="contact" type="file" class="form-control input-default" />
                                     </div>
                                     <div class="form-group">
-                                        <label>Email to Notify: *</label>
-                                        <input name="notify_email" type="email" class="form-control input-default " placeholder="Enter email to notify" value="{{$Counters->notify_email ?? ''}}" required>
+                                        <label>Acknowledgments Hero: *</label>
+                                        <input name="acknowledgments" type="file" class="form-control input-default" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Calendar Hero: *</label>
+                                        <input name="calendar" type="file" class="form-control input-default" />
                                     </div>
                                     <br><br>
                                     <button type="submit" class="btn btn-primary">Submit</button>

@@ -16,7 +16,7 @@
                     <div class="overlay"></div>
                     <div class="bg-holder image-flip wow fadeIn">
                         <picture>
-                            <source srcset="{{url('public/img')}}/landingpage.jpg" media="(min-width: 992px)" /><img class="img-bg jarallax-img" src="{{url('public/img')}}/landingpage.jpg" alt="img" />
+                            <source srcset="{{getCounterValues()->HomePath}}" media="(min-width: 992px)" /><img class="img-bg wow fadeIn" src="{{getCounterValues()->HomePath}}" alt="img" />
                         </picture>
                     </div>
                     <div class="container">

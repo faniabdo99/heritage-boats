@@ -11,6 +11,11 @@ return new class extends Migration {
             $table->integer('clubs');
             $table->integer('events');
             $table->integer('visits');
+            $table->string('notify_email');
+            $table->string('homepage');
+            $table->string('about');
+            $table->string('contact');
+            $table->string('calendar');
             $table->timestamps();
         });
     }

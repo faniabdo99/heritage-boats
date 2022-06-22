@@ -11,7 +11,7 @@
         <section class="promo-primary">
             <div class="overlay"></div>
             <picture class="wow fadeIn">
-                <source srcset="{{url('public/img')}}/contact.jpg" media="(min-width: 992px)"/><img class="jarallax-img img-bg" src="{{url('public/img')}}/contact.jpg" alt="img"/>
+                <source srcset="{{getCounterValues()->ContactPath}}" media="(min-width: 992px)" /><img class="img-bg wow fadeIn" src="{{getCounterValues()->ContactPath}}" alt="img" />
             </picture>
             <div class="container">
                 <div class="row">

@@ -11,7 +11,7 @@
         <section class="promo-primary">
             <div class="overlay wow fadeIn"></div>
             <picture>
-                <source srcset="{{url('public/img')}}/aboutholder2.jpg" media="(min-width: 992px)" /><img class="img-bg wow fadeIn" src="{{url('public/img')}}/aboutholder2.jpg" alt="img" />
+                <source srcset="{{getCounterValues()->AboutPath}}" media="(min-width: 992px)" /><img class="img-bg wow fadeIn" src="{{getCounterValues()->AboutPath}}" alt="img" />
             </picture>
             <div class="container">
                 <div class="row">
