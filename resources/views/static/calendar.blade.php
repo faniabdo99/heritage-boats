@@ -18,7 +18,7 @@
                     <div class="col-12">
                         <div class="align-container">
                             <div class="align-item"><span>@lang('pages/acknowlegement.hero_headline')</span>
-                                <h1 class="title wow fadeInUp">Calendar</h1>
+                                <h1 class="title wow fadeInUp">@lang('pages/calendar.title')</h1>
                             </div>
                         </div>
                     </div>

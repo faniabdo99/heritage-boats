@@ -37,6 +37,10 @@ Route::prefix('blog')->group(function (){
     Route::post('new-comment' , [CommentController::class , 'postNew'])->name('blog.comment.post');
 });
 /*
+ * SEO RELATED
+ */
+
+/*
     AUTH SYSTEM
     Auth routes
     Middleware: guest
@@ -98,5 +102,4 @@ Route::group(['prefix' => 'admin' , 'middleware' => 'admin'] , function(){
     Route::post('settings' , [CounterController::class , 'postUpdate'])->name('admin.settings.postUpdate');
     Route::get('hero-images' , [CounterController::class , 'getHero'])->name('admin.hero.all');
     Route::post('hero-images' , [CounterController::class , 'postHero'])->name('admin.hero.postUpdate');
-
 });
