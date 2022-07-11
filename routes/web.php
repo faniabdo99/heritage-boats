@@ -1,7 +1,4 @@
 <?php
-
-use App\Http\Controllers\CounterController;
-use App\Models\User;
 use Illuminate\Support\Facades\Route;
 //Controllers
 use App\Http\Controllers\LocalizationController;
@@ -19,7 +16,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ClubController;
 use App\Http\Controllers\EventsCalendarController;
-
+use App\Http\Controllers\CounterController;
+use App\Http\Controllers\SitemapController;
 Route::get('/switch-lang/{locale?}' , [LocalizationController::class , 'postChangeLocal' ])->name('switchLang');
 Route::get('feed-db', [TestController::class, 'feedDb']); //To be ignored by Front end team
 Route::get('/', [HomeController::class , 'getHomepage'])->name('home'); // The homepage: resources/views/home.blade.php
@@ -39,7 +37,7 @@ Route::prefix('blog')->group(function (){
 /*
  * SEO RELATED
  */
-
+Route::get('sitemap.xml' , [SitemapController::class , 'getSitemap']);
 /*
     AUTH SYSTEM
     Auth routes
