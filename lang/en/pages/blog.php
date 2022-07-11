@@ -3,6 +3,7 @@ return [
     //All Articles Page
     'site_title' => 'Iraqi Heritage Boat Clubs Network',
     'page_title' => 'Our Blog',
+    'page_description' => 'Iraqi Heritage Boat Clubs Network latest news',
     'category' => 'Category',
     'recent_posts' => 'Recent post',
     'archive' => 'Archive',

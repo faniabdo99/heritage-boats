@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="@lang('settings.direction')">
-@include('layout.header' , ['PageTitle' => $TheClub->LocalTitle])
+@include('layout.header' , [
+    'PageTitle' => $TheClub->LocalTitle,
+    'PageDescription' => $TheClub->LocalDescription
+])
 <body>
 @include('layout.loader')
 <div class="page-wrapper">

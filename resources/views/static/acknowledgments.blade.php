@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-@include('layout.header' , ['PageTitle' => __('pages/acknowlegement.hero_title')])
+@include('layout.header' , [
+    'PageTitle' => __('pages/acknowlegement.hero_title'),
+    'PageDescription' => __('pages/acknowlegement.pricing_description')
+])
 <body>
 @include('layout.loader')
 <div class="page-wrapper">

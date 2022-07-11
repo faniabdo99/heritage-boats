@@ -3,6 +3,7 @@ return [
     //All Articles Page
     'site_title' => 'نادي الموروث الملاحــــــــــي',
     'page_title' => 'المدونة',
+    'page_description' => 'تعرف على أحدث أخبار نادي الموروث الملاحي',
     'category' => 'الأقسام',
     'recent_posts' => 'أحدث المقالات',
     'archive' => 'الأرشيف',

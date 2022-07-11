@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="@lang('settings.direction')">
-@include('layout.header' , ['PageTitle' => __('layout.home')])
+@include('layout.header' , [
+    'PageTitle' => __('layout.home'),
+    'PageDescription' => __('pages/home.hero_description')
+])
 <body>
 @include('layout.loader')
 <div class="page-wrapper">

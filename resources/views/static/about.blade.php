@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{app()->getLocale()}}" dir="@lang('settings.direction')">
-@include('layout.header' , ['PageTitle' => __('pages/about.hero_title')])
+@include('layout.header' , [
+    'PageTitle' => __('pages/about.hero_title'),
+    'PageDescription' => __('pages/about.about_description_paragraph_1')
+])
 <body>
 @include('layout.loader')
 <div class="page-wrapper">
