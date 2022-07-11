@@ -5,7 +5,7 @@
             <!-- main menu start-->
             <nav class="menu-holder">
                 <ul class="mobile-menu">
-                    <li class="menu-item"><a class="logo-font"><img class="logo" src="{{url('public/img')}}/HeritageLogo.svg"><span>@lang('layout.home')</span></a></li>
+                    <li class="menu-item"><a class="logo-font"><img class="logo" src="{{url('public/img')}}/HeritageLogo.svg" alt="Logo"><span>@lang('layout.home')</span></a></li>
 
                     <li class="menu-item"><a href="{{route('about')}}"><span>@lang('layout.about_us')</span></a></li>
                     <li class="menu-item menu-item--has-child"><a href="javascript:void(0);"><span>@lang('layout.clubs')</span> </a>
@@ -39,7 +39,7 @@
         <div class="row">
             <div class="col-12 column">
                 <!-- logo block start-->
-                <div class="logo-block"><a class="logo-font"><img class="logo" src="{{url('public/img')}}/HeritageLogo.svg"><span>@lang('layout.site_title')</span></a></div>
+                <div class="logo-block"><a class="logo-font"><img class="logo" src="{{url('public/img')}}/HeritageLogo.svg" alt="Logo" ><span>@lang('layout.site_title')</span></a></div>
                 <!-- logo block end-->
                 <!-- menu block start-->
                 <div class="menu-block">
