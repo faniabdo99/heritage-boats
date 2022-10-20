@@ -20,10 +20,9 @@
                     <li class="menu-item"><a href="{{route('contact.get')}}"><span>@lang('layout.contact_us')</span></a></li>
                     <li class="menu-item"><a href="{{route('calendar')}}"><span>@lang('layout.calendar')</span></a></li>
                     <li class="menu-item"><a href="{{route('acknowledgments')}}"><span>@lang('layout.acknowledgements')</span></a>
-                    <li class="menu-item"><a href="{{route('blog')}}"><span>@lang('layout.blog')</span></a>
-                        <!-- main menu end-->
-                        <div class="button-holder"><a class="button button--filled" href="{{route('contact.get')}}" data-hover="@lang('layout.get_in_touch')"><span>@lang('layout.get_in_touch')</span></a></div>
-                    </li>
+                    <li class="menu-item"><a href="{{route('blog')}}"><span>@lang('layout.blog')</span></a></li>
+                    <!-- main menu end-->
+                    <div class="button-holder"><a class="button button--filled" href="{{route('contact.get')}}" data-hover="@lang('layout.get_in_touch')"><span>@lang('layout.get_in_touch')</span></a></div>
                 </ul>
             </nav>
         </div>
@@ -59,6 +58,8 @@
                             <li class="menu-item"><a href="{{route('contact.get')}}"><span>@lang('layout.contact_us')</span></a></li>
                             <li class="menu-item"><a href="{{route('calendar')}}"><span>@lang('layout.calendar')</span></a></li>
                             <li class="menu-item"><a href="{{route('acknowledgments')}}"><span>@lang('layout.acknowledgements')</span></a>
+                            <li class="menu-item"><a href="{{route('blog')}}"><span>@lang('layout.blog')</span></a></li>
+
                         </ul>
                     </nav>
                     <!-- main menu end-->
